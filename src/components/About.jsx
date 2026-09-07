@@ -12,7 +12,7 @@ export default function About() {
       {/* ------------------------------------------------------------- */}
       <section className="relative w-screen min-h-screen flex items-center justify-center overflow-hidden left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-0">
         
-        {/* Strictly Raw Background Video - Occupies 100% full browser screen */}
+        {/* Strictly Raw Background Video - Occupies 100% full browser screen with no gradient or color overlay */}
         <video
           autoPlay
           loop
@@ -24,7 +24,7 @@ export default function About() {
           Your browser does not support the video tag.
         </video>
 
-        {/* Hero Content Overlay (Text styled with heavy drop shadow for legibility) */}
+        {/* Hero Content Overlay */}
         <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-12 text-center space-y-5">
           
           {/* Top Tagline Badge */}
@@ -80,7 +80,7 @@ export default function About() {
               {/* Section Header Tag */}
               <div className="space-y-1">
                 <span className="text-[10px] sm:text-xs font-bold font-mono tracking-widest text-[#3a4d31] uppercase">
-                  SECTION 2 — OUR PHILOSOPHY
+                  OUR PHILOSOPHY
                 </span>
                 <div className="h-[2px] w-24 bg-[#587a41]"></div>
               </div>
@@ -90,9 +90,10 @@ export default function About() {
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1e3215] font-normal tracking-wide">
                   Nature: A Living Teacher
                 </h2>
-                {/* Decorative chevrons matching reference */}
-                <div className="text-[#587a41] font-bold text-lg tracking-tight select-none">
-                  «««
+                {/* Decorative chevrons with 🌿 leaf emoji */}
+                <div className="flex items-center gap-2 text-[#587a41] font-bold text-lg tracking-tight select-none">
+                  <span>🌿</span>
+                  <span>«««</span>
                 </div>
               </div>
 

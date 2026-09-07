@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import ScrollFade from './ScrollFade';
 
 export default function About() {
@@ -8,76 +8,47 @@ export default function About() {
     <div className="bg-[#fcfbf9] min-h-screen space-y-20 pb-24 overflow-hidden">
       
       {/* ------------------------------------------------------------- */}
-      {/* SEAMLESS VIDEO HERO SECTION                                  */}
+      {/* SEAMLESS VIDEO HERO SECTION (CLEAR VIDEO WITH NEW CONTENT)    */}
       {/* ------------------------------------------------------------- */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         
-        {/* Background Video */}
+        {/* Clean Background Video - No dark filter */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0 filter brightness-[0.70]"
+          className="absolute inset-0 w-full h-full object-cover z-0"
         >
-          {/* REPLACE '/hero-video.mp4' WITH YOUR VIDEO FILE PATH OR URL */}
           <source src="/about-hero-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
-        {/* Gradient Overlay for Readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1e3215]/90 via-[#1e3215]/50 to-[#1e3215]/30 z-10" />
 
         {/* Hero Content Overlay */}
         <div className="relative z-20 max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-20 text-center text-white space-y-8">
           
           {/* Top Tagline Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-emerald-200 text-xs font-bold tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/30 backdrop-blur-md border border-white/30 text-emerald-100 text-xs font-bold tracking-widest uppercase drop-shadow-md">
             <span>🌿</span>
             <span>About Magnifying Children's Horizons</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-serif text-white font-light tracking-wide leading-tight max-w-4xl mx-auto drop-shadow-md">
-            Expanding Children's Horizons Through <span className="font-semibold italic text-emerald-300">Nature, Stories</span> and <span className="font-semibold italic text-emerald-300">Discovery</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-serif text-white font-light tracking-wide leading-tight max-w-4xl mx-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
+            Expanding Children's Horizons Through <span className="font-semibold italic text-emerald-300">Nature</span>, <span className="font-semibold italic text-emerald-300">Stories</span> and <span className="font-semibold italic text-emerald-300">Discovery</span>
           </h1>
 
-          {/* Subtitle / Paragraph */}
-          <p className="text-base sm:text-xl text-emerald-100 font-light leading-relaxed max-w-3xl mx-auto drop-shadow">
-            Nurturing curiosity, positive character, and inner awareness in young minds by learning to observe, question, and connect with the quiet wisdom of the natural world.
-          </p>
-
-          {/* Quick Action Buttons */}
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
-            <a 
-              href="#meet-founder" 
-              className="bg-[#355322] hover:bg-[#283f19] text-white font-semibold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg transition duration-300 flex items-center gap-2 group border border-emerald-500/30"
-            >
-              Meet Our Founder
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <Link 
-              to="/books" 
-              className="bg-white/90 hover:bg-white text-[#1e3215] font-semibold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg backdrop-blur-sm transition duration-300"
-            >
-              Explore Books
-            </Link>
-          </div>
-
-          {/* Highlights Footer Bar */}
-          <div className="pt-10 max-w-3xl mx-auto border-t border-white/20 grid grid-cols-3 gap-4 text-center">
-            <div>
-              <p className="text-2xl sm:text-3xl font-serif font-bold text-emerald-200">Nature</p>
-              <p className="text-xs sm:text-sm text-emerald-100/80 font-light">As a Living Teacher</p>
-            </div>
-            <div>
-              <p className="text-2xl sm:text-3xl font-serif font-bold text-emerald-200">Character</p>
-              <p className="text-xs sm:text-sm text-emerald-100/80 font-light">Values & Mindfulness</p>
-            </div>
-            <div>
-              <p className="text-2xl sm:text-3xl font-serif font-bold text-emerald-200">Stories</p>
-              <p className="text-xs sm:text-sm text-emerald-100/80 font-light">The Weaverton Series</p>
-            </div>
+          {/* New Description Paragraphs */}
+          <div className="space-y-4 max-w-3xl mx-auto text-white/95 font-light text-base sm:text-lg leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+            <p className="text-lg sm:text-xl font-medium text-emerald-100">
+              At Magnifying Children’s Horizons, we believe a child’s curiosity is a living seed, ready to grow when it meets the quiet wisdom of nature.
+            </p>
+            <p>
+              Every leaf, ripple and sunrise holds a quiet lesson, inviting children to slow down, wonder and grow.
+            </p>
+            <p>
+              Through meaningful stories, nature-based experiences and opportunities for discovery and reflection, we help children explore their connection with nature while nurturing positive character, inner awareness and spiritual growth.
+            </p>
           </div>
 
         </div>

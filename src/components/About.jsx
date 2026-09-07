@@ -270,6 +270,77 @@ export default function About() {
           </div>
         </section>
 
+
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-8 border-t border-[#23351a]/15">
+                    <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pb-8">
+                      
+                      {/* Brand & Tagline with seamless leaf image icon */}
+                      <div className="space-y-2 text-center lg:text-left">
+                        <Link to="/" className="inline-flex items-center space-x-3">
+                          <img 
+                            src="/leave.jpeg" 
+                            alt="" 
+                            aria-hidden="true"
+                            className="w-8 h-8 object-contain shrink-0 mix-blend-multiply opacity-95" 
+                          />
+                          <div className="flex flex-col text-left">
+                            <span className="font-serif font-bold text-lg text-[#23351a] leading-none">Magnifying</span>
+                            <span className="font-serif font-light text-lg text-[#355322] leading-none mt-1">Children's Horizons</span>
+                          </div>
+                        </Link>
+                        <p className="text-[11px] text-[#4a5944] uppercase tracking-widest font-semibold pl-11">
+                          NATURE • CHARACTER • A BRIGHTER TOMORROW
+                        </p>
+                      </div>
+        
+                      {/* Navigation Links */}
+                      <div className="flex flex-wrap justify-center gap-6 text-xs uppercase tracking-wider font-bold text-[#355322]">
+                        <Link to="/" className="hover:text-[#23351a] transition">Home</Link>
+                        <Link to="/books" className="hover:text-[#23351a] transition">Books</Link>
+                        <Link to="/cwn/pathways" className="hover:text-[#23351a] transition">Character with Nature™</Link>
+                        <Link to="/about" className="hover:text-[#23351a] transition">About Us</Link>
+                        <Link to="/collaborations" className="hover:text-[#23351a] transition">Collaborations</Link>
+                        <Link to="/contact" className="hover:text-[#23351a] transition">Contact</Link>
+                      </div>
+        
+                      {/* Social / Connect Icons (Instagram -> Facebook -> YouTube) */}
+                      <div className="flex items-center space-x-3">
+                        {/* Instagram Icon */}
+                        <a href="#instagram" aria-label="Instagram" className="w-9 h-9 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                          </svg>
+                        </a>
+                        {/* Facebook Icon */}
+                        <a href="#facebook" aria-label="Facebook" className="w-9 h-9 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                          </svg>
+                        </a>
+                        {/* YouTube Icon */}
+                        <a href="#youtube" aria-label="YouTube" className="w-9 h-9 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                          </svg>
+                        </a>
+                      </div>
+        
+                    </div>
+        
+                    {/* Bottom Copyright & Legal row */}
+                    <div className="pt-6 border-t border-[#23351a]/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#55664d] gap-4">
+                      <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
+                      <div className="flex items-center space-x-6">
+                        <a href="#privacy" className="hover:underline">Privacy Policy</a>
+                        <a href="#terms" className="hover:underline">Terms of Use</a>
+                        <a href="#credits" className="hover:underline">Site by Pixel Designer Agency</a>
+                      </div>
+                    </div>
+        
+                  </div>
+
       </div>
 
     </div>

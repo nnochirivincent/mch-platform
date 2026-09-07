@@ -157,7 +157,10 @@ export default function About() {
                       YOUR PHOTO HERE
                     </div>
                     <div className="text-[11px] text-[#7a7265] mt-1">
-                      (Drop placeholder or replace with actual founder photo)
+                      (<img 
+                         src="/about-tolu.png" 
+                          alt="Bush Forest Teaching" 
+                      />)
                     </div>
                   </div>
                   <p className="text-xs sm:text-sm text-[#595247] italic text-center leading-relaxed px-2 font-serif">

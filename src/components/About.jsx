@@ -153,9 +153,9 @@ export default function About() {
                     <div className="w-16 h-16 rounded-full bg-[#e3dcd0] flex items-center justify-center text-[#736b5e] mb-3 shadow-sm">
                       <ImageIcon className="w-8 h-8 opacity-70" />
                     </div>
-                    <div className="text-[#595247] font-mono text-xs sm:text-sm tracking-wider font-semibold uppercase">
+                    {/* <div className="text-[#595247] font-mono text-xs sm:text-sm tracking-wider font-semibold uppercase">
                       YOUR PHOTO HERE
-                    </div>
+                    </div> */}
                     <div className="text-[11px] text-[#7a7265] mt-1">
                       (<img 
                          src="/about-tolu.png" 

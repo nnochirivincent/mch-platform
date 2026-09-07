@@ -21,7 +21,7 @@ export default function About() {
           className="absolute inset-0 w-full h-full object-cover z-0 filter brightness-[0.70]"
         >
           {/* REPLACE '/hero-video.mp4' WITH YOUR VIDEO FILE PATH OR URL */}
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="/about-hero-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

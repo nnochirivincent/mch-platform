@@ -120,7 +120,7 @@ export default function About() {
                   <div className="w-full max-w-[280px] rounded-2xl overflow-hidden shadow-xl border border-emerald-950/10 bg-white/40 p-2">
                     {/* Insert your chosen image here or keep it ready */}
                     <img 
-                      src="/hero-image-2.png" 
+                      src="/nature-image.png" 
                       alt="Nature teaching illustration" 
                       className="w-full h-auto object-cover rounded-xl"
                     />

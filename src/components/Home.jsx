@@ -669,78 +669,79 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* The Four Cards Grid */}
-                <div className="grid sm:grid-cols-2 gap-8 pt-4">
-                  
-                  {/* Card 1: Cause & Effect */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
-                    <div className="h-48 overflow-hidden bg-gray-100">
-                      <img 
-                        src="/cwn-image-2.png" 
-                        alt="Cause and Effect - seed/plant or water creating a path" 
-                        className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
-                      />
-                    </div>
-                    <div className="p-6 space-y-2 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-lg text-[#23351a]">Cause & Effect</h4>
-                      <p className="text-gray-600 text-sm font-light">
-                        What we do influences what happens next.
-                      </p>
-                    </div>
-                  </div>
+                         
+                         {/* The Four Cards Grid */}
+<div className="grid sm:grid-cols-2 gap-8 pt-4">
+  
+  {/* Card 1: Cause & Effect */}
+  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
+    <div className="w-full aspect-video bg-gray-50 flex items-center justify-center p-2">
+      <img 
+        src="/cwn-image-2.png" 
+        alt="Cause and Effect - seed/plant or water creating a path" 
+        className="w-full h-full object-contain transform hover:scale-105 transition duration-500"
+      />
+    </div>
+    <div className="p-6 space-y-2 text-center flex-1 flex flex-col justify-between">
+      <h4 className="font-serif font-bold text-lg text-[#23351a]">Cause & Effect</h4>
+      <p className="text-gray-600 text-sm font-light">
+        What we do influences what happens next.
+      </p>
+    </div>
+  </div>
 
-                  {/* Card 2: Like Attracts Like */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
-                    <div className="h-48 overflow-hidden bg-gray-100">
-                      <img 
-                        src="/cwn-image-3.png" 
-                        alt="Like Attracts Like - flower attracting bees" 
-                        className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
-                      />
-                    </div>
-                    <div className="p-6 space-y-2 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-lg text-[#23351a]">Like Attracts Like</h4>
-                      <p className="text-gray-600 text-sm font-light">
-                        What we nurture and give attention to can influence what grows around us.
-                      </p>
-                    </div>
-                  </div>
+  {/* Card 2: Like Attracts Like */}
+  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
+    <div className="w-full aspect-video bg-gray-50 flex items-center justify-center p-2">
+      <img 
+        src="/cwn-image-3.png" 
+        alt="Like Attracts Like - flower attracting bees" 
+        className="w-full h-full object-contain transform hover:scale-105 transition duration-500"
+      />
+    </div>
+    <div className="p-6 space-y-2 text-center flex-1 flex flex-col justify-between">
+      <h4 className="font-serif font-bold text-lg text-[#23351a]">Like Attracts Like</h4>
+      <p className="text-gray-600 text-sm font-light">
+        What we nurture and give attention to can influence what grows around us.
+      </p>
+    </div>
+  </div>
 
-                  {/* Card 3: Gravity */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
-                    <div className="h-48 overflow-hidden bg-gray-100">
-                      <img 
-                        src="/cwn-image-4.png" 
-                        alt="Gravity - light seed and heavier natural object" 
-                        className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
-                      />
-                    </div>
-                    <div className="p-6 space-y-2 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-lg text-[#23351a]">Gravity</h4>
-                      <p className="text-gray-600 text-sm font-light">
-                        What we carry within can influence how we move and the direction we take.
-                      </p>
-                    </div>
-                  </div>
+  {/* Card 3: Gravity */}
+  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
+    <div className="w-full aspect-video bg-gray-50 flex items-center justify-center p-2">
+      <img 
+        src="/cwn-image-4.png" 
+        alt="Gravity - light seed and heavier natural object" 
+        className="w-full h-full object-contain transform hover:scale-105 transition duration-500"
+      />
+    </div>
+    <div className="p-6 space-y-2 text-center flex-1 flex flex-col justify-between">
+      <h4 className="font-serif font-bold text-lg text-[#23351a]">Gravity</h4>
+      <p className="text-gray-600 text-sm font-light">
+        What we carry within can influence how we move and the direction we take.
+      </p>
+    </div>
+  </div>
 
-                  {/* Card 4: Balance */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
-                    <div className="h-48 overflow-hidden bg-gray-100">
-                      <img 
-                        src="/cwn-image-5.png" 
-                        alt="Balance - nature returning to equilibrium" 
-                        className="w-full h-full object-cover transform hover:scale-105 transition duration-500"
-                      />
-                    </div>
-                    <div className="p-6 space-y-2 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-lg text-[#23351a]">Balance</h4>
-                      <p className="text-gray-600 text-sm font-light">
-                        Nature shows us patterns of balance, adjustment and harmony.
-                      </p>
-                    </div>
-                  </div>
+  {/* Card 4: Balance */}
+  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
+    <div className="w-full aspect-video bg-gray-50 flex items-center justify-center p-2">
+      <img 
+        src="/cwn-image-5.png" 
+        alt="Balance - nature returning to equilibrium" 
+        className="w-full h-full object-contain transform hover:scale-105 transition duration-500"
+      />
+    </div>
+    <div className="p-6 space-y-2 text-center flex-1 flex flex-col justify-between">
+      <h4 className="font-serif font-bold text-lg text-[#23351a]">Balance</h4>
+      <p className="text-gray-600 text-sm font-light">
+        Nature shows us patterns of balance, adjustment and harmony.
+      </p>
+    </div>
+  </div>
 
-                </div>
+</div>
 
                 {/* Bottom Action Button */}
                 <div className="pt-6 text-center">

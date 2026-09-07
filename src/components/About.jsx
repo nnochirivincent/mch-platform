@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Image as ImageIcon } from 'lucide-react';
 import ScrollFade from './ScrollFade';
 
 export default function About() {
@@ -125,49 +125,60 @@ export default function About() {
         </ScrollFade>
 
         {/* ------------------------------------------------------------- */}
-        {/* SECTION 3: MEET THE FOUNDER                                   */}
+        {/* SECTION 3: MEET THE FOUNDER (EXACTLY MATCHING DESIGN IMAGE)     */}
         {/* ------------------------------------------------------------- */}
         <ScrollFade delay={100}>
-          <section id="meet-founder" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-8">
-            <div className="bg-white rounded-3xl shadow-xl border border-gray-200 p-8 sm:p-12 lg:p-16">
+          <section id="meet-founder" className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 scroll-mt-8">
+            <div className="space-y-8 text-left">
               
-              <div className="grid lg:grid-cols-12 gap-12 items-center">
+              {/* Section Header Tag */}
+              <div className="space-y-1">
+                <span className="text-[10px] sm:text-xs font-bold font-mono tracking-widest text-[#3a4d31] uppercase">
+                  SECTION 3 — MEET THE FOUNDER
+                </span>
+                <div className="h-[2px] w-32 bg-[#587a41]"></div>
+              </div>
+
+              {/* Main Headline */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1e3215] font-normal tracking-wide">
+                Meet Tolulope Okudolo
+              </h2>
+
+              {/* Grid matching the layout in your reference image */}
+              <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start pt-2">
                 
-                <div className="lg:col-span-5 space-y-4">
-                  <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
-                    <img 
-                      src="/tolu-founder.jpeg" 
-                      alt="Tolulope Okudolo sharing a story with children at the Niagara Nature Centre" 
-                      className="w-full h-auto object-cover"
-                    />
+                {/* Left Column: Photo Placeholder Box with Dashed Border */}
+                <div className="lg:col-span-5 space-y-3">
+                  <div className="w-full aspect-[4/3] sm:aspect-square bg-[#f3efe6] rounded-2xl border-2 border-dashed border-[#c5bcac] flex flex-col items-center justify-center p-6 text-center shadow-inner group transition hover:bg-[#efe9df]">
+                    <div className="w-16 h-16 rounded-full bg-[#e3dcd0] flex items-center justify-center text-[#736b5e] mb-3 shadow-sm">
+                      <ImageIcon className="w-8 h-8 opacity-70" />
+                    </div>
+                    <div className="text-[#595247] font-mono text-xs sm:text-sm tracking-wider font-semibold uppercase">
+                      YOUR PHOTO HERE
+                    </div>
+                    <div className="text-[11px] text-[#7a7265] mt-1">
+                      (Drop placeholder or replace with actual founder photo)
+                    </div>
                   </div>
-                  <p className="text-xs text-gray-500 text-center italic">
-                    Tolulope sharing a story with children at the Niagara Nature Centre (Fall Fundraiser, October 2017)
+                  <p className="text-xs sm:text-sm text-[#595247] italic text-center leading-relaxed px-2 font-serif">
+                    Tolulope sharing a story with children at the Niagara Nature Centre
                   </p>
                 </div>
 
-                <div className="lg:col-span-7 space-y-6 text-left">
-                  <div className="space-y-1">
-                    <span className="text-emerald-700 font-bold text-xs tracking-widest uppercase">Founder & Author</span>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-extrabold text-[#23351a]">
-                      Meet Tolulope Okudolo
-                    </h2>
-                  </div>
-
-                  <div className="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed font-light">
-                    <p className="font-medium text-[#23351a]">
-                      A child at heart with a deep, abiding love for her Creator, Tolulope (Tolu) Okudolo is an author and educator with a Bachelor of Education and an MBA. Her experiences living in Africa, Europe and North America have given her a rich multicultural perspective.
-                    </p>
-                    <p>
-                      Her passion lies in helping children discover the connections, wisdom and laws within nature and exploring how these can guide everyday choices, nurture positive character and deepen their connection with themselves and the world around them.
-                    </p>
-                    <p>
-                      Tolu is the founder of Magnifying Children’s Horizons and creator of <span className="font-semibold text-[#23351a]">Character with Nature™</span>, a nature-inspired framework that helps children discover life’s timeless principles through the natural world.
-                    </p>
-                    <p className="text-xs sm:text-sm italic text-[#4a6934] bg-emerald-50 p-3 rounded-xl border border-emerald-900/10">
-                      She is the author of stories from The Weaverton Series, and co-creator of Blossom in Nature.
-                    </p>
-                  </div>
+                {/* Right Column: Exact Copy from Design Reference */}
+                <div className="lg:col-span-7 space-y-4 text-[#23351a] text-sm sm:text-base leading-relaxed">
+                  <p className="font-light">
+                    A child at heart with a deep, abiding love for her Creator, <strong className="font-semibold text-[#1e3215]">Tolulope (Tolu) Okudolo</strong> is an author and educator with a Bachelor of Education and an MBA. Her experiences living in Africa, Europe and North America have given her a rich multicultural perspective.
+                  </p>
+                  <p className="font-light">
+                    Her passion lies in helping children discover the connections, wisdom and laws within nature and explore how these can guide everyday choices, nurture positive character and deepen their connection with the world around them.
+                  </p>
+                  <p className="font-light">
+                    Tolu is the founder of Magnifying Children’s Horizons and creator of <strong className="font-semibold text-[#1e3215]">Character with Nature™</strong>, a nature-inspired framework that helps children discover life’s timeless principles through the natural world.
+                  </p>
+                  <p className="font-light">
+                    She is the author of <em className="italic">The Face in the Mountain</em> and <em className="italic">The Festival Shoes</em> from The Weaverton Series, and co-creator of <em className="italic">Blossom in Nature</em>, a paired-perspective children's book initiative.
+                  </p>
                 </div>
 
               </div>

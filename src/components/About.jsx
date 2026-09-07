@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Compass, BookOpen, Quote, Sparkles, Heart, ArrowRight } from 'lucide-react';
+import { Sparkles, ArrowRight } from 'lucide-react';
 import ScrollFade from './ScrollFade';
 
 export default function About() {
@@ -8,103 +8,75 @@ export default function About() {
     <div className="bg-[#fcfbf9] min-h-screen space-y-20 pb-24 overflow-hidden">
       
       {/* ------------------------------------------------------------- */}
-      {/* NEW HERO SECTION                                              */}
+      {/* SEAMLESS VIDEO HERO SECTION                                  */}
       {/* ------------------------------------------------------------- */}
-      <section className="relative pt-12 pb-16 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto overflow-hidden">
-        {/* Subtle Decorative Background Elements */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none -z-10">
-          <div className="absolute top-10 left-10 w-72 h-72 bg-emerald-100/50 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-80 h-80 bg-amber-100/40 rounded-full blur-3xl"></div>
-        </div>
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0 filter brightness-[0.70]"
+        >
+          {/* REPLACE '/hero-video.mp4' WITH YOUR VIDEO FILE PATH OR URL */}
+          <source src="/hero-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center pt-6">
+        {/* Gradient Overlay for Readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1e3215]/90 via-[#1e3215]/50 to-[#1e3215]/30 z-10" />
+
+        {/* Hero Content Overlay */}
+        <div className="relative z-20 max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-20 text-center text-white space-y-8">
           
-          {/* Left Column: Hero Text & Call to Actions */}
-          <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#355322]/10 text-[#355322] border border-[#355322]/20 text-xs font-bold tracking-widest uppercase">
-              <span>🌿</span>
-              <span>About Magnifying Children's Horizons</span>
-            </div>
-
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#23351a] font-light tracking-wide leading-tight">
-              Expanding Children's Horizons Through <span className="font-semibold italic text-[#355322]">Nature, Stories</span> and <span className="font-semibold italic text-[#355322]">Discovery</span>
-            </h1>
-
-            <p className="text-base sm:text-lg text-[#2c4022] font-light leading-relaxed max-w-2xl">
-              Nurturing curiosity, positive character, and inner awareness in young minds by learning to observe, question, and connect with the quiet wisdom of the natural world.
-            </p>
-
-            {/* Quick Action Links */}
-            <div className="pt-4 flex flex-wrap items-center gap-4">
-              <a 
-                href="#meet-founder" 
-                className="bg-[#23351a] hover:bg-[#355322] text-white font-semibold text-xs sm:text-sm uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-md transition duration-300 flex items-center gap-2 group"
-              >
-                Meet Our Founder
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <Link 
-                to="/books" 
-                className="bg-white hover:bg-emerald-50 text-[#23351a] border border-[#23351a]/20 font-semibold text-xs sm:text-sm uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-sm transition duration-300"
-              >
-                Explore Books
-              </Link>
-            </div>
-
-            {/* Quick Highlights Bar */}
-            <div className="pt-6 border-t border-[#658a4c]/20 grid grid-cols-3 gap-4 text-left">
-              <div>
-                <p className="text-xl sm:text-2xl font-serif font-bold text-[#1e3215]">Nature</p>
-                <p className="text-xs text-gray-600 font-light">As a Living Teacher</p>
-              </div>
-              <div>
-                <p className="text-xl sm:text-2xl font-serif font-bold text-[#1e3215]">Character</p>
-                <p className="text-xs text-gray-600 font-light">Values & Mindfulness</p>
-              </div>
-              <div>
-                <p className="text-xl sm:text-2xl font-serif font-bold text-[#1e3215]">Stories</p>
-                <p className="text-xs text-gray-600 font-light">The Weaverton Series</p>
-              </div>
-            </div>
+          {/* Top Tagline Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-emerald-200 text-xs font-bold tracking-widest uppercase">
+            <span>🌿</span>
+            <span>About Magnifying Children's Horizons</span>
           </div>
 
-          {/* Right Column: Hero Visual Feature Card */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              
-              {/* Main Decorative Image Frame */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
-                <img 
-                  src="/hero-image-2.png" 
-                  alt="Children exploring nature and learning" 
-                  className="w-full h-80 sm:h-96 lg:h-[420px] object-cover object-center transform hover:scale-105 transition duration-700 ease-out"
-                />
-                
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1e3215]/60 via-transparent to-transparent"></div>
-                
-                {/* Image Caption/Badge Overlay */}
-                <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
-                  <span className="bg-[#658a4c] text-white text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-md">
-                    Character with Nature™
-                  </span>
-                  <p className="font-serif italic text-sm text-emerald-50">
-                    "Every leaf, ripple and sunrise holds a quiet lesson."
-                  </p>
-                </div>
-              </div>
+          {/* Main Headline */}
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-serif text-white font-light tracking-wide leading-tight max-w-4xl mx-auto drop-shadow-md">
+            Expanding Children's Horizons Through <span className="font-semibold italic text-emerald-300">Nature, Stories</span> and <span className="font-semibold italic text-emerald-300">Discovery</span>
+          </h1>
 
-              {/* Floating Decorative Leaf Badge */}
-              <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-md border border-[#23351a]/10 p-4 rounded-2xl shadow-xl hidden sm:flex items-center gap-3">
-                <div className="p-3 bg-emerald-100/80 rounded-xl text-[#355322]">
-                  <Sparkles className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-[#1e3215]">Nurturing Curiosity</p>
-                  <p className="text-[11px] text-gray-600">Guided discovery for kids</p>
-                </div>
-              </div>
+          {/* Subtitle / Paragraph */}
+          <p className="text-base sm:text-xl text-emerald-100 font-light leading-relaxed max-w-3xl mx-auto drop-shadow">
+            Nurturing curiosity, positive character, and inner awareness in young minds by learning to observe, question, and connect with the quiet wisdom of the natural world.
+          </p>
 
+          {/* Quick Action Buttons */}
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+            <a 
+              href="#meet-founder" 
+              className="bg-[#355322] hover:bg-[#283f19] text-white font-semibold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg transition duration-300 flex items-center gap-2 group border border-emerald-500/30"
+            >
+              Meet Our Founder
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <Link 
+              to="/books" 
+              className="bg-white/90 hover:bg-white text-[#1e3215] font-semibold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg backdrop-blur-sm transition duration-300"
+            >
+              Explore Books
+            </Link>
+          </div>
+
+          {/* Highlights Footer Bar */}
+          <div className="pt-10 max-w-3xl mx-auto border-t border-white/20 grid grid-cols-3 gap-4 text-center">
+            <div>
+              <p className="text-2xl sm:text-3xl font-serif font-bold text-emerald-200">Nature</p>
+              <p className="text-xs sm:text-sm text-emerald-100/80 font-light">As a Living Teacher</p>
+            </div>
+            <div>
+              <p className="text-2xl sm:text-3xl font-serif font-bold text-emerald-200">Character</p>
+              <p className="text-xs sm:text-sm text-emerald-100/80 font-light">Values & Mindfulness</p>
+            </div>
+            <div>
+              <p className="text-2xl sm:text-3xl font-serif font-bold text-emerald-200">Stories</p>
+              <p className="text-xs sm:text-sm text-emerald-100/80 font-light">The Weaverton Series</p>
             </div>
           </div>
 

@@ -77,7 +77,7 @@ export default function About() {
               {/* Section Header Tag */}
               <div className="space-y-2 text-left">
                 <span className="text-xs font-bold font-mono tracking-widest text-[#3a4d31] uppercase">
-                  SECTION 2 — OUR PHILOSOPHY
+                 — OUR PHILOSOPHY
                 </span>
                 <div className="h-[2px] w-28 bg-[#587a41]"></div>
               </div>

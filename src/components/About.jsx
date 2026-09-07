@@ -182,67 +182,68 @@ export default function About() {
           </section>
         </ScrollFade>
 
-        {/* ------------------------------------------------------------- */}
-        {/* SECTION 4: HEAR FROM TOLU IN HER OWN VOICE (Q&A)              */}
-        {/* ------------------------------------------------------------- */}
-        <ScrollFade delay={150}>
-          <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center space-y-3 mb-12">
-              <span className="text-emerald-700 font-bold text-xs tracking-widest uppercase">In Her Own Words</span>
-              <h2 className="text-3xl sm:text-4xl font-serif font-extrabold text-[#23351a]">
-                A Conversation with Tolu
-              </h2>
-              <p className="text-gray-600 text-sm sm:text-base max-w-xl mx-auto">
-                Insights into the inspiration, vision, and heart behind our stories.
-              </p>
-            </div>
+                   {/* ------------------------------------------------------------- */}
+{/* SECTION 4: HEAR FROM TOLU IN HER OWN VOICE                    */}
+{/* ------------------------------------------------------------- */}
+<ScrollFade delay={150}>
+  <section className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+    <div className="bg-[#dce2dd] rounded-3xl p-8 sm:p-12 lg:p-16 border border-[#c8d1c9] shadow-sm space-y-10">
+      
+      {/* Title */}
+      <div className="text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#3a4d31] font-normal tracking-tight">
+          Hear From Tolu in Her Own Voice
+        </h2>
+      </div>
 
-            <div className="space-y-6">
-              
-              {/* Q1 */}
-              <div className="bg-[#f7f4ee] p-6 sm:p-8 rounded-2xl shadow-md border border-[#e5cea3]/30 space-y-2 text-left">
-                <h3 className="font-serif font-bold text-lg text-[#23351a] flex items-start gap-2">
-                  <span className="text-emerald-700 font-sans">Q:</span> What inspired you to begin writing your books?
-                </h3>
-                <p className="text-gray-700 text-sm sm:text-base pl-6 font-light leading-relaxed">
-                  My love for nature and children inspired me to begin writing. I believe that an important part of helping children develop character and spirituality lies in helping them connect with nature and discover its laws for themselves. My own experiences have also shaped the stories I tell.
-                </p>
-              </div>
+      {/* 2x2 Grid Layout matching the reference design */}
+      <div className="grid md:grid-cols-2 gap-8 lg:gap-12 pt-4">
+        
+        {/* Q1 */}
+        <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
+          <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] font-serif leading-snug">
+            What inspired you to begin writing your books?
+          </h3>
+          <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
+            <strong className="font-semibold text-[#1e2e18]">My love for nature and children inspired me to begin writing.</strong> I believe that an important part of helping children develop character and spirituality lies in helping them connect with nature and discover its laws for themselves. My own experiences have also shaped the stories I tell.
+          </p>
+        </div>
 
-              {/* Q2 */}
-              <div className="bg-[#f7f4ee] p-6 sm:p-8 rounded-2xl shadow-md border border-[#e5cea3]/30 space-y-2 text-left">
-                <h3 className="font-serif font-bold text-lg text-[#23351a] flex items-start gap-2">
-                  <span className="text-emerald-700 font-sans">Q:</span> How do your stories begin?
-                </h3>
-                <p className="text-gray-700 text-sm sm:text-base pl-6 font-light leading-relaxed">
-                  Often with pictures. I see scenes in my mind's eye and begin putting the dialogue around them. It's also quite fun!
-                </p>
-              </div>
+        {/* Q2 */}
+        <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
+          <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] font-serif leading-snug">
+            How do your stories begin?
+          </h3>
+          <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
+            <strong className="font-semibold text-[#1e2e18]">Often with pictures.</strong> I see scenes in my mind's eye and begin putting the dialogue around them. It's also quite fun!
+          </p>
+        </div>
 
-              {/* Q3 */}
-              <div className="bg-[#f7f4ee] p-6 sm:p-8 rounded-2xl shadow-md border border-[#e5cea3]/30 space-y-2 text-left">
-                <h3 className="font-serif font-bold text-lg text-[#23351a] flex items-start gap-2">
-                  <span className="text-emerald-700 font-sans">Q:</span> When a parent reads your books to their child, how do you want the child to feel?
-                </h3>
-                <p className="text-gray-700 text-sm sm:text-base pl-6 font-light leading-relaxed">
-                  Secure — and curious. I want children to feel that there is more to nature than what they first see, and to leave the story wanting to explore, discover and find their own connection with the natural world.
-                </p>
-              </div>
+        {/* Q3 */}
+        <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
+          <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] font-serif leading-snug">
+            When a parent reads your books to their child, how do you want the child to feel?
+          </h3>
+          <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
+            <strong className="font-semibold text-[#1e2e18]">Secure — and curious.</strong> I want children to feel that there is more to nature than what they first see, and to leave the story wanting to explore, discover and find their own connection with the natural world.
+          </p>
+        </div>
 
-              {/* Q4 */}
-              <div className="bg-[#f7f4ee] p-6 sm:p-8 rounded-2xl shadow-md border border-[#e5cea3]/30 space-y-2 text-left">
-                <h3 className="font-serif font-bold text-lg text-[#23351a] flex items-start gap-2">
-                  <span className="text-emerald-700 font-sans">Q:</span> Why do you believe nature is such an important teacher for children?
-                </h3>
-                <p className="text-gray-700 text-sm sm:text-base pl-6 font-light leading-relaxed">
-                  I believe nature can be a child's first classroom. Just as children learn the language of those around them, they can learn to observe and understand the language of nature. Through that relationship, they can discover principles that help them develop character, inner awareness and a deeper connection with the world around them.
-                </p>
-              </div>
+        {/* Q4 */}
+        <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
+          <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] font-serif leading-snug">
+            Why do you believe nature is such an important teacher for children?
+          </h3>
+          <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
+            <strong className="font-semibold text-[#1e2e18]">I believe nature can be a child's first classroom.</strong> Just as children learn the language of those around them, they can learn to observe and understand the language of nature. Through that relationship, they can discover principles that help them develop character, inner awareness and a deeper connection with the world around them.
+          </p>
+        </div>
 
-            </div>
-          </section>
-        </ScrollFade>
+      </div>
 
+    </div>
+  </section>
+</ScrollFade>
         {/* ------------------------------------------------------------- */}
         {/* BOTTOM CALL TO ACTION                                         */}
         {/* ------------------------------------------------------------- */}

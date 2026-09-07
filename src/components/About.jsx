@@ -134,7 +134,7 @@ export default function About() {
               {/* Section Header Tag */}
               <div className="space-y-1">
                 <span className="text-[10px] sm:text-xs font-bold font-mono tracking-widest text-[#3a4d31] uppercase">
-                  SECTION 3 — MEET THE FOUNDER
+                   MEET THE FOUNDER
                 </span>
                 <div className="h-[2px] w-32 bg-[#587a41]"></div>
               </div>

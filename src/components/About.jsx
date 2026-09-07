@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Compass, BookOpen, Quote, Sparkles, Heart } from 'lucide-react';
 import ScrollFade from './ScrollFade';
-import About from './About';
 
 export default function About() {
   return (

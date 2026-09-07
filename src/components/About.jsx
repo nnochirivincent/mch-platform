@@ -147,27 +147,19 @@ export default function About() {
               {/* Grid matching the layout in your reference image */}
               <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start pt-2">
                 
-                {/* Left Column: Photo Placeholder Box with Dashed Border */}
-                <div className="lg:col-span-5 space-y-3">
-                  <div className="w-full aspect-[4/3] sm:aspect-square bg-[#f3efe6] rounded-2xl border-2 border-dashed border-[#c5bcac] flex flex-col items-center justify-center p-6 text-center shadow-inner group transition hover:bg-[#efe9df]">
-                    <div className="w-16 h-16 rounded-full bg-[#e3dcd0] flex items-center justify-center text-[#736b5e] mb-3 shadow-sm">
-                      <ImageIcon className="w-8 h-8 opacity-70" />
-                    </div>
-                    {/* <div className="text-[#595247] font-mono text-xs sm:text-sm tracking-wider font-semibold uppercase">
-                      YOUR PHOTO HERE
-                    </div> */}
-                    <div className="text-[11px] text-[#7a7265] mt-1">
-                      (<img 
-                         src="/about-tolu.png" 
-                          alt="Bush Forest Teaching" 
-                      />)
-                    </div>
-                  </div>
-                  <p className="text-xs sm:text-sm text-[#595247] italic text-center leading-relaxed px-2 font-serif">
-                    Tolulope sharing a story with children at the Niagara Nature Centre
-                  </p>
-                </div>
-
+                {/* Left Column: Direct Image */}
+<div className="lg:col-span-5 space-y-3">
+  <div className="w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-md">
+    <img 
+      src="/about-tolu.png" 
+      alt="Tolulope Okudolo" 
+      className="w-full h-full object-cover"
+    />
+  </div>
+  <p className="text-xs sm:text-sm text-[#595247] italic text-center leading-relaxed px-2 font-serif">
+    Tolulope sharing a story with children at the Niagara Nature Centre
+  </p>
+</div>
                 {/* Right Column: Exact Copy from Design Reference */}
                 <div className="lg:col-span-7 space-y-4 text-[#23351a] text-sm sm:text-base leading-relaxed">
                   <p className="font-light">

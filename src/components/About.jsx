@@ -1,29 +1,119 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Compass, BookOpen, Quote, Sparkles, Heart } from 'lucide-react';
+import { Compass, BookOpen, Quote, Sparkles, Heart, ArrowRight } from 'lucide-react';
 import ScrollFade from './ScrollFade';
 
 export default function About() {
   return (
-    <div className="bg-[#fcfbf9] min-h-screen space-y-24 pb-24 overflow-hidden">
+    <div className="bg-[#fcfbf9] min-h-screen space-y-20 pb-24 overflow-hidden">
       
-      {/* Page Header / Hero */}
-      <section className="relative pt-16 pb-12 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto text-center space-y-4">
-        <span className="text-[#355322] font-bold text-xs tracking-widest uppercase">About Us</span>
-        <h1 className="text-4xl sm:text-6xl font-serif text-[#23351a] font-light tracking-wide">
-          Magnifying Children's Horizons
-        </h1>
-        <p className="font-serif italic text-[#4a6934] text-xl sm:text-2xl max-w-2xl mx-auto">
-          Expanding Children's Horizons Through Nature, Stories and Discovery
-        </p>
-        <div className="flex items-center justify-center space-x-3 text-[#658a4c] pt-2">
-          <div className="h-[1.5px] w-12 bg-[#658a4c]/40"></div>
-          <span>🌿</span>
-          <div className="h-[1.5px] w-12 bg-[#658a4c]/40"></div>
+      {/* ------------------------------------------------------------- */}
+      {/* NEW HERO SECTION                                              */}
+      {/* ------------------------------------------------------------- */}
+      <section className="relative pt-12 pb-16 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto overflow-hidden">
+        {/* Subtle Decorative Background Elements */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none -z-10">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-emerald-100/50 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-amber-100/40 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center pt-6">
+          
+          {/* Left Column: Hero Text & Call to Actions */}
+          <div className="lg:col-span-7 space-y-6 text-left">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#355322]/10 text-[#355322] border border-[#355322]/20 text-xs font-bold tracking-widest uppercase">
+              <span>🌿</span>
+              <span>About Magnifying Children's Horizons</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-[#23351a] font-light tracking-wide leading-tight">
+              Expanding Children's Horizons Through <span className="font-semibold italic text-[#355322]">Nature, Stories</span> and <span className="font-semibold italic text-[#355322]">Discovery</span>
+            </h1>
+
+            <p className="text-base sm:text-lg text-[#2c4022] font-light leading-relaxed max-w-2xl">
+              Nurturing curiosity, positive character, and inner awareness in young minds by learning to observe, question, and connect with the quiet wisdom of the natural world.
+            </p>
+
+            {/* Quick Action Links */}
+            <div className="pt-4 flex flex-wrap items-center gap-4">
+              <a 
+                href="#meet-founder" 
+                className="bg-[#23351a] hover:bg-[#355322] text-white font-semibold text-xs sm:text-sm uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-md transition duration-300 flex items-center gap-2 group"
+              >
+                Meet Our Founder
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <Link 
+                to="/books" 
+                className="bg-white hover:bg-emerald-50 text-[#23351a] border border-[#23351a]/20 font-semibold text-xs sm:text-sm uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-sm transition duration-300"
+              >
+                Explore Books
+              </Link>
+            </div>
+
+            {/* Quick Highlights Bar */}
+            <div className="pt-6 border-t border-[#658a4c]/20 grid grid-cols-3 gap-4 text-left">
+              <div>
+                <p className="text-xl sm:text-2xl font-serif font-bold text-[#1e3215]">Nature</p>
+                <p className="text-xs text-gray-600 font-light">As a Living Teacher</p>
+              </div>
+              <div>
+                <p className="text-xl sm:text-2xl font-serif font-bold text-[#1e3215]">Character</p>
+                <p className="text-xs text-gray-600 font-light">Values & Mindfulness</p>
+              </div>
+              <div>
+                <p className="text-xl sm:text-2xl font-serif font-bold text-[#1e3215]">Stories</p>
+                <p className="text-xs text-gray-600 font-light">The Weaverton Series</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Hero Visual Feature Card */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative mx-auto max-w-md lg:max-w-none">
+              
+              {/* Main Decorative Image Frame */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                <img 
+                  src="/hero-image-2.png" 
+                  alt="Children exploring nature and learning" 
+                  className="w-full h-80 sm:h-96 lg:h-[420px] object-cover object-center transform hover:scale-105 transition duration-700 ease-out"
+                />
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1e3215]/60 via-transparent to-transparent"></div>
+                
+                {/* Image Caption/Badge Overlay */}
+                <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
+                  <span className="bg-[#658a4c] text-white text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-md">
+                    Character with Nature™
+                  </span>
+                  <p className="font-serif italic text-sm text-emerald-50">
+                    "Every leaf, ripple and sunrise holds a quiet lesson."
+                  </p>
+                </div>
+              </div>
+
+              {/* Floating Decorative Leaf Badge */}
+              <div className="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-md border border-[#23351a]/10 p-4 rounded-2xl shadow-xl hidden sm:flex items-center gap-3">
+                <div className="p-3 bg-emerald-100/80 rounded-xl text-[#355322]">
+                  <Sparkles className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-[#1e3215]">Nurturing Curiosity</p>
+                  <p className="text-[11px] text-gray-600">Guided discovery for kids</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </section>
 
-      {/* Section 1 & 2: Introduction & Philosophy (Cream Background Container) */}
+      {/* ------------------------------------------------------------- */}
+      {/* SECTION 1 & 2: INTRODUCTION & PHILOSOPHY                      */}
+      {/* ------------------------------------------------------------- */}
       <ScrollFade>
         <section className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 rounded-3xl overflow-hidden shadow-2xl py-16 border border-emerald-950/20">
           
@@ -95,9 +185,11 @@ export default function About() {
         </section>
       </ScrollFade>
 
-      {/* Section 3: Meet the Founder */}
+      {/* ------------------------------------------------------------- */}
+      {/* SECTION 3: MEET THE FOUNDER                                   */}
+      {/* ------------------------------------------------------------- */}
       <ScrollFade delay={100}>
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="meet-founder" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-8">
           <div className="bg-white rounded-3xl shadow-xl border border-gray-200 p-8 sm:p-12 lg:p-16">
             
             <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -145,7 +237,9 @@ export default function About() {
         </section>
       </ScrollFade>
 
-      {/* Section 4: Hear from Tolu in Her Own Voice (Q&A) */}
+      {/* ------------------------------------------------------------- */}
+      {/* SECTION 4: HEAR FROM TOLU IN HER OWN VOICE (Q&A)              */}
+      {/* ------------------------------------------------------------- */}
       <ScrollFade delay={150}>
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-3 mb-12">
@@ -204,7 +298,9 @@ export default function About() {
         </section>
       </ScrollFade>
 
-      {/* Bottom Call to Action */}
+      {/* ------------------------------------------------------------- */}
+      {/* BOTTOM CALL TO ACTION                                         */}
+      {/* ------------------------------------------------------------- */}
       <section className="max-w-4xl mx-auto px-4 text-center pt-8">
         <div className="bg-[#23351a] text-white p-8 sm:p-12 rounded-3xl shadow-xl space-y-6">
           <h2 className="text-2xl sm:text-3xl font-serif font-light">Ready to Explore More?</h2>

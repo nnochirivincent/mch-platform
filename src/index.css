@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* Custom Nature Theme Styles */
+body {
+  background-color: #FDFBF7; /* Soft sand background */
+  color: #23461f;           /* Deep forest green text */
+  font-family: system-ui, -apple-system, sans-serif;
+}
+@import "tailwindcss";
+
+/* Custom Nature Theme Styles */
+body {
+  background-color: #FDFBF7;
+  color: #23461f;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Handwriting Font Class */
+.font-handwriting {
+  font-family: 'Great Vibes', cursive;
+}

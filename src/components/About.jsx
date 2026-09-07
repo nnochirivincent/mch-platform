@@ -63,70 +63,60 @@ export default function About() {
         <ScrollFade>
           <section className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 rounded-3xl overflow-hidden shadow-2xl py-16 border border-emerald-950/20">
             
-            {/* Background image container (matches your design image layout) */}
+            {/* Background Image spanning the entire section card */}
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img 
-                src="/cream.jpeg" 
-                alt="Philosophy section background" 
+                src="/nature-image.png" 
+                alt="Nature teaching background" 
                 className="w-full h-full object-cover object-center"
               />
+              {/* Left-to-right gradient overlay covering the text side and fading out on the right */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#fbfaf7] via-[#fbfaf7]/90 to-transparent sm:w-3/4 lg:w-2/3 pointer-events-none"></div>
             </div>
 
-            <div className="relative z-10 max-w-5xl mx-auto space-y-8">
+            {/* Content Layer */}
+            <div className="relative z-10 max-w-4xl mx-auto sm:mx-0 sm:max-w-2xl lg:max-w-3xl space-y-6 text-left">
               
               {/* Section Header Tag */}
-              <div className="space-y-2 text-left">
-                <span className="text-xs font-bold font-mono tracking-widest text-[#3a4d31] uppercase">
-                 — OUR PHILOSOPHY
+              <div className="space-y-1">
+                <span className="text-[10px] sm:text-xs font-bold font-mono tracking-widest text-[#3a4d31] uppercase">
+                  SECTION 2 — OUR PHILOSOPHY
                 </span>
-                <div className="h-[2px] w-28 bg-[#587a41]"></div>
+                <div className="h-[2px] w-24 bg-[#587a41]"></div>
               </div>
 
               {/* Main Section Title */}
-              <div className="text-left space-y-3">
+              <div className="space-y-2">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1e3215] font-normal tracking-wide">
                   Nature: A Living Teacher
                 </h2>
-                {/* Decorative chevron/arrows graphic matching the image */}
-                <div className="text-[#587a41] font-bold text-xl tracking-tight select-none">
+                {/* Decorative chevrons matching reference */}
+                <div className="text-[#587a41] font-bold text-lg tracking-tight select-none">
                   «««
                 </div>
               </div>
 
-              {/* Main Writeups Grid / Text Content matching the image exactly */}
-              <div className="grid lg:grid-cols-12 gap-10 items-center text-left">
-                
-                <div className="lg:col-span-8 space-y-5 text-[#23351a] text-sm sm:text-base leading-relaxed font-medium">
-                  <p>
-                    Just as children learn the language of their parents to live in harmony at home, we believe they can also learn the language of nature — observing its patterns, relationships and rhythms and discovering what these can teach them about themselves and the world around them.
-                  </p>
-                  <p className="text-[#2c4022]">
-                    Nature offers children more than knowledge about plants, animals and ecosystems. Through observation and experience, nature can help children develop positive character traits and a growing understanding of the consequences of their choices.
-                  </p>
-                  <p className="font-semibold text-[#1e3215]">
-                    We encourage children to notice, question, explore and discover for themselves.
-                  </p>
+              {/* Body Text Paragraphs */}
+              <div className="space-y-4 text-[#23351a] text-sm sm:text-base leading-relaxed font-medium">
+                <p>
+                  Just as children learn the language of their parents to live in harmony at home, we believe they can also learn the language of nature — observing its patterns, relationships and rhythms and discovering what these can teach them about themselves and the world around them.
+                </p>
+                <p className="text-[#2c4022]">
+                  Nature offers children more than knowledge about plants, animals and ecosystems. Through observation and experience, nature can help children develop positive character traits and a growing understanding of the consequences of their choices.
+                </p>
+                <p className="font-semibold text-[#1e3215]">
+                  We encourage children to notice, question, explore and discover for themselves.
+                </p>
+              </div>
 
-                  {/* Blockquote Style matching image */}
-                  <div className="pt-4">
-                    <blockquote className="inline-block bg-white/70 backdrop-blur-sm border-l-4 border-[#658a4c] px-6 py-4 rounded-r-2xl italic font-serif text-base sm:text-lg text-[#23351a] shadow-sm">
-                      “Every leaf, ripple and sunrise holds a quiet lesson.”
-                    </blockquote>
-                  </div>
+              {/* Blockquote with explicit 🍀 clover leaf emoji positioned exactly like the design */}
+              <div className="pt-3 flex items-center gap-4">
+                <div className="text-3xl sm:text-4xl select-none flex-shrink-0">
+                  🍀
                 </div>
-
-                {/* Optional placeholder column for your custom image implementation */}
-                <div className="lg:col-span-4 flex justify-center">
-                  <div className="w-full max-w-[280px] rounded-2xl overflow-hidden shadow-xl border border-emerald-950/10 bg-white/40 p-2">
-                    {/* Insert your chosen image here or keep it ready */}
-                    <img 
-                      src="/nature-image.png" 
-                      alt="Nature teaching illustration" 
-                      className="w-full h-auto object-cover rounded-xl"
-                    />
-                  </div>
-                </div>
-
+                <blockquote className="bg-white/80 backdrop-blur-md border-l-4 border-[#658a4c] px-5 py-3.5 rounded-r-2xl italic font-serif text-sm sm:text-base text-[#23351a] shadow-sm">
+                  “Every leaf, ripple and sunrise holds a quiet lesson.”
+                </blockquote>
               </div>
 
             </div>

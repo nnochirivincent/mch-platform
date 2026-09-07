@@ -8,11 +8,11 @@ export default function About() {
     <div className="bg-[#fcfbf9] min-h-screen space-y-20 pb-24 overflow-hidden">
       
       {/* ------------------------------------------------------------- */}
-      {/* SEAMLESS VIDEO HERO SECTION (CLEAR VIDEO WITH NEW CONTENT)    */}
+      {/* SEAMLESS VIDEO HERO SECTION                                  */}
       {/* ------------------------------------------------------------- */}
-      <section className="relative w-full h-screen min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         
-        {/* Clean Background Video - Occupies the entire browser viewport */}
+        {/* Background Video */}
         <video
           autoPlay
           loop
@@ -24,30 +24,33 @@ export default function About() {
           Your browser does not support the video tag.
         </video>
 
+        {/* Dark Tint Overlay to boost text legibility */}
+        <div className="absolute inset-0 bg-black/50 z-10" />
+
         {/* Hero Content Overlay */}
-        <div className="relative z-20 max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-16 text-center text-white space-y-5">
+        <div className="relative z-20 max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-12 text-center text-white space-y-6">
           
           {/* Top Tagline Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/30 backdrop-blur-md border border-white/30 text-emerald-100 text-[10px] sm:text-xs font-bold tracking-widest uppercase drop-shadow-md">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-emerald-300 text-xs sm:text-sm font-bold tracking-widest uppercase shadow-lg">
             <span>🌿</span>
             <span>About Magnifying Children's Horizons</span>
           </div>
 
-          {/* Main Headline (Scaled down) */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white font-light tracking-wide leading-snug max-w-3xl mx-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-            Expanding Children's Horizons Through <span className="font-semibold italic text-emerald-300">Nature</span>, <span className="font-semibold italic text-emerald-300">Stories</span> and <span className="font-semibold italic text-emerald-300">Discovery</span>
+          {/* Main Headline */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white font-light tracking-wide leading-tight max-w-3xl mx-auto drop-shadow-md">
+            Expanding Children's Horizons Through <span className="font-semibold italic text-emerald-300">Nature</span>, <span className="font-semibold italic text-emerald-300">Stories</span>, and <span className="font-semibold italic text-emerald-300">Discovery</span>
           </h1>
 
-          {/* New Description Paragraphs (Scaled down) */}
-          <div className="space-y-3 max-w-2xl mx-auto text-white/95 font-light text-xs sm:text-sm md:text-base leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-            <p className="text-sm sm:text-base md:text-lg font-medium text-emerald-100">
+          {/* Description Paragraphs */}
+          <div className="space-y-4 max-w-2xl mx-auto text-white/95 font-light text-sm sm:text-base md:text-lg leading-relaxed drop-shadow-sm">
+            <p className="text-base sm:text-lg md:text-xl font-medium text-emerald-200">
               At Magnifying Children’s Horizons, we believe a child’s curiosity is a living seed, ready to grow when it meets the quiet wisdom of nature.
             </p>
             <p>
-              Every leaf, ripple and sunrise holds a quiet lesson, inviting children to slow down, wonder and grow.
+              Every leaf, ripple, and sunrise holds a quiet lesson, inviting children to slow down, wonder, and grow.
             </p>
             <p>
-              Through meaningful stories, nature-based experiences and opportunities for discovery and reflection, we help children explore their connection with nature while nurturing positive character, inner awareness and spiritual growth.
+              Through meaningful stories, nature-based experiences, and opportunities for discovery and reflection, we help children explore their connection with nature while nurturing positive character, inner awareness, and spiritual growth.
             </p>
           </div>
 

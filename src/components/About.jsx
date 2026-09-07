@@ -10,7 +10,7 @@ export default function About() {
       {/* ------------------------------------------------------------- */}
       {/* SEAMLESS VIDEO HERO SECTION (100% FULL BROWSER WIDTH & HEIGHT) */}
       {/* ------------------------------------------------------------- */}
-      <section className="relative w-screen min-h-screen flex items-center justify-center overflow-hidden left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] -mt-0">
+      <section className="relative w-screen min-h-screen flex items-center justify-center overflow-hidden left-[calc(-50vw+50%)] right-[calc(-50vw+50%)] -mt-0">
         
         {/* Strictly Raw Background Video - Occupies 100% full browser screen with no gradient or color overlay */}
         <video

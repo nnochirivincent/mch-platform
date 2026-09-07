@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Compass, BookOpen, Quote, Sparkles, Heart } from 'lucide-react';
 import ScrollFade from './ScrollFade';
 
 export default function About() {
@@ -8,9 +9,7 @@ export default function About() {
       
       {/* Page Header / Hero */}
       <section className="relative pt-16 pb-12 px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto text-center space-y-4">
-        <span className="text-[#355322] font-bold text-xs tracking-widest uppercase">
-          About Us
-        </span>
+        <span className="text-[#355322] font-bold text-xs tracking-widest uppercase">About Us</span>
         <h1 className="text-4xl sm:text-6xl font-serif text-[#23351a] font-light tracking-wide">
           Magnifying Children's Horizons
         </h1>
@@ -28,10 +27,9 @@ export default function About() {
       <ScrollFade>
         <section className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 rounded-3xl overflow-hidden shadow-2xl py-16 border border-emerald-950/20">
           
-          {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img 
-              src="/about-hero-video.mp4" 
+              src="/cream.jpeg" 
               alt="Cream background" 
               className="w-full h-full object-cover object-center"
             />
@@ -119,9 +117,7 @@ export default function About() {
 
               <div className="lg:col-span-7 space-y-6 text-left">
                 <div className="space-y-1">
-                  <span className="text-emerald-700 font-bold text-xs tracking-widest uppercase">
-                    Founder & Author
-                  </span>
+                  <span className="text-emerald-700 font-bold text-xs tracking-widest uppercase">Founder & Author</span>
                   <h2 className="text-3xl sm:text-4xl font-serif font-extrabold text-[#23351a]">
                     Meet Tolulope Okudolo
                   </h2>
@@ -153,9 +149,7 @@ export default function About() {
       <ScrollFade delay={150}>
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-3 mb-12">
-            <span className="text-emerald-700 font-bold text-xs tracking-widest uppercase">
-              In Her Own Words
-            </span>
+            <span className="text-emerald-700 font-bold text-xs tracking-widest uppercase">In Her Own Words</span>
             <h2 className="text-3xl sm:text-4xl font-serif font-extrabold text-[#23351a]">
               A Conversation with Tolu
             </h2>

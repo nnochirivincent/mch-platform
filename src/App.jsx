@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import AdminDashboard from './components/AdminDashboard';
 import About from './components/About';
+import CWN from './components/CWN'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/about" element={<About  />} />
+            <Route path="/Cwn" element={<CWN />} />
           </Routes>
         </main>
 

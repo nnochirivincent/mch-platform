@@ -204,6 +204,69 @@ export default function CharacterwithNature() {
               </div>
 
             </div>
+                
+                <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-4 border-t border-[#23351a]/15">
+                            <div className="flex flex-col lg:flex-row items-center justify-between gap-5 pb-5">
+                              
+                              <div className="space-y-1 text-center lg:text-left">
+                                <Link to="/" className="inline-flex items-center space-x-3">
+                                  <img 
+                                    src="/leave.jpeg" 
+                                    alt="" 
+                                    aria-hidden="true"
+                                    className="w-7 h-7 object-contain shrink-0 mix-blend-multiply opacity-95" 
+                                  />
+                                  <div className="flex flex-col text-left">
+                                    <span className="font-serif font-bold text-base text-[#1a2b13] leading-none">Magnifying</span>
+                                    <span className="font-serif font-semibold text-base text-[#28421c] leading-none mt-1">Children's Horizons</span>
+                                  </div>
+                                </Link>
+                                <p className="text-[10px] text-[#2c3e24] font-bold uppercase tracking-widest pl-10">
+                                  NATURE • CHARACTER • A BRIGHTER TOMORROW
+                                </p>
+                              </div>
+                
+                              <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
+                                <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
+                                <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
+                                <Link to="/cwn/pathways" className="hover:text-[#1a2b13] transition">Character with Nature™</Link>
+                                <Link to="/about" className="hover:text-[#1a2b13] transition">About Us</Link>
+                                <Link to="/collaborations" className="hover:text-[#1a2b13] transition">Collaborations</Link>
+                                <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
+                              </div>
+                
+                              <div className="flex items-center space-x-2.5">
+                                <a href="#instagram" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+                                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                                  </svg>
+                                </a>
+                                <a href="#facebook" aria-label="Facebook" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+                                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                                  </svg>
+                                </a>
+                                <a href="#youtube" aria-label="YouTube" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+                                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                  </svg>
+                                </a>
+                              </div>
+                
+                            </div>
+                
+                            <div className="pt-3 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2">
+                              <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
+                              <div className="flex items-center space-x-4">
+                                <a href="#privacy" className="hover:underline">Privacy Policy</a>
+                                <a href="#terms" className="hover:underline">Terms of Use</a>
+                                <a href="#credits" className="hover:underline">Site by Pixel Designer Agency</a>
+                              </div>
+                            </div>
+                
+                          </div>
 
           </div>
 

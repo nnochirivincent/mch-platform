@@ -16,24 +16,24 @@ export default function CharacterwithNature() {
             />
           </div>
 
-          {/* Content Body */}
-          <div className="p-6 sm:p-10 space-y-10">
+          {/* Section 1 pulled completely out of body padding so its top touches the banner bottom */}
+          <div>
             
-            {/* SECTION 1: THE CWN APPROACH & IMAGE */}
-            <div className="space-y-6">
-              <div className="border-l-4 border-[#355322] pl-3">
-                <h3 className="text-[10px] uppercase tracking-widest font-extrabold text-[#355322]">
-                  THE CWN APPROACH
-                </h3>
-                <h2 className="text-2xl sm:text-3xl font-serif text-[#1e3319] font-bold tracking-tight">
-                  Learning Through Discovery
-                </h2>
-              </div>
+            {/* Top portion containing Header Title and Image side-by-side starting right below banner */}
+            <div className="grid lg:grid-cols-12 items-stretch">
+              
+              {/* Left Column: Title & Text padded normally */}
+              <div className="lg:col-span-7 p-6 sm:p-10 space-y-6 flex flex-col justify-center">
+                <div className="border-l-4 border-[#355322] pl-3">
+                  <h3 className="text-[10px] uppercase tracking-widest font-extrabold text-[#355322]">
+                    THE CWN APPROACH
+                  </h3>
+                  <h2 className="text-2xl sm:text-3xl font-serif text-[#1e3319] font-bold tracking-tight">
+                    Learning Through Discovery
+                  </h2>
+                </div>
 
-              <div className="grid lg:grid-cols-12 gap-6 items-start">
-                
-                {/* Left Text */}
-                <div className="lg:col-span-7 space-y-4 text-xs sm:text-sm text-[#2c3d26] leading-relaxed text-justify">
+                <div className="space-y-4 text-xs sm:text-sm text-[#2c3d26] leading-relaxed text-justify">
                   <p>
                     Children encounter patterns, relationships and processes in nature every day. <strong className="font-bold text-[#1e3319]">Character with Nature™ (CWN)</strong> turns these encounters into opportunities for discovery—helping children explore what the natural world can reveal about character, choices and their inner lives.
                   </p>
@@ -44,20 +44,27 @@ export default function CharacterwithNature() {
                     Nature • Character • Inner Awareness • Spiritual Growth
                   </div>
                 </div>
-
-                {/* Right Image */}
-                <div className="lg:col-span-5 flex justify-center">
-                  <div className="rounded-2xl overflow-hidden shadow-lg border border-[#23351a]/15 w-full aspect-[4/3] bg-emerald-950/5">
-                    <img 
-                      src="/cwn-image-1.png" 
-                      alt="Child looking out at nature landscape" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
               </div>
+
+              {/* Right Column: Image starting precisely at the hero banner line */}
+              <div className="lg:col-span-5 relative h-full min-h-[300smp]:h-auto lg:-mr-10">
+                <div className="relative w-full h-full overflow-hidden shadow-lg border-b lg:border-b-0 border-[#23351a]/15 bg-emerald-950/5">
+                  {/* Solid to transparent white gradient covering the left edge */}
+                  <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none z-10 hidden sm:block"></div>
+                  
+                  <img 
+                    src="/cwn-2-image.png" 
+                    alt="Child looking out at nature landscape" 
+                    className="w-full h-full object-cover rounded-none"
+                  />
+                </div>
+              </div>
+
             </div>
+          </div>
+
+          {/* Content Body for the rest of the sections */}
+          <div className="p-6 sm:p-10 space-y-10">
 
             <hr className="border-gray-200" />
 

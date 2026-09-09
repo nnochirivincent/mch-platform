@@ -6,7 +6,10 @@ import ScrollFade from './ScrollFade';
 
 
 export default function About() {
-  {/* CHARACTER WITH NATURE™ SECTION */}
+   return (
+    <div className="bg-[#fcfbf9] min-h-screen space-y-8 pb-10 overflow-hidden">
+      
+      {/* CHARACTER WITH NATURE™ SECTION */}
       <ScrollFade delay={80}>
         <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="relative overflow-hidden rounded-3xl shadow-xl border border-emerald-950/20 py-4 px-5 sm:px-8 lg:px-10 space-y-5">
@@ -237,4 +240,6 @@ export default function About() {
           </div>
         </section>
       </ScrollFade>
+    </div>
+  );
 }

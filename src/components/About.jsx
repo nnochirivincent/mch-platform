@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Image as ImageIcon } from 'lucide-react';
 import ScrollFade from './ScrollFade';
 
 export default function About() {
   return (
-    <div className="bg-[#fcfbf9] min-h-screen space-y-4 pb-6 overflow-hidden">
+    <div className="bg-[#fcfbf9] min-h-screen space-y-4 sm:space-y-6 pb-6 overflow-hidden">
       
       {/* HERO VIDEO SECTION (FULL WIDTH) */}
       <section className="w-full pt-1 pb-1">
-        <div className="relative w-full overflow-hidden shadow-xl h-[180px] sm:h-[240px] md:h-[300px]">
+        <div className="relative w-full overflow-hidden shadow-xl h-[180px] sm:h-[240px] md:h-[320px]">
           <video
             autoPlay
             loop
@@ -24,20 +23,20 @@ export default function About() {
       </section>
 
       {/* WRITE-UP PLACED INSIDE A PROFESSIONAL CREAM CONTAINER */}
-      <section className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pt-1 pb-1">
-        <div className="relative max-w-4xl mx-auto rounded-3xl bg-[#f5f2eb] border border-[#e2dcd2] shadow-md py-8 px-6 sm:px-10 text-left space-y-4">
+      <section className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 pt-1 pb-1">
+        <div className="relative max-w-4xl mx-auto rounded-3xl bg-[#f5f2eb] border border-[#e2dcd2] shadow-md py-6 sm:py-8 px-5 sm:px-10 text-left space-y-3 sm:space-y-4">
           <div className="inline-block">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#3a4d31]/10 border border-[#3a4d31]/20 text-[#3a4d31] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-2 shadow-sm">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 rounded-full bg-[#3a4d31]/10 border border-[#3a4d31]/20 text-[#3a4d31] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-2 shadow-sm">
               <span>🌿</span>
               <span>About Magnifying Children's Horizons</span>
             </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#1e3215] font-semibold tracking-wide leading-snug">
+            <h1 className="text-xl sm:text-3xl md:text-4xl font-serif text-[#1e3215] font-semibold tracking-wide leading-snug">
               Expanding Children's Horizons Through <span className="italic text-[#3a4d31]">Nature</span>, <span className="italic text-[#3a4d31]">Stories</span> and <span className="italic text-[#3a4d31]">Discovery</span>
             </h1>
           </div>
 
-          <div className="space-y-2.5 text-[#1c2c15] font-semibold text-sm sm:text-base leading-relaxed">
+          <div className="space-y-2.5 text-[#1c2c15] font-semibold text-xs sm:text-base leading-relaxed">
             <p className="font-bold text-[#2a3c21]">
               At Magnifying Children’s Horizons, we believe a child’s curiosity is a living seed, ready to grow when it meets the quiet wisdom of nature.
             </p>
@@ -52,69 +51,71 @@ export default function About() {
       </section>
 
       {/* Main Content Wrap */}
-      <div className="space-y-6">
+      <div className="space-y-6 sm:space-y-8">
 
         {/* ------------------------------------------------------------- */}
         <ScrollFade>
-          <section className="relative max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 rounded-3xl overflow-hidden shadow-xl py-6 sm:py-8 border border-emerald-950/25">
-            
-            <div className="absolute inset-0 z-0 overflow-hidden">
-              <img 
-                src="/nature-image.png" 
-                alt="Nature teaching background" 
-                className="w-full h-full object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#fbfaf7] via-[#fbfaf7]/95 sm:via-[#fbfaf7] to-[#fbfaf7]/70 sm:to-transparent w-full sm:w-11/12 lg:w-4/5 pointer-events-none"></div>
-            </div>
-
-            <div className="relative z-10 max-w-xl sm:max-w-2xl lg:max-w-3xl space-y-3 text-left">
+          <section className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
+            <div className="relative rounded-3xl overflow-hidden shadow-xl py-6 sm:py-8 px-5 sm:px-10 border border-emerald-950/25">
               
-              <div className="space-y-1">
-                <span className="text-[10px] sm:text-xs font-bold font-mono tracking-widest text-[#2c3c24] uppercase">
-                  OUR PHILOSOPHY
-                </span>
-                <div className="h-[2px] w-24 bg-[#587a41]"></div>
+              <div className="absolute inset-0 z-0 overflow-hidden">
+                <img 
+                  src="/nature-image.png" 
+                  alt="Nature teaching background" 
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#fbfaf7] via-[#fbfaf7]/95 sm:via-[#fbfaf7] to-[#fbfaf7]/70 sm:to-transparent w-full sm:w-11/12 lg:w-4/5 pointer-events-none"></div>
               </div>
 
-              <div className="space-y-1">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#162510] font-bold tracking-wide">
-                  Nature: A Living Teacher
-                </h2>
-                <div className="flex items-center gap-2 text-[#4c6a37] font-bold text-base tracking-tight select-none">
-                  <span>🌿</span>
-                  <span>«««</span>
+              <div className="relative z-10 max-w-xl sm:max-w-2xl lg:max-w-3xl space-y-3 text-left">
+                
+                <div className="space-y-1">
+                  <span className="text-[10px] sm:text-xs font-bold font-mono tracking-widest text-[#2c3c24] uppercase">
+                    OUR PHILOSOPHY
+                  </span>
+                  <div className="h-[2px] w-24 bg-[#587a41]"></div>
                 </div>
-              </div>
 
-              <div className="space-y-2.5 text-[#192813] text-sm sm:text-base leading-relaxed font-semibold">
-                <p>
-                  Just as children learn the language of their parents to live in harmony at home, we believe they can also learn the language of nature — observing its patterns, relationships and rhythms and discovering what these can teach them about themselves and the world around them.
-                </p>
-                <p className="text-[#192813]">
-                  Nature offers children more than knowledge about plants, animals and ecosystems. Through observation and experience, nature can help children develop positive character traits and a growing understanding of the consequences of their choices.
-                </p>
-                <p className="font-bold text-[#111e0c]">
-                  We encourage children to notice, question, explore and discover for themselves.
-                </p>
-              </div>
-
-              <div className="pt-1 flex items-center gap-3">
-                <div className="text-2xl sm:text-3xl select-none flex-shrink-0">
-                  🍀
+                <div className="space-y-1">
+                  <h2 className="text-xl sm:text-3xl md:text-4xl font-serif text-[#162510] font-bold tracking-wide">
+                    Nature: A Living Teacher
+                  </h2>
+                  <div className="flex items-center gap-2 text-[#4c6a37] font-bold text-sm sm:text-base tracking-tight select-none">
+                    <span>🌿</span>
+                    <span>«««</span>
+                  </div>
                 </div>
-                <blockquote className="bg-white/95 backdrop-blur-md border-l-4 border-[#52703c] px-4 py-2.5 rounded-r-xl italic font-serif text-sm sm:text-base text-[#192813] font-bold shadow-sm">
-                  “Every leaf, ripple and sunrise holds a quiet lesson.”
-                </blockquote>
-              </div>
 
+                <div className="space-y-2.5 text-[#192813] text-xs sm:text-base leading-relaxed font-semibold">
+                  <p>
+                    Just as children learn the language of their parents to live in harmony at home, we believe they can also learn the language of nature — observing its patterns, relationships and rhythms and discovering what these can teach them about themselves and the world around them.
+                  </p>
+                  <p className="text-[#192813]">
+                    Nature offers children more than knowledge about plants, animals and ecosystems. Through observation and experience, nature can help children develop positive character traits and a growing understanding of the consequences of their choices.
+                  </p>
+                  <p className="font-bold text-[#111e0c]">
+                    We encourage children to notice, question, explore and discover for themselves.
+                  </p>
+                </div>
+
+                <div className="pt-1 flex items-center gap-3">
+                  <div className="text-2xl sm:text-3xl select-none flex-shrink-0">
+                    🍀
+                  </div>
+                  <blockquote className="bg-white/95 backdrop-blur-md border-l-4 border-[#52703c] px-3 sm:px-4 py-2.5 rounded-r-xl italic font-serif text-xs sm:text-base text-[#192813] font-bold shadow-sm">
+                    “Every leaf, ripple and sunrise holds a quiet lesson.”
+                  </blockquote>
+                </div>
+
+              </div>
             </div>
           </section>
         </ScrollFade>
 
         {/* ------------------------------------------------------------- */}
         <ScrollFade delay={100}>
-          <section id="meet-founder" className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 scroll-mt-6">
-            <div className="relative rounded-3xl overflow-hidden shadow-xl py-6 sm:py-8 px-6 sm:px-10 border border-emerald-950/25 bg-[#fbfaf7]">
+          <section id="meet-founder" className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 scroll-mt-6">
+            <div className="relative rounded-3xl overflow-hidden shadow-xl py-6 sm:py-8 px-5 sm:px-10 border border-emerald-950/25 bg-[#fbfaf7]">
               
               <div className="relative z-10 space-y-4 text-left">
                 
@@ -125,7 +126,7 @@ export default function About() {
                   <div className="h-[2px] w-32 bg-[#587a41]"></div>
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#162510] font-bold tracking-wide">
+                <h2 className="text-xl sm:text-3xl md:text-4xl font-serif text-[#162510] font-bold tracking-wide">
                   Meet Tolulope Okudolo
                 </h2>
 
@@ -143,7 +144,7 @@ export default function About() {
                     </p>
                   </div>
 
-                  <div className="lg:col-span-8 space-y-2.5 text-[#192813] text-sm sm:text-base leading-relaxed font-semibold">
+                  <div className="lg:col-span-8 space-y-2.5 text-[#192813] text-xs sm:text-base leading-relaxed font-semibold">
                     <p>
                       A child at heart with a deep, abiding love for her Creator, <strong className="font-bold text-[#111e0c]">Tolulope (Tolu) Okudolo</strong> is an author and educator with a Bachelor of Education and an MBA. Her experiences living in Africa, Europe and North America have given her a rich multicultural perspective.
                     </p>
@@ -166,18 +167,18 @@ export default function About() {
 
         {/* ------------------------------------------------------------- */}
         <ScrollFade delay={150}>
-          <section className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="bg-[#dce2dd] rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#c8d1c9] shadow-sm space-y-6">
+          <section className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
+            <div className="bg-[#dce2dd] rounded-3xl p-5 sm:p-8 lg:p-10 border border-[#c8d1c9] shadow-sm space-y-6">
               
               <div className="text-center">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#293822] font-bold tracking-tight">
+                <h2 className="text-xl sm:text-3xl md:text-4xl font-serif text-[#293822] font-bold tracking-tight">
                   In Tolu's Own Voice
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-5 lg:gap-6 pt-1">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 pt-1">
                 <div className="border-l-2 border-[#6f8564] pl-4 space-y-1.5">
-                  <h3 className="font-serif text-base sm:text-lg text-[#753c2f] font-bold leading-snug">
+                  <h3 className="font-serif text-sm sm:text-lg text-[#753c2f] font-bold leading-snug">
                     What inspired you to begin writing your books?
                   </h3>
                   <p className="text-[#192813] text-xs sm:text-sm leading-relaxed font-semibold">
@@ -186,7 +187,7 @@ export default function About() {
                 </div>
 
                 <div className="border-l-2 border-[#6f8564] pl-4 space-y-1.5">
-                  <h3 className="font-serif text-base sm:text-lg text-[#753c2f] font-bold leading-snug">
+                  <h3 className="font-serif text-sm sm:text-lg text-[#753c2f] font-bold leading-snug">
                     How do your stories begin?
                   </h3>
                   <p className="text-[#192813] text-xs sm:text-sm leading-relaxed font-semibold">
@@ -194,12 +195,12 @@ export default function About() {
                   </p>
                 </div>
 
-                <div className="border-l-2 border-[#6f8564] pl-4 space-y-1.5">
-                  <h3 className="font-serif text-base sm:text-lg text-[#753c2f] font-bold leading-snug">
+                <div className="border-l-2 border-[#6f8564] pl-4 space-y-1.5 md:col-span-2 lg:col-span-1">
+                  <h3 className="font-serif text-sm sm:text-lg text-[#753c2f] font-bold leading-snug">
                     What do you hope a child carries away from your stories?
                   </h3>
                   <p className="text-[#192813] text-xs sm:text-sm leading-relaxed font-semibold">
-                    <strong className="font-bold text-[#111e0c]">Curiosity — .</strong> and a sense that there is more to discover. I hope children leave wanting to explore, ask questions and find their own connection with the natural world.
+                    <strong className="font-bold text-[#111e0c]">Curiosity</strong> — and a sense that there is more to discover. I hope children leave wanting to explore, ask questions and find their own connection with the natural world.
                   </p>
                 </div>
 
@@ -210,8 +211,8 @@ export default function About() {
         </ScrollFade>
 
         {/* ------------------------------------------------------------- */}
-        <section className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pt-1">
-          <div className="max-w-4xl mx-auto px-4 text-center">
+        <section className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 pt-1">
+          <div className="max-w-4xl mx-auto text-center">
             <div className="bg-[#23351a] text-white p-6 sm:p-8 rounded-3xl shadow-xl space-y-4">
               <h2 className="text-xl sm:text-2xl font-serif font-bold">Ready to Explore More?</h2>
               <p className="text-emerald-100 text-xs sm:text-sm max-w-lg mx-auto font-semibold">
@@ -236,11 +237,11 @@ export default function About() {
         </section>
 
         {/* FOOTER */}
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pt-4 border-t border-[#23351a]/15">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 pt-4 border-t border-[#23351a]/15">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-5 pb-5">
             
             <div className="space-y-1.5 text-center lg:text-left">
-              <Link to="/" className="inline-flex items-center space-x-3">
+              <Link to="/" className="inline-flex items-center space-x-3 justify-center lg:justify-start">
                 <img 
                   src="/leave.jpeg" 
                   alt="" 
@@ -252,12 +253,12 @@ export default function About() {
                   <span className="font-serif font-bold text-base text-[#355322] leading-none mt-1">Children's Horizons</span>
                 </div>
               </Link>
-              <p className="text-[10px] text-[#3c4a36] uppercase tracking-widest font-bold pl-10">
+              <p className="text-[10px] text-[#3c4a36] uppercase tracking-widest font-bold lg:pl-10 text-center lg:text-left">
                 NATURE • CHARACTER • A BRIGHTER TOMORROW
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-5 text-xs uppercase tracking-wider font-bold text-[#355322]">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-5 text-xs uppercase tracking-wider font-bold text-[#355322] text-center">
               <Link to="/" className="hover:text-[#23351a] transition">Home</Link>
               <Link to="/books" className="hover:text-[#23351a] transition">Books</Link>
               <Link to="/cwn/pathways" className="hover:text-[#23351a] transition">Character with Nature™</Link>
@@ -288,9 +289,9 @@ export default function About() {
 
           </div>
 
-          <div className="pt-3 border-t border-[#23351a]/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#42503b] font-semibold gap-3 pb-6">
+          <div className="pt-3 border-t border-[#23351a]/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#42503b] font-semibold gap-3 pb-6 text-center sm:text-left">
             <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
-            <div className="flex items-center space-x-6">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:space-x-6">
               <a href="#privacy" className="hover:underline">Privacy Policy</a>
               <a href="#terms" className="hover:underline">Terms of Use</a>
               <a href="#credits" className="hover:underline">Site by Pixel Designer Agency</a>

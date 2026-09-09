@@ -177,12 +177,12 @@ export default function CharacterwithNature() {
 
             <div className="grid lg:grid-cols-12 gap-6 items-center">
               
-              {/* Image Container with rounded edges and object-cover to fill the container completely */}
-              <div className="lg:col-span-8 w-full h-44 sm:h-56 bg-emerald-950/5 rounded-2xl overflow-hidden border border-emerald-950/10 shadow-sm">
+              {/* Image Container with background matching the section background (#f0ece1) */}
+              <div className="lg:col-span-8 w-full h-44 sm:h-56 bg-[#f0ece1] rounded-2xl overflow-hidden border border-emerald-950/10 shadow-sm flex items-center justify-center">
                 <img 
-                  src="/2-cwn-image.jpeg" 
+                  src="/final-cwn-image.jpeg" 
                   alt="CWN Grows With Children" 
-                  className="w-full h-full object-cover object-center rounded-2xl"
+                  className="w-full h-full object-cover object-center rounded-2xl mix-blend-multiply opacity-95"
                 />
               </div>
 

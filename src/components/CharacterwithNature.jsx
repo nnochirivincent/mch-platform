@@ -177,12 +177,12 @@ export default function CharacterwithNature() {
 
             <div className="grid lg:grid-cols-12 gap-6 items-center">
               
-              {/* Single Full Image Container replacing the 4 age milestones */}
-              <div className="lg:col-span-8 w-full h-64 sm:h-80 bg-emerald-950/5 rounded-none overflow-hidden border border-emerald-950/10 shadow-sm">
+              {/* Image Container with rounded edges and object-cover to fill the container completely */}
+              <div className="lg:col-span-8 w-full h-44 sm:h-56 bg-emerald-950/5 rounded-2xl overflow-hidden border border-emerald-950/10 shadow-sm">
                 <img 
-                  src="/cwn-children-image.png" 
+                  src="/2-cwn-image.jpeg" 
                   alt="CWN Grows With Children" 
-                  className="w-full h-full object-cover object-center rounded-none"
+                  className="w-full h-full object-cover object-center rounded-2xl"
                 />
               </div>
 
@@ -197,7 +197,7 @@ export default function CharacterwithNature() {
                 <div>
                   <button 
                     type="button"
-                    className="w-full bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest py-3 px-4 rounded-none shadow transition text-center"
+                    className="w-full bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest py-3 px-4 rounded-xl shadow transition text-center"
                   >
                     EXPLORE CWN PROGRAMMES →
                   </button>

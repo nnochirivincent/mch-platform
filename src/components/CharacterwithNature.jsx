@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Image as ImageIcon } from 'lucide-react';
 import ScrollFade from './ScrollFade';
 
-{/* CHARACTER WITH NATURE™ SECTION */}
+
+
+export default function About() {
+  {/* CHARACTER WITH NATURE™ SECTION */}
       <ScrollFade delay={80}>
         <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="relative overflow-hidden rounded-3xl shadow-xl border border-emerald-950/20 py-4 px-5 sm:px-8 lg:px-10 space-y-5">
@@ -234,3 +237,4 @@ import ScrollFade from './ScrollFade';
           </div>
         </section>
       </ScrollFade>
+}

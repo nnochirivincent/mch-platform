@@ -37,16 +37,20 @@ export default function Navbar() {
               <BookOpen size={15} className="text-emerald-700" /> Our Books
             </Link>
 
+             <Link to="/Character with Nature" className="hover:text-emerald-700 transition flex items-center gap-1.5 py-2">
+              <Leaf size={15} className="text-emerald-700" />  Character with Nature®
+            </Link>
+
             {/* Character With Nature Dropdown */}
-            <div className="relative">
+            {/* <div className="relative">
               <button 
                 onClick={() => setDropdownOpen(!dropdownOpen)}
                 className="hover:text-emerald-700 transition flex items-center gap-1.5 focus:outline-none py-2"
               >
                 <Leaf size={15} className="text-emerald-700" /> Character with Nature® <ChevronDown size={13} />
-              </button>
+              </button> */}
 
-              {dropdownOpen && (
+              {/* {dropdownOpen && (
                 <div className="absolute left-0 mt-2 w-56 bg-white text-gray-800 rounded-2xl shadow-2xl py-3 border border-emerald-900/10">
                   <Link 
                     to="/cwn/about" 
@@ -62,9 +66,9 @@ export default function Navbar() {
                   >
                     Programme Pathways (3–15 yrs)
                   </Link>
-                </div>
-              )}
-            </div>
+                </div> */}
+              {/* )} */}
+            {/* </div> */}
 
             <Link to="/resources" className="hover:text-emerald-700 transition flex items-center gap-1.5 py-2">
               <FolderDown size={15} className="text-emerald-700" /> Resources

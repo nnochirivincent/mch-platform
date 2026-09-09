@@ -5,8 +5,8 @@ import ScrollFade from './ScrollFade';
 
 
 
-export default function About() {
-   return (
+export default function CharacterwithNature() {
+  return (
     <div className="bg-[#fcfbf9] min-h-screen space-y-8 pb-10 overflow-hidden">
       
       {/* CHARACTER WITH NATURE™ SECTION */}

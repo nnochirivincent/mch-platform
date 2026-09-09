@@ -426,7 +426,7 @@ export default function Home() {
         </div>
       </ScrollFade>
 
-      {/* CHARACTER WITH NATURE™ SECTION (Made more compact vertically) */}
+      {/* CHARACTER WITH NATURE™ SECTION (Made compact vertically, width matched precisely to image column) */}
       <ScrollFade delay={80}>
         <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="relative overflow-hidden rounded-3xl shadow-xl border border-emerald-950/20 p-5 sm:p-8 lg:p-10 space-y-6">
@@ -445,9 +445,9 @@ export default function Home() {
               {/* Top Grid: Child Image & Intro Content */}
               <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
                 
-                {/* Left Image: Child exploring stream / leaf (Reduced box height) */}
-                <div className="lg:col-span-4">
-                  <div className="rounded-2xl overflow-hidden shadow-xl border border-[#23351a]/10 max-w-[280px] lg:max-w-none mx-auto aspect-[4/3] lg:aspect-[3/4]">
+                {/* Left Image Column: Restricts width tightly to the image frame */}
+                <div className="lg:col-span-5 flex justify-center">
+                  <div className="rounded-2xl overflow-hidden shadow-xl border border-[#23351a]/10 w-[240px] sm:w-[280px] lg:w-full aspect-[4/3] lg:aspect-[3/4]">
                     <img 
                       src="/cwn-image-1.png" 
                       alt="Child exploring stream and leaves" 
@@ -457,7 +457,7 @@ export default function Home() {
                 </div>
 
                 {/* Right Content */}
-                <div className="lg:col-span-8 space-y-3.5 text-left">
+                <div className="lg:col-span-7 space-y-3.5 text-left">
                   <div className="space-y-1">
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#23351a] font-bold tracking-tight">
                       Character with Nature™
@@ -896,7 +896,7 @@ export default function Home() {
                 </a>
                 <a href="#youtube" aria-label="YouTube" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
                   <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                   </svg>
                 </a>
               </div>

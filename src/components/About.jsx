@@ -17,7 +17,7 @@ export default function About() {
             playsInline
             className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
           >
-            <source src="/about-hero-video.mp4" type="video/mp4" />
+            <source src="/about-hero-n0-barsvideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

@@ -190,9 +190,9 @@ export default function Home() {
                   <div className="sm:col-span-5">
                     <Link to="/books" className="block group">
                       <img 
-                        src="/2-book -image.jpeg" 
+                        src="/TFITM.jpeg" 
                         alt="The Face in the Mountain Book Cover" 
-                        className="w-full h-auto object-cover rounded-2xl shadow-2xl transition duration-300 group-hover:scale-[1.02] border border-[#23351a]/10"
+                        className="w-full h-auto object-cover rounded-2xl shadow-2xl transition duration-300 group-hover:scale-[1.02] border-0 mix-blend-multiply"
                       />
                     </Link>
                   </div>
@@ -236,9 +236,9 @@ export default function Home() {
                   <div className="sm:col-span-5">
                     <Link to="/books" className="block group">
                       <img 
-                        src="/book-section.png" 
-                        alt="The Festival Shoes Book Cover" 
-                        className="w-full h-auto object-cover rounded-2xl shadow-2xl transition duration-300 group-hover:scale-[1.02] border border-[#23351a]/10"
+                       src="/TFS.jpeg" 
+                       alt="The Festival Shoes Book Cover" 
+                        className="w-full h-auto object-cover rounded-2xl shadow-2xl transition duration-300 group-hover:scale-[1.02] border-0 mix-blend-multiply"
                       />
                     </Link>
                   </div>

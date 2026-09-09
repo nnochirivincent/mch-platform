@@ -18,7 +18,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/about" element={<About  />} />
-            <Route path="/Cwn" element={<CWN />} />
+            <Route path="/CharacterwithNature" element={<CharacterwithNature />} />
           </Routes>
         </main>
 

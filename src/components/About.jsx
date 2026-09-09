@@ -5,42 +5,40 @@ import ScrollFade from './ScrollFade';
 
 export default function About() {
   return (
-    <div className="bg-[#fcfbf9] min-h-screen pb-24 overflow-x-hidden">
+    <div className="bg-[#fcfbf9] min-h-screen space-y-8 pb-10 overflow-hidden">
       
-      {/* ------------------------------------------------------------- */}
-      {/* SEAMLESS VIDEO HERO SECTION (100% FULL BROWSER WIDTH & HEIGHT) */}
-      {/* ------------------------------------------------------------- */}
-      <section className="relative w-screen min-h-screen flex items-center justify-center overflow-hidden left-[calc(-50vw+50%)] right-[calc(-50vw+50%)] -mt-0">
-        
-        {/* Strictly Raw Background Video - Occupies 100% full browser screen with no gradient or color overlay */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        >
-          <source src="/about-hero-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      {/* HERO VIDEO SECTION (FULL WIDTH CONTAINER & CLEAN WIDESCREEN RECTANGLE) */}
+      <section className="w-full px-2 sm:px-4 pt-1 pb-4">
+        <div className="relative w-full max-w-[1440px] mx-auto rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl h-[280px] sm:h-[380px] md:h-[440px]">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+          >
+            <source src="/about-hero-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
 
-        {/* Hero Content Overlay */}
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-12 text-center space-y-5">
-          
-          {/* Top Tagline Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/40 text-emerald-300 text-[10px] sm:text-xs font-bold tracking-widest uppercase shadow-2xl">
-            <span>🌿</span>
-            <span>About Magnifying Children's Horizons</span>
+      {/* WRITE-UP PLACED UNDERNEATH THE HERO VIDEO */}
+      <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-2 pb-4">
+        <div className="max-w-4xl mx-auto text-left space-y-6">
+          <div className="inline-block">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#3a4d31]/10 border border-[#3a4d31]/20 text-[#3a4d31] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-3 shadow-sm">
+              <span>🌿</span>
+              <span>About Magnifying Children's Horizons</span>
+            </div>
+
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1e3215] font-semibold tracking-wide leading-snug">
+              Expanding Children's Horizons Through <span className="italic text-[#3a4d31]">Nature</span>, <span className="italic text-[#3a4d31]">Stories</span> and <span className="italic text-[#3a4d31]">Discovery</span>
+            </h1>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white font-semibold tracking-wide leading-snug max-w-3xl mx-auto drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
-            Expanding Children's Horizons Through <span className="italic text-emerald-300">Nature</span>, <span className="italic text-emerald-300">Stories</span> and <span className="italic text-emerald-300">Discovery</span>
-          </h1>
-
-          {/* Description Paragraphs */}
-          <div className="space-y-3 max-w-2xl mx-auto text-white font-medium text-xs sm:text-sm md:text-base leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
-            <p className="text-sm sm:text-base md:text-lg font-bold text-emerald-200">
+          <div className="space-y-4 text-[#23351a] font-medium text-sm sm:text-base md:text-lg leading-relaxed">
+            <p className="font-bold text-[#3a4d31]">
               At Magnifying Children’s Horizons, we believe a child’s curiosity is a living seed, ready to grow when it meets the quiet wisdom of nature.
             </p>
             <p>
@@ -50,34 +48,27 @@ export default function About() {
               Through meaningful stories, nature-based experiences and opportunities for discovery and reflection, we help children explore their connection with nature while nurturing positive character, inner awareness and spiritual growth.
             </p>
           </div>
-
         </div>
       </section>
 
-      {/* Main Content Wrap with top spacing separated from Hero */}
-      <div className="mt-20 space-y-20">
+      {/* Main Content Wrap */}
+      <div className="space-y-12">
 
         {/* ------------------------------------------------------------- */}
-        {/* SECTION 2 — OUR PHILOSOPHY (NATURE: A LIVING TEACHER)           */}
-        {/* ------------------------------------------------------------- */}
         <ScrollFade>
-          <section className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 rounded-3xl overflow-hidden shadow-2xl py-16 border border-emerald-950/20">
+          <section className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 rounded-3xl overflow-hidden shadow-2xl py-12 border border-emerald-950/20">
             
-            {/* Background Image spanning the entire section card */}
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img 
                 src="/nature-image.png" 
                 alt="Nature teaching background" 
                 className="w-full h-full object-cover object-center"
               />
-              {/* Left-to-right gradient overlay covering the text side and fading out on the right */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#fbfaf7] via-[#fbfaf7]/90 to-transparent sm:w-3/4 lg:w-2/3 pointer-events-none"></div>
             </div>
 
-            {/* Content Layer */}
             <div className="relative z-10 max-w-4xl mx-auto sm:mx-0 sm:max-w-2xl lg:max-w-3xl space-y-6 text-left">
               
-              {/* Section Header Tag */}
               <div className="space-y-1">
                 <span className="text-[10px] sm:text-xs font-bold font-mono tracking-widest text-[#3a4d31] uppercase">
                   OUR PHILOSOPHY
@@ -85,19 +76,16 @@ export default function About() {
                 <div className="h-[2px] w-24 bg-[#587a41]"></div>
               </div>
 
-              {/* Main Section Title */}
               <div className="space-y-2">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1e3215] font-normal tracking-wide">
                   Nature: A Living Teacher
                 </h2>
-                {/* Decorative chevrons with 🌿 leaf emoji */}
                 <div className="flex items-center gap-2 text-[#587a41] font-bold text-lg tracking-tight select-none">
                   <span>🌿</span>
                   <span>«««</span>
                 </div>
               </div>
 
-              {/* Body Text Paragraphs */}
               <div className="space-y-4 text-[#23351a] text-sm sm:text-base leading-relaxed font-medium">
                 <p>
                   Just as children learn the language of their parents to live in harmony at home, we believe they can also learn the language of nature — observing its patterns, relationships and rhythms and discovering what these can teach them about themselves and the world around them.
@@ -110,7 +98,6 @@ export default function About() {
                 </p>
               </div>
 
-              {/* Blockquote with explicit 🍀 clover leaf emoji positioned exactly like the design */}
               <div className="pt-3 flex items-center gap-4">
                 <div className="text-3xl sm:text-4xl select-none flex-shrink-0">
                   🍀
@@ -125,224 +112,202 @@ export default function About() {
         </ScrollFade>
 
         {/* ------------------------------------------------------------- */}
-        {/* SECTION 3: MEET THE FOUNDER (EXACTLY MATCHING DESIGN IMAGE)     */}
-        {/* ------------------------------------------------------------- */}
         <ScrollFade delay={100}>
-          <section id="meet-founder" className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 scroll-mt-8">
-            <div className="space-y-8 text-left">
+          <section id="meet-founder" className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 scroll-mt-8">
+            <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 rounded-3xl overflow-hidden shadow-2xl py-12 border border-emerald-950/20 bg-[#fbfaf7]">
               
-              {/* Section Header Tag */}
-              <div className="space-y-1">
-                <span className="text-[10px] sm:text-xs font-bold font-mono tracking-widest text-[#3a4d31] uppercase">
-                   MEET THE FOUNDER
-                </span>
-                <div className="h-[2px] w-32 bg-[#587a41]"></div>
+              <div className="relative z-10 space-y-8 text-left">
+                
+                <div className="space-y-1">
+                  <span className="text-[10px] sm:text-xs font-bold font-mono tracking-widest text-[#3a4d31] uppercase">
+                    MEET THE FOUNDER
+                  </span>
+                  <div className="h-[2px] w-32 bg-[#587a41]"></div>
+                </div>
+
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1e3215] font-normal tracking-wide">
+                  Meet Tolulope Okudolo
+                </h2>
+
+                <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start pt-2">
+                  <div className="lg:col-span-5 space-y-3">
+                    <div className="w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-md">
+                      <img 
+                        src="/about-tolu.png" 
+                        alt="Tolulope Okudolo" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-xs sm:text-sm text-[#595247] italic text-center leading-relaxed px-2 font-serif">
+                      Tolulope sharing a story with children at the Niagara Nature Centre
+                    </p>
+                  </div>
+
+                  <div className="lg:col-span-7 space-y-4 text-[#23351a] text-sm sm:text-base leading-relaxed">
+                    <p className="font-light">
+                      A child at heart with a deep, abiding love for her Creator, <strong className="font-semibold text-[#1e3215]">Tolulope (Tolu) Okudolo</strong> is an author and educator with a Bachelor of Education and an MBA. Her experiences living in Africa, Europe and North America have given her a rich multicultural perspective.
+                    </p>
+                    <p className="font-light">
+                      Her passion lies in helping children discover the connections, wisdom and laws within nature and explore how these can guide everyday choices, nurture positive character and deepen their connection with the world around them.
+                    </p>
+                    <p className="font-light">
+                      Tolu is the founder of Magnifying Children’s Horizons and creator of <strong className="font-semibold text-[#1e3215]">Character with Nature™</strong>, a nature-inspired framework that helps children discover life’s timeless principles through the natural world.
+                    </p>
+                    <p className="font-light">
+                      She is the author of <em className="italic">The Face in the Mountain</em> and <em className="italic">The Festival Shoes</em> from The Weaverton Series, and co-creator of <em className="italic">Blossom in Nature</em>, a paired-perspective children's book initiative.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </ScrollFade>
+
+        {/* ------------------------------------------------------------- */}
+        <ScrollFade delay={150}>
+          <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div className="bg-[#dce2dd] rounded-3xl p-8 sm:p-12 lg:p-16 border border-[#c8d1c9] shadow-sm space-y-10">
+              
+              <div className="text-center">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#3a4d31] font-normal tracking-tight">
+                  Hear From Tolu in Her Own Voice
+                </h2>
               </div>
 
-              {/* Main Headline */}
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1e3215] font-normal tracking-wide">
-                Meet Tolulope Okudolo
-              </h2>
-
-              {/* Grid matching the layout in your reference image */}
-              <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start pt-2">
-                
-                {/* Left Column: Direct Image */}
-<div className="lg:col-span-5 space-y-3">
-  <div className="w-full aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-md">
-    <img 
-      src="/about-tolu.png" 
-      alt="Tolulope Okudolo" 
-      className="w-full h-full object-cover"
-    />
-  </div>
-  <p className="text-xs sm:text-sm text-[#595247] italic text-center leading-relaxed px-2 font-serif">
-    Tolulope sharing a story with children at the Niagara Nature Centre
-  </p>
-</div>
-                {/* Right Column: Exact Copy from Design Reference */}
-                <div className="lg:col-span-7 space-y-4 text-[#23351a] text-sm sm:text-base leading-relaxed">
-                  <p className="font-light">
-                    A child at heart with a deep, abiding love for her Creator, <strong className="font-semibold text-[#1e3215]">Tolulope (Tolu) Okudolo</strong> is an author and educator with a Bachelor of Education and an MBA. Her experiences living in Africa, Europe and North America have given her a rich multicultural perspective.
-                  </p>
-                  <p className="font-light">
-                    Her passion lies in helping children discover the connections, wisdom and laws within nature and explore how these can guide everyday choices, nurture positive character and deepen their connection with the world around them.
-                  </p>
-                  <p className="font-light">
-                    Tolu is the founder of Magnifying Children’s Horizons and creator of <strong className="font-semibold text-[#1e3215]">Character with Nature™</strong>, a nature-inspired framework that helps children discover life’s timeless principles through the natural world.
-                  </p>
-                  <p className="font-light">
-                    She is the author of <em className="italic">The Face in the Mountain</em> and <em className="italic">The Festival Shoes</em> from The Weaverton Series, and co-creator of <em className="italic">Blossom in Nature</em>, a paired-perspective children's book initiative.
+              <div className="grid md:grid-cols-2 gap-8 lg:gap-12 pt-4">
+                <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] leading-snug">
+                    What inspired you to begin writing your books?
+                  </h3>
+                  <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
+                    <strong className="font-semibold text-[#1e2e18]">My love for nature and children inspired me to begin writing.</strong> I believe that an important part of helping children develop character and spirituality lies in helping them connect with nature and discover its laws for themselves. My own experiences have also shaped the stories I tell.
                   </p>
                 </div>
 
+                <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] leading-snug">
+                    How do your stories begin?
+                  </h3>
+                  <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
+                    <strong className="font-semibold text-[#1e2e18]">Often with pictures.</strong> I see scenes in my mind's eye and begin putting the dialogue around them. It's also quite fun!
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] leading-snug">
+                    When a parent reads your books to their child, how do you want the child to feel?
+                  </h3>
+                  <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
+                    <strong className="font-semibold text-[#1e2e18]">Secure — and curious.</strong> I want children to feel that there is more to nature than what they first see, and to leave the story wanting to explore, discover and find their own connection with the natural world.
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] leading-snug">
+                    Why do you believe nature is such an important teacher for children?
+                  </h3>
+                  <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
+                    <strong className="font-semibold text-[#1e2e18]">I believe nature can be a child's first classroom.</strong> Just as children learn the language of those around them, they can learn to observe and understand the language of nature. Through that relationship, they can discover principles that help them develop character, inner awareness and a deeper connection with the world around them.
+                  </p>
+                </div>
               </div>
 
             </div>
           </section>
         </ScrollFade>
 
-                   {/* ------------------------------------------------------------- */}
-{/* SECTION 4: HEAR FROM TOLU IN HER OWN VOICE                    */}
-{/* ------------------------------------------------------------- */}
-<ScrollFade delay={150}>
-  <section className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-    <div className="bg-[#dce2dd] rounded-3xl p-8 sm:p-12 lg:p-16 border border-[#c8d1c9] shadow-sm space-y-10">
-      
-      {/* Title */}
-      <div className="text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#3a4d31] font-normal tracking-tight">
-          Hear From Tolu in Her Own Voice
-        </h2>
-      </div>
-
-      {/* 2x2 Grid Layout matching the reference design */}
-      <div className="grid md:grid-cols-2 gap-8 lg:gap-12 pt-4">
-        
-        {/* Q1 */}
-        <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
-          <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] font-serif leading-snug">
-            What inspired you to begin writing your books?
-          </h3>
-          <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
-            <strong className="font-semibold text-[#1e2e18]">My love for nature and children inspired me to begin writing.</strong> I believe that an important part of helping children develop character and spirituality lies in helping them connect with nature and discover its laws for themselves. My own experiences have also shaped the stories I tell.
-          </p>
-        </div>
-
-        {/* Q2 */}
-        <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
-          <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] font-serif leading-snug">
-            How do your stories begin?
-          </h3>
-          <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
-            <strong className="font-semibold text-[#1e2e18]">Often with pictures.</strong> I see scenes in my mind's eye and begin putting the dialogue around them. It's also quite fun!
-          </p>
-        </div>
-
-        {/* Q3 */}
-        <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
-          <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] font-serif leading-snug">
-            When a parent reads your books to their child, how do you want the child to feel?
-          </h3>
-          <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
-            <strong className="font-semibold text-[#1e2e18]">Secure — and curious.</strong> I want children to feel that there is more to nature than what they first see, and to leave the story wanting to explore, discover and find their own connection with the natural world.
-          </p>
-        </div>
-
-        {/* Q4 */}
-        <div className="border-l-2 border-[#8ba180] pl-5 space-y-3">
-          <h3 className="font-serif text-xl sm:text-2xl text-[#834d3d] font-serif leading-snug">
-            Why do you believe nature is such an important teacher for children?
-          </h3>
-          <p className="text-[#2b3a24] text-sm sm:text-base leading-relaxed font-normal">
-            <strong className="font-semibold text-[#1e2e18]">I believe nature can be a child's first classroom.</strong> Just as children learn the language of those around them, they can learn to observe and understand the language of nature. Through that relationship, they can discover principles that help them develop character, inner awareness and a deeper connection with the world around them.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-</ScrollFade>
         {/* ------------------------------------------------------------- */}
-        {/* BOTTOM CALL TO ACTION                                         */}
-        {/* ------------------------------------------------------------- */}
-        <section className="max-w-4xl mx-auto px-4 text-center pt-8">
-          <div className="bg-[#23351a] text-white p-8 sm:p-12 rounded-3xl shadow-xl space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-serif font-light">Ready to Explore More?</h2>
-            <p className="text-emerald-100 text-sm sm:text-base max-w-xl mx-auto font-light">
-              Discover our collection of books and nature-based learning pathways designed to inspire your child's journey.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 pt-2">
-              <Link 
-                to="/books" 
-                className="bg-white text-[#23351a] hover:bg-emerald-50 font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg transition"
-              >
-                Explore Our Books
-              </Link>
-              <Link 
-                to="/cwn/pathways" 
-                className="bg-[#355322] hover:bg-[#2c441b] text-white border border-emerald-700 font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg transition"
-              >
-                Character With Nature™
-              </Link>
+        <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-4">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <div className="bg-[#23351a] text-white p-8 sm:p-12 rounded-3xl shadow-xl space-y-6">
+              <h2 className="text-2xl sm:text-3xl font-serif font-light">Ready to Explore More?</h2>
+              <p className="text-emerald-100 text-sm sm:text-base max-w-xl mx-auto font-light">
+                Discover our collection of books and nature-based learning pathways designed to inspire your child's journey.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 pt-2">
+                <Link 
+                  to="/books" 
+                  className="bg-white text-[#23351a] hover:bg-emerald-50 font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg transition"
+                >
+                  Explore Our Books
+                </Link>
+                <Link 
+                  to="/cwn/pathways" 
+                  className="bg-[#355322] hover:bg-[#2c441b] text-white border border-emerald-700 font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg transition"
+                >
+                  Character With Nature™
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
-
+        {/* FOOTER */}
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-8 border-t border-[#23351a]/15">
-                    <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pb-8">
-                      
-                      {/* Brand & Tagline with seamless leaf image icon */}
-                      <div className="space-y-2 text-center lg:text-left">
-                        <Link to="/" className="inline-flex items-center space-x-3">
-                          <img 
-                            src="/leave.jpeg" 
-                            alt="" 
-                            aria-hidden="true"
-                            className="w-8 h-8 object-contain shrink-0 mix-blend-multiply opacity-95" 
-                          />
-                          <div className="flex flex-col text-left">
-                            <span className="font-serif font-bold text-lg text-[#23351a] leading-none">Magnifying</span>
-                            <span className="font-serif font-light text-lg text-[#355322] leading-none mt-1">Children's Horizons</span>
-                          </div>
-                        </Link>
-                        <p className="text-[11px] text-[#4a5944] uppercase tracking-widest font-semibold pl-11">
-                          NATURE • CHARACTER • A BRIGHTER TOMORROW
-                        </p>
-                      </div>
-        
-                      {/* Navigation Links */}
-                      <div className="flex flex-wrap justify-center gap-6 text-xs uppercase tracking-wider font-bold text-[#355322]">
-                        <Link to="/" className="hover:text-[#23351a] transition">Home</Link>
-                        <Link to="/books" className="hover:text-[#23351a] transition">Books</Link>
-                        <Link to="/cwn/pathways" className="hover:text-[#23351a] transition">Character with Nature™</Link>
-                        <Link to="/about" className="hover:text-[#23351a] transition">About Us</Link>
-                        <Link to="/collaborations" className="hover:text-[#23351a] transition">Collaborations</Link>
-                        <Link to="/contact" className="hover:text-[#23351a] transition">Contact</Link>
-                      </div>
-        
-                      {/* Social / Connect Icons (Instagram -> Facebook -> YouTube) */}
-                      <div className="flex items-center space-x-3">
-                        {/* Instagram Icon */}
-                        <a href="#instagram" aria-label="Instagram" className="w-9 h-9 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
-                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-                          </svg>
-                        </a>
-                        {/* Facebook Icon */}
-                        <a href="#facebook" aria-label="Facebook" className="w-9 h-9 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
-                          </svg>
-                        </a>
-                        {/* YouTube Icon */}
-                        <a href="#youtube" aria-label="YouTube" className="w-9 h-9 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                          </svg>
-                        </a>
-                      </div>
-        
-                    </div>
-        
-                    {/* Bottom Copyright & Legal row */}
-                    <div className="pt-6 border-t border-[#23351a]/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#55664d] gap-4">
-                      <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
-                      <div className="flex items-center space-x-6">
-                        <a href="#privacy" className="hover:underline">Privacy Policy</a>
-                        <a href="#terms" className="hover:underline">Terms of Use</a>
-                        <a href="#credits" className="hover:underline">Site by Pixel Designer Agency</a>
-                      </div>
-                    </div>
-        
-                  </div>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pb-8">
+            
+            <div className="space-y-2 text-center lg:text-left">
+              <Link to="/" className="inline-flex items-center space-x-3">
+                <img 
+                  src="/leave.jpeg" 
+                  alt="" 
+                  aria-hidden="true"
+                  className="w-8 h-8 object-contain shrink-0 mix-blend-multiply opacity-95" 
+                />
+                <div className="flex flex-col text-left">
+                  <span className="font-serif font-bold text-lg text-[#23351a] leading-none">Magnifying</span>
+                  <span className="font-serif font-light text-lg text-[#355322] leading-none mt-1">Children's Horizons</span>
+                </div>
+              </Link>
+              <p className="text-[11px] text-[#4a5944] uppercase tracking-widest font-semibold pl-11">
+                NATURE • CHARACTER • A BRIGHTER TOMORROW
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-6 text-xs uppercase tracking-wider font-bold text-[#355322]">
+              <Link to="/" className="hover:text-[#23351a] transition">Home</Link>
+              <Link to="/books" className="hover:text-[#23351a] transition">Books</Link>
+              <Link to="/cwn/pathways" className="hover:text-[#23351a] transition">Character with Nature™</Link>
+              <Link to="/about" className="hover:text-[#23351a] transition">About Us</Link>
+              <Link to="/collaborations" className="hover:text-[#23351a] transition">Collaborations</Link>
+              <Link to="/contact" className="hover:text-[#23351a] transition">Contact</Link>
+            </div>
+
+            <div className="flex items-center space-x-3">
+              <a href="#instagram" aria-label="Instagram" className="w-9 h-9 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </a>
+              <a href="#facebook" aria-label="Facebook" className="w-9 h-9 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                </svg>
+              </a>
+              <a href="#youtube" aria-label="YouTube" className="w-9 h-9 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <div className="pt-6 border-t border-[#23351a]/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#55664d] gap-4 pb-12">
+            <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
+            <div className="flex items-center space-x-6">
+              <a href="#privacy" className="hover:underline">Privacy Policy</a>
+              <a href="#terms" className="hover:underline">Terms of Use</a>
+              <a href="#credits" className="hover:underline">Site by Pixel Designer Agency</a>
+            </div>
+          </div>
+
+        </div>
 
       </div>
-
     </div>
   );
 }

@@ -190,7 +190,7 @@ export default function Home() {
                   <div className="sm:col-span-5">
                     <Link to="/books" className="block group">
                       <img 
-                        src="/book-cover-1.jpeg" 
+                        src="/2-book-image.jpeg" 
                         alt="The Face in the Mountain Book Cover" 
                         className="w-full h-auto object-cover rounded-2xl shadow-2xl transition duration-300 group-hover:scale-[1.02] border border-[#23351a]/10"
                       />

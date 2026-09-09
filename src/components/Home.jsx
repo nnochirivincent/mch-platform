@@ -467,7 +467,7 @@ export default function Home() {
                   </div>
 
                   <div className="pt-1.5 border-t border-[#23351a]/10 space-y-1.5">
-                    <h4 class="text-[9px] uppercase tracking-widest font-bold text-[#355322] text-center">
+                    <h4 className="text-[9px] uppercase tracking-widest font-bold text-[#355322] text-center">
                       HOW CHILDREN EXPLORE WITH CWN
                     </h4>
                     
@@ -523,7 +523,7 @@ export default function Home() {
                   <div className="pt-1 text-center lg:text-left">
                     <Link 
                       to="/cwn/pathways" 
-                      className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2 rounded-xl shadow transition"
+                      className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[9px] uppercase tracking-widest px-3.5 py-1.5 rounded-lg shadow transition"
                     >
                       Discover Character With Nature™
                     </Link>
@@ -629,7 +629,7 @@ export default function Home() {
                 <div className="pt-1 text-center">
                   <Link 
                     to="/cwn/laws" 
-                    className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2 rounded-xl shadow transition"
+                    className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[9px] uppercase tracking-widest px-4 py-1.5 rounded-lg shadow transition"
                   >
                     Explore The Laws & Our Approach
                   </Link>
@@ -643,10 +643,10 @@ export default function Home() {
         </section>
       </ScrollFade>
 
-      {/* 4. CHARACTER WITH NATURE GROWS WITH YOUR CHILD SECTION */}
+      {/* 4. CHARACTER WITH NATURE GROWS WITH YOUR CHILD SECTION (Made compact) */}
       <ScrollFade delay={90}>
         <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="relative overflow-hidden rounded-3xl shadow-xl border border-emerald-950/20 py-8 sm:py-10 text-center space-y-6">
+          <div className="relative overflow-hidden rounded-3xl shadow-xl border border-emerald-950/20 py-5 sm:py-6 text-center space-y-3.5">
             
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img 
@@ -656,70 +656,68 @@ export default function Home() {
               />
             </div>
 
-            <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 space-y-3">
+            <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 space-y-2">
               
               <div className="space-y-1">
                 <div className="flex justify-center mb-0.5">
-                  <svg className="w-5 h-5 text-[#355322]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-[#355322]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                   </svg>
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-serif text-[#23351a] font-bold tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-serif text-[#23351a] font-bold tracking-tight">
                   Character with Nature™
                 </h2>
-                <p className="font-serif italic text-[#4a6934] text-lg sm:text-xl font-medium">
+                <p className="font-serif italic text-[#4a6934] text-base sm:text-lg font-medium">
                   grows with your child
                 </p>
-                <div className="flex items-center justify-center space-x-3 text-[#658a4c] pt-0.5">
-                  <div className="h-[1.5px] w-8 bg-[#658a4c]/40"></div>
-                  <span className="text-xs">🌿</span>
-                  <div className="h-[1.5px] w-8 bg-[#658a4c]/40"></div>
+                <div className="flex items-center justify-center space-x-2 text-[#658a4c] pt-0.5">
+                  <div className="h-[1px] w-6 bg-[#658a4c]/40"></div>
+                  <span className="text-[10px]">🌿</span>
+                  <div className="h-[1px] w-6 bg-[#658a4c]/40"></div>
                 </div>
               </div>
 
-              <p className="text-sm sm:text-base text-[#1e3215] leading-relaxed max-w-3xl mx-auto font-semibold drop-shadow-sm text-center">
-                Age-appropriate programmes help children discover their connection with nature <br className="hidden sm:block" />
-                and explore how nature can guide their character, choices and <br className="hidden sm:block" />
-                inner growth in positive ways as they grow.
+              <p className="text-xs sm:text-sm text-[#1e3215] leading-relaxed max-w-2xl mx-auto font-medium text-center">
+                Age-appropriate programmes help children discover their connection with nature and explore how nature can guide their character, choices and inner growth in positive ways as they grow.
               </p>
 
             </div>
 
-            <div className="relative z-10 w-full px-2 sm:px-4 lg:px-6">
-              <div className="w-full overflow-hidden max-w-5xl mx-auto">
+            <div className="relative z-10 w-full px-4 sm:px-6">
+              <div className="w-full overflow-hidden max-w-3xl mx-auto">
                 <img 
                   src="/2-cwn-image.png" 
                   alt="Character with Nature grows with your child age progression" 
-                  className="w-full h-auto object-cover object-center mx-auto mix-blend-multiply opacity-95 scale-100 transition-transform duration-500 max-h-[320px]"
+                  className="w-full h-auto object-cover object-center mx-auto mix-blend-multiply opacity-95 max-h-[220px]"
                 />
               </div>
             </div>
 
-            <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-8 space-y-4 pt-0.5">
+            <div className="relative z-10 max-w-xl mx-auto px-6 space-y-3 pt-0.5">
               
               <div>
                 <a 
                   href="#explore-cwn" 
-                  className="inline-flex items-center space-x-2.5 bg-[#23351a] hover:bg-[#1a2813] text-white font-sans text-xs tracking-widest font-semibold uppercase px-6 py-3 rounded-xl shadow-xl transition-all duration-200 border border-[#486337]"
+                  className="inline-flex items-center space-x-2 bg-[#23351a] hover:bg-[#1a2813] text-white font-sans text-[10px] tracking-widest font-bold uppercase px-4 py-2 rounded-xl shadow transition-all duration-200 border border-[#486337]"
                 >
                   <span>EXPLORE CWN PROGRAMMES</span>
-                  <ArrowRight size={15} className="text-emerald-300" />
+                  <ArrowRight size={13} className="text-emerald-300" />
                 </a>
               </div>
 
-              <div className="pt-3 border-t border-[#23351a]/10 max-w-md mx-auto space-y-2">
-                <p className="text-xs text-[#355322] font-medium">
+              <div className="pt-2 border-t border-[#23351a]/10 max-w-sm mx-auto space-y-1.5">
+                <p className="text-[10px] text-[#355322] font-medium">
                   Be the first to know when Character with Nature™ launches.
                 </p>
 
                 {notified ? (
-                  <div className="bg-white/85 backdrop-blur-md border border-emerald-900/15 py-2 px-4 rounded-xl text-xs font-bold text-[#23351a] shadow">
+                  <div className="bg-white/85 backdrop-blur-md border border-emerald-900/15 py-1.5 px-3 rounded-xl text-[10px] font-bold text-[#23351a] shadow">
                     ✓ You're on the early notification list!
                   </div>
                 ) : (
-                  <form onSubmit={handleNotifySubmit} className="flex items-center bg-white rounded-xl shadow-inner border border-emerald-900/15 overflow-hidden p-1">
-                    <div className="pl-3 text-gray-400">
-                      <Mail size={15} />
+                  <form onSubmit={handleNotifySubmit} className="flex items-center bg-white rounded-xl shadow-inner border border-emerald-900/15 overflow-hidden p-0.5">
+                    <div className="pl-2.5 text-gray-400">
+                      <Mail size={13} />
                     </div>
                     <input 
                       type="email" 
@@ -727,13 +725,13 @@ export default function Home() {
                       onChange={(e) => setNotifyEmail(e.target.value)}
                       placeholder="Enter your email address" 
                       required
-                      className="w-full px-3 py-1.5 text-xs sm:text-sm text-[#23351a] bg-transparent focus:outline-none placeholder-gray-400"
+                      className="w-full px-2.5 py-1 text-[11px] text-[#23351a] bg-transparent focus:outline-none placeholder-gray-400"
                     />
                     <button 
                       type="submit"
-                      className="bg-[#23351a] hover:bg-[#1a2813] text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-2 rounded-lg transition shrink-0 flex items-center gap-1 shadow"
+                      className="bg-[#23351a] hover:bg-[#1a2813] text-white text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg transition shrink-0 flex items-center gap-1 shadow"
                     >
-                      <Bell size={11} className="text-amber-300" />
+                      <Bell size={10} className="text-amber-300" />
                       <span>GET NOTIFIED</span>
                     </button>
                   </form>

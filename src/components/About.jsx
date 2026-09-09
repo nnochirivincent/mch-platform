@@ -7,9 +7,9 @@ export default function About() {
   return (
     <div className="bg-[#fcfbf9] min-h-screen space-y-4 pb-6 overflow-hidden">
       
-      {/* HERO VIDEO SECTION (COMPACT HEIGHT & WIDER CONTAINER) */}
-      <section className="w-full px-2 sm:px-4 pt-1 pb-1">
-        <div className="relative w-full max-w-[1520px] mx-auto rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl h-[160px] sm:h-[220px] md:h-[260px]">
+      {/* HERO VIDEO SECTION (FULL WIDTH) */}
+      <section className="w-full pt-1 pb-1">
+        <div className="relative w-full overflow-hidden shadow-xl h-[180px] sm:h-[240px] md:h-[300px]">
           <video
             autoPlay
             loop
@@ -200,7 +200,6 @@ export default function About() {
                   </h3>
                   <p className="text-[#192813] text-xs sm:text-sm leading-relaxed font-semibold">
                     <strong className="font-bold text-[#111e0c]">Curiosity — .</strong> and a sense that there is more to discover. I hope children leave wanting to explore, ask questions and find their own connection with the natural world.
-
                   </p>
                 </div>
 

@@ -8,20 +8,10 @@ export default function Home() {
   const [name, setName] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const [notifyEmail, setNotifyEmail] = useState('');
-  const [notified, setNotified] = useState(false);
-
   const handleDownloadSubmit = (e) => {
     e.preventDefault();
     if (email && name) {
       setSubmitted(true);
-    }
-  };
-
-  const handleNotifySubmit = (e) => {
-    e.preventDefault();
-    if (notifyEmail) {
-      setNotified(true);
     }
   };
 
@@ -547,26 +537,11 @@ export default function Home() {
                 <div className="w-full px-2">
                   <div className="w-full overflow-hidden max-w-3xl mx-auto space-y-2">
                     <img 
-                      src="/2-cwn-image.png" 
+                      src="/children-section-image.jpeg" 
                       alt="Designed to grow with your child age progression silhouettes" 
                       className="w-full h-auto object-cover object-center mx-auto mix-blend-multiply opacity-100 max-h-[160px]"
                     />
                     
-                    {/* Implemented exact age gaps directly under the image as requested */}
-                    <div className="grid grid-cols-4 text-center pt-1 px-4 sm:px-12">
-                      <div className="text-[10px] sm:text-xs font-extrabold tracking-widest text-[#1a2b13] uppercase">
-                        AGES 3 - 5
-                      </div>
-                      <div className="text-[10px] sm:text-xs font-extrabold tracking-widest text-[#1a2b13] uppercase">
-                        AGES 6 - 9
-                      </div>
-                      <div className="text-[10px] sm:text-xs font-extrabold tracking-widest text-[#1a2b13] uppercase">
-                        AGES 9 - 12
-                      </div>
-                      <div className="text-[10px] sm:text-xs font-extrabold tracking-widest text-[#1a2b13] uppercase">
-                        AGES 12 - 15
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -590,39 +565,6 @@ export default function Home() {
                     <span className="text-[#52703c]">•</span>
                     <span>Spiritual Growth</span>
                   </div>
-                </div>
-
-                <div className="max-w-sm mx-auto space-y-1 pt-0.5">
-                  <p className="text-[10px] text-[#28421c] font-bold">
-                    Be the first to know when Character with Nature™ launches.
-                  </p>
-
-                  {notified ? (
-                    <div className="bg-white/95 backdrop-blur-md border border-emerald-900/20 py-1.5 px-3 rounded-xl text-[10px] font-bold text-[#1a2b13] shadow">
-                      ✓ You're on the early notification list!
-                    </div>
-                  ) : (
-                    <form onSubmit={handleNotifySubmit} className="flex items-center bg-white rounded-xl shadow-inner border border-emerald-900/25 overflow-hidden p-0.5">
-                      <div className="pl-2.5 text-gray-500">
-                        <Mail size={13} />
-                      </div>
-                      <input 
-                        type="email" 
-                        value={notifyEmail}
-                        onChange={(e) => setNotifyEmail(e.target.value)}
-                        placeholder="Enter your email address" 
-                        required
-                        className="w-full px-2.5 py-1 text-[11px] text-[#1a2b13] font-medium bg-transparent focus:outline-none placeholder-gray-400"
-                      />
-                      <button 
-                        type="submit"
-                        className="bg-[#23351a] hover:bg-[#1a2813] text-white text-[9px] font-extrabold uppercase tracking-wider px-3 py-1.5 rounded-lg transition shrink-0 flex items-center gap-1 shadow"
-                      >
-                        <Bell size={10} className="text-amber-300" />
-                        <span>GET NOTIFIED</span>
-                      </button>
-                    </form>
-                  )}
                 </div>
 
               </div>
@@ -709,7 +651,7 @@ export default function Home() {
               <div className="space-y-1 text-center lg:text-left">
                 <Link to="/" className="inline-flex items-center space-x-3">
                   <img 
-                    src="/children-image.jpeg" 
+                    src="/leave.jpeg" 
                     alt="" 
                     aria-hidden="true"
                     className="w-7 h-7 object-contain shrink-0 mix-blend-multiply opacity-95" 

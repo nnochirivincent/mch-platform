@@ -201,7 +201,7 @@ export default function Home() {
                     <div>
                       <h3 className="font-extrabold text-xl sm:text-2xl text-[#1a2b13] font-serif">The Face in the Mountain</h3>
                       <p className="text-[#25351e] text-xs sm:text-sm leading-relaxed mt-1 font-medium">
-                        When Borne's father must leave Vamper Creek, Borne worries that he won't remember everything he has been taught. As challenges arise, he must learn to trust what he knows, think creatively and discover what he is capable of.
+                        When Boma's father must leave Vamper Creek, Borne worries that he won't remember everything he has been taught. As challenges arise, he must learn to trust what he knows, think creatively and discover what he is capable of.
                       </p>
                     </div>
 
@@ -248,7 +248,7 @@ export default function Home() {
                       <span className="text-[9px] font-extrabold uppercase tracking-widest text-[#1a2b13] bg-amber-400 px-2 py-0.5 rounded shadow-sm">COMING SOON</span>
                       <h3 className="font-extrabold text-xl sm:text-2xl text-[#1a2b13] mt-1 font-serif">The Festival Shoes</h3>
                       <p className="text-[#25351e] text-xs sm:text-sm leading-relaxed mt-1 font-medium">
-                        Drunia's journey takes him through Weaverton, where late facies and nature beings are busy at work. When an unexpected challenge arises, he must draw on his courage, determination and self-trust to find a way forward.
+                        Drumlo's journey takes him through Weaverton, where late facies and nature beings are busy at work. When an unexpected challenge arises, he must draw on his courage, determination and self-trust to find a way forward.
                       </p>
                     </div>
 

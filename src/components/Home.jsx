@@ -94,7 +94,6 @@ export default function Home() {
       <ScrollFade>
         <section className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 rounded-3xl overflow-hidden shadow-2xl py-8 border border-emerald-950/20">
           
-          {/* Absolute Background using cream.jpeg */}
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img 
               src="/cream.jpeg" 
@@ -105,7 +104,6 @@ export default function Home() {
 
           <div className="relative z-10 space-y-6">
             
-            {/* Sub-block A: Helping Children Grow Through Nature directly integrated */}
             <div className="w-full">
               <div className="relative min-h-[360px] flex items-center">
                 
@@ -180,7 +178,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Sub-block B: Stories That Open New Horizons */}
             <div className="space-y-6 pt-1">
               
               <div className="text-center space-y-2 max-w-3xl mx-auto">
@@ -199,7 +196,6 @@ export default function Home() {
 
               <div className="grid md:grid-cols-2 gap-8 lg:gap-10 items-start px-2 sm:px-4">
                 
-                {/* Book 1 */}
                 <div className="grid sm:grid-cols-12 gap-5 items-center">
                   <div className="sm:col-span-5">
                     <Link to="/books" className="block group">
@@ -246,7 +242,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Book 2 */}
                 <div className="grid sm:grid-cols-12 gap-5 items-center">
                   <div className="sm:col-span-5">
                     <Link to="/books" className="block group">
@@ -303,12 +298,11 @@ export default function Home() {
         </section>
       </ScrollFade>
 
-      {/* Free Activity Book Lead Capture Section (Fully Cream Background using cream.jpeg) */}
+      {/* Free Activity Book Lead Capture Section */}
       <ScrollFade>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-3xl shadow-2xl border border-emerald-950/20 p-6 sm:p-8 text-[#23351a]">
             
-            {/* Absolute Background using cream.jpeg */}
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img 
                 src="/cream.jpeg" 
@@ -426,12 +420,11 @@ export default function Home() {
         </div>
       </ScrollFade>
 
-      {/* CHARACTER WITH NATURE™ SECTION (Made compact vertically, width matched precisely to image column) */}
+      {/* CHARACTER WITH NATURE™ SECTION (Optimized vertical padding and fully contained/fitting card images) */}
       <ScrollFade delay={80}>
         <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="relative overflow-hidden rounded-3xl shadow-xl border border-emerald-950/20 p-5 sm:p-8 lg:p-10 space-y-6">
+          <div className="relative overflow-hidden rounded-3xl shadow-xl border border-emerald-950/20 py-4 px-5 sm:px-8 lg:px-10 space-y-5">
             
-            {/* Absolute Background using cream.jpeg */}
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img 
                 src="/cream.jpeg" 
@@ -440,14 +433,12 @@ export default function Home() {
               />
             </div>
 
-            <div className="relative z-10 space-y-6">
+            <div className="relative z-10 space-y-4">
               
-              {/* Top Grid: Child Image & Intro Content */}
-              <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+              <div className="grid lg:grid-cols-12 gap-5 lg:gap-8 items-center">
                 
-                {/* Left Image Column: Restricts width tightly to the image frame */}
                 <div className="lg:col-span-5 flex justify-center">
-                  <div className="rounded-2xl overflow-hidden shadow-xl border border-[#23351a]/10 w-[240px] sm:w-[280px] lg:w-full aspect-[4/3] lg:aspect-[3/4]">
+                  <div className="rounded-2xl overflow-hidden shadow-xl border border-[#23351a]/10 w-[240px] sm:w-[260px] lg:w-full aspect-[4/3] lg:aspect-[4/3]">
                     <img 
                       src="/cwn-image-1.png" 
                       alt="Child exploring stream and leaves" 
@@ -456,94 +447,83 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Right Content */}
-                <div className="lg:col-span-7 space-y-3.5 text-left">
-                  <div className="space-y-1">
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#23351a] font-bold tracking-tight">
+                <div className="lg:col-span-7 space-y-2.5 text-left">
+                  <div className="space-y-0.5">
+                    <h2 className="text-2xl sm:text-3xl font-serif text-[#23351a] font-bold tracking-tight">
                       Character with Nature™
                     </h2>
-                    <p className="font-serif italic text-[#4a6934] text-sm sm:text-base font-medium">
+                    <p className="font-serif italic text-[#4a6934] text-xs sm:text-sm font-medium">
                       Tapping into Nature's Wisdom to Help Children Grow From Within
                     </p>
                   </div>
 
-                  <div className="space-y-2 text-[#23351a] text-xs sm:text-sm leading-relaxed font-light">
+                  <div className="space-y-1.5 text-[#23351a] text-xs leading-relaxed font-light">
                     <p>
                       <strong className="font-medium">Character with Nature™</strong> is a nature-based character development programme that helps children discover meaningful connections between the natural world, their choices and their inner lives.
                     </p>
                     <p>
                       Through stories, nature explorations, observation and reflection, children are encouraged to discover positive character traits, deepen their spiritual awareness and experience for themselves some of the principles at work in nature and in life.
                     </p>
-                    <p className="font-medium text-[#23351a]">
-                      Rather than simply telling children what to think, Character with Nature™ invites them to notice, question, explore and discover for themselves.
-                    </p>
                   </div>
 
-                  {/* HOW CHILDREN EXPLORE WITH CWN */}
-                  <div className="pt-2 border-t border-[#23351a]/10 space-y-2">
-                    <h4 className="text-[10px] uppercase tracking-widest font-bold text-[#355322] text-center">
+                  <div className="pt-1.5 border-t border-[#23351a]/10 space-y-1.5">
+                    <h4 class="text-[9px] uppercase tracking-widest font-bold text-[#355322] text-center">
                       HOW CHILDREN EXPLORE WITH CWN
                     </h4>
                     
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 pt-0.5">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-0.5">
                       
-                      {/* Discover Step */}
-                      <div className="flex flex-col items-center text-center max-w-[120px] space-y-1">
-                        <div className="w-10 h-10 rounded-full bg-[#1e3215] flex items-center justify-center shadow-lg border border-[#486337]">
-                          <svg className="w-5 h-5 text-[#fcf9f2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="flex flex-col items-center text-center max-w-[110px] space-y-0.5">
+                        <div className="w-8 h-8 rounded-full bg-[#1e3215] flex items-center justify-center shadow-md border border-[#486337]">
+                          <svg className="w-4 h-4 text-[#fcf9f2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                           </svg>
                         </div>
                         <div>
-                          <h5 className="font-bold text-[#23351a] text-[10px] uppercase tracking-wider">DISCOVER</h5>
-                          <p className="text-[9px] text-gray-600 leading-tight">Notice and explore nature</p>
+                          <h5 className="font-bold text-[#23351a] text-[9px] uppercase tracking-wider">DISCOVER</h5>
+                          <p className="text-[8px] text-gray-600 leading-tight">Notice and explore nature</p>
                         </div>
                       </div>
 
-                      {/* Arrow 1 */}
-                      <div className="hidden sm:flex text-[#355322] font-bold text-base pb-4">
+                      <div className="hidden sm:flex text-[#355322] font-bold text-sm pb-3">
                         →
                       </div>
 
-                      {/* Connect Step */}
-                      <div className="flex flex-col items-center text-center max-w-[120px] space-y-1">
-                        <div className="w-10 h-10 rounded-full bg-[#1e3215] flex items-center justify-center shadow-lg border border-[#486337]">
-                          <svg className="w-5 h-5 text-[#fcf9f2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="flex flex-col items-center text-center max-w-[110px] space-y-0.5">
+                        <div className="w-8 h-8 rounded-full bg-[#1e3215] flex items-center justify-center shadow-md border border-[#486337]">
+                          <svg className="w-4 h-4 text-[#fcf9f2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7 7 0 0014 0v-2a1.5 1.5 0 00-3 0m-3-6V14m0-2.5a1.5 1.5 0 113 0" />
                           </svg>
                         </div>
                         <div>
-                          <h5 className="font-bold text-[#23351a] text-[10px] uppercase tracking-wider">CONNECT</h5>
-                          <p className="text-[9px] text-gray-600 leading-tight">Make connections and find meaning</p>
+                          <h5 className="font-bold text-[#23351a] text-[9px] uppercase tracking-wider">CONNECT</h5>
+                          <p className="text-[8px] text-gray-600 leading-tight">Make connections & find meaning</p>
                         </div>
                       </div>
 
-                      {/* Arrow 2 */}
-                      <div className="hidden sm:flex text-[#355322] font-bold text-base pb-4">
+                      <div className="hidden sm:flex text-[#355322] font-bold text-sm pb-3">
                         →
                       </div>
 
-                      {/* Create Step */}
-                      <div className="flex flex-col items-center text-center max-w-[120px] space-y-1">
-                        <div className="w-10 h-10 rounded-full bg-[#1e3215] flex items-center justify-center shadow-lg border border-[#486337]">
-                          <svg className="w-5 h-5 text-[#fcf9f2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="flex flex-col items-center text-center max-w-[110px] space-y-0.5">
+                        <div className="w-8 h-8 rounded-full bg-[#1e3215] flex items-center justify-center shadow-md border border-[#486337]">
+                          <svg className="w-4 h-4 text-[#fcf9f2]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                           </svg>
                         </div>
                         <div>
-                          <h5 className="font-bold text-[#23351a] text-[10px] uppercase tracking-wider">CREATE</h5>
-                          <p className="text-[9px] text-gray-600 leading-tight">Bring discoveries into everyday life</p>
+                          <h5 className="font-bold text-[#23351a] text-[9px] uppercase tracking-wider">CREATE</h5>
+                          <p className="text-[8px] text-gray-600 leading-tight">Bring discoveries to daily life</p>
                         </div>
                       </div>
 
                     </div>
                   </div>
 
-                  {/* Button */}
                   <div className="pt-1 text-center lg:text-left">
                     <Link 
                       to="/cwn/pathways" 
-                      className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[11px] uppercase tracking-widest px-5 py-2.5 rounded-xl shadow-lg transition"
+                      className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2 rounded-xl shadow transition"
                     >
                       Discover Character With Nature™
                     </Link>
@@ -552,113 +532,104 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Typography Bar */}
-              <div className="py-3 border-t border-b border-[#23351a]/15 text-center">
-                <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-bold tracking-widest text-[#355322] uppercase">
+              <div className="py-2.5 border-t border-b border-[#23351a]/15 text-center">
+                <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs font-bold tracking-widest text-[#355322] uppercase">
                   <span>Nature</span>
-                  <span className="text-[#658a4c] text-base">•</span>
+                  <span className="text-[#658a4c] text-sm">•</span>
                   <span>Character</span>
-                  <span className="text-[#658a4c] text-base">•</span>
+                  <span className="text-[#658a4c] text-sm">•</span>
                   <span>Inner Awareness</span>
-                  <span className="text-[#658a4c] text-base">•</span>
+                  <span className="text-[#658a4c] text-sm">•</span>
                   <span>Spiritual Growth</span>
                 </div>
               </div>
 
-              {/* Discovering Nature's Laws Sub-section */}
-              <div className="space-y-6 pt-1">
-                <div className="text-center max-w-2xl mx-auto space-y-2">
-                  <h3 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#23351a]">
+              <div className="space-y-4 pt-0.5">
+                <div className="text-center max-w-2xl mx-auto space-y-1">
+                  <h3 className="text-xl sm:text-2xl font-serif font-extrabold text-[#23351a]">
                     Discovering Nature’s Laws
                   </h3>
-                  <div className="space-y-1.5 text-gray-700 text-xs sm:text-sm font-light leading-relaxed">
-                    <p>
-                      At the heart of Character with Nature™ are universal laws and principles that children can discover through patterns and processes in the natural world.
-                    </p>
-                    <p>
-                      Through age-appropriate observation, exploration and reflection, children are interconnectedly able to connect what they discover in nature with their own choices, character and inner lives.
-                    </p>
-                  </div>
+                  <p className="text-gray-700 text-xs font-light leading-relaxed">
+                    At the heart of Character with Nature™ are universal laws and principles that children can discover through patterns and processes in the natural world.
+                  </p>
                 </div>
 
-                {/* The Four Cards Grid (Compact image height via aspect ratio) */}
-                <div className="grid sm:grid-cols-2 gap-4 pt-1">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3.5 pt-0.5">
                   
                   {/* Card 1: Cause & Effect */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
-                    <div className="w-full h-32 bg-gray-50 flex items-center justify-center p-2">
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 flex flex-col">
+                    <div className="w-full h-36 bg-emerald-950/5 relative overflow-hidden flex items-center justify-center p-2">
                       <img 
                         src="/cwn-image-2.png" 
                         alt="Cause and Effect" 
-                        className="w-full h-full object-contain transform hover:scale-105 transition duration-500"
+                        className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500"
                       />
                     </div>
-                    <div className="p-4 space-y-1 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-sm sm:text-base text-[#23351a]">Cause & Effect</h4>
-                      <p className="text-gray-600 text-[11px] sm:text-xs font-light">
+                    <div className="p-3 space-y-1 text-center flex-1 flex flex-col justify-between">
+                      <h4 className="font-serif font-bold text-xs sm:text-sm text-[#23351a]">Cause & Effect</h4>
+                      <p className="text-gray-600 text-[10px] font-light">
                         What we do influences what happens next.
                       </p>
                     </div>
                   </div>
 
                   {/* Card 2: Like Attracts Like */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
-                    <div className="w-full h-32 bg-gray-50 flex items-center justify-center p-2">
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 flex flex-col">
+                    <div className="w-full h-36 bg-emerald-950/5 relative overflow-hidden flex items-center justify-center p-2">
                       <img 
                         src="/cwn-image-3.png" 
                         alt="Like Attracts Like" 
-                        className="w-full h-full object-contain transform hover:scale-105 transition duration-500"
+                        className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500"
                       />
                     </div>
-                    <div className="p-4 space-y-1 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-sm sm:text-base text-[#23351a]">Like Attracts Like</h4>
-                      <p className="text-gray-600 text-[11px] sm:text-xs font-light">
-                        What we nurture and give attention to can influence what grows around us.
+                    <div className="p-3 space-y-1 text-center flex-1 flex flex-col justify-between">
+                      <h4 className="font-serif font-bold text-xs sm:text-sm text-[#23351a]">Like Attracts Like</h4>
+                      <p className="text-gray-600 text-[10px] font-light">
+                        What we nurture influences what grows around us.
                       </p>
                     </div>
                   </div>
 
                   {/* Card 3: Gravity */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
-                    <div className="w-full h-32 bg-gray-50 flex items-center justify-center p-2">
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 flex flex-col">
+                    <div className="w-full h-36 bg-emerald-950/5 relative overflow-hidden flex items-center justify-center p-2">
                       <img 
                         src="/cwn-image-4.png" 
                         alt="Gravity" 
-                        className="w-full h-full object-contain transform hover:scale-105 transition duration-500"
+                        className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500"
                       />
                     </div>
-                    <div className="p-4 space-y-1 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-sm sm:text-base text-[#23351a]">Gravity</h4>
-                      <p className="text-gray-600 text-[11px] sm:text-xs font-light">
-                        What we carry within can influence how we move and the direction we take.
+                    <div className="p-3 space-y-1 text-center flex-1 flex flex-col justify-between">
+                      <h4 className="font-serif font-bold text-xs sm:text-sm text-[#23351a]">Gravity</h4>
+                      <p className="text-gray-600 text-[10px] font-light">
+                        What we carry within influences our direction.
                       </p>
                     </div>
                   </div>
 
                   {/* Card 4: Balance */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200/80 flex flex-col">
-                    <div className="w-full h-32 bg-gray-50 flex items-center justify-center p-2">
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 flex flex-col">
+                    <div className="w-full h-36 bg-emerald-950/5 relative overflow-hidden flex items-center justify-center p-2">
                       <img 
                         src="/cwn-image-5.png" 
                         alt="Balance" 
-                        className="w-full h-full object-contain transform hover:scale-105 transition duration-500"
+                        className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500"
                       />
                     </div>
-                    <div className="p-4 space-y-1 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-sm sm:text-base text-[#23351a]">Balance</h4>
-                      <p className="text-gray-600 text-[11px] sm:text-xs font-light">
-                        Nature shows us patterns of balance, adjustment and harmony.
+                    <div className="p-3 space-y-1 text-center flex-1 flex flex-col justify-between">
+                      <h4 className="font-serif font-bold text-xs sm:text-sm text-[#23351a]">Balance</h4>
+                      <p className="text-gray-600 text-[10px] font-light">
+                        Nature shows us patterns of harmony.
                       </p>
                     </div>
                   </div>
 
                 </div>
 
-                {/* Bottom Action Button */}
-                <div className="pt-2 text-center">
+                <div className="pt-1 text-center">
                   <Link 
                     to="/cwn/laws" 
-                    className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[11px] uppercase tracking-widest px-6 py-2.5 rounded-xl shadow-lg transition"
+                    className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2 rounded-xl shadow transition"
                   >
                     Explore The Laws & Our Approach
                   </Link>
@@ -672,12 +643,11 @@ export default function Home() {
         </section>
       </ScrollFade>
 
-      {/* 4. CHARACTER WITH NATURE GROWS WITH YOUR CHILD SECTION (Made more compact vertically) */}
+      {/* 4. CHARACTER WITH NATURE GROWS WITH YOUR CHILD SECTION */}
       <ScrollFade delay={90}>
         <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="relative overflow-hidden rounded-3xl shadow-xl border border-emerald-950/20 py-8 sm:py-10 text-center space-y-6">
             
-            {/* Absolute Background using cream.jpeg */}
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img 
                 src="/cream.jpeg" 
@@ -686,7 +656,6 @@ export default function Home() {
               />
             </div>
 
-            {/* Content Container */}
             <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 space-y-3">
               
               <div className="space-y-1">
@@ -716,7 +685,6 @@ export default function Home() {
 
             </div>
 
-            {/* Age Progression Graphic / Illustration Area */}
             <div className="relative z-10 w-full px-2 sm:px-4 lg:px-6">
               <div className="w-full overflow-hidden max-w-5xl mx-auto">
                 <img 
@@ -727,7 +695,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Lower Content Container */}
             <div className="relative z-10 max-w-3xl mx-auto px-6 sm:px-8 space-y-4 pt-0.5">
               
               <div>
@@ -740,7 +707,6 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Get Notified Sub-section */}
               <div className="pt-3 border-t border-[#23351a]/10 max-w-md mx-auto space-y-2">
                 <p className="text-xs text-[#355322] font-medium">
                   Be the first to know when Character with Nature™ launches.
@@ -850,7 +816,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Integrated Footer */}
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-4 border-t border-[#23351a]/15">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-5 pb-5">
               

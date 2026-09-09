@@ -132,11 +132,11 @@ export default function Home() {
                         </div>
                       </div>
 
-                      <div className="space-y-2 text-[#23351a] text-sm sm:text-base leading-relaxed font-medium">
+                      <div className="space-y-2 text-[#1c2c15] text-sm sm:text-base leading-relaxed font-semibold">
                         <p>
                           At Magnifying Children's Horizons, we believe the natural world offers children more than a place to explore. It offers opportunities to wonder, discover, reflect and grow.
                         </p>
-                        <p className="text-xs sm:text-sm text-[#2c4022]">
+                        <p className="text-xs sm:text-sm text-[#1e3016] font-medium">
                           Through meaningful stories and nature-based experiences, we help children develop positive character traits, inner awareness, spiritual growth and a deeper connection with the world around them.
                         </p>
                       </div>
@@ -153,7 +153,7 @@ export default function Home() {
                         </div>
 
                         <div className="space-y-1">
-                          <div className="text-[11px] font-bold uppercase tracking-widest text-[#3d5632]">Explore:</div>
+                          <div className="text-[11px] font-bold uppercase tracking-widest text-[#23381a]">Explore:</div>
                           <div className="flex flex-wrap gap-2.5">
                             <Link 
                               to="/books" 
@@ -184,13 +184,13 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-serif text-[#23351a]">
                   Stories That Open New Horizons
                 </h2>
-                <p className="font-serif italic text-[#4a6934] tracking-wide text-lg font-medium">
+                <p className="font-serif italic text-[#3c552a] tracking-wide text-lg font-bold">
                   Discover The Weaverton Series
                 </p>
-                <div className="flex items-center justify-center space-x-3 text-[#658a4c] pt-0.5">
-                  <div className="h-[1.5px] w-12 bg-[#658a4c]/40"></div>
+                <div className="flex items-center justify-center space-x-3 text-[#52703c] pt-0.5">
+                  <div className="h-[1.5px] w-12 bg-[#52703c]/60"></div>
                   <span>🌿</span>
-                  <div className="h-[1.5px] w-12 bg-[#658a4c]/40"></div>
+                  <div className="h-[1.5px] w-12 bg-[#52703c]/60"></div>
                 </div>
               </div>
 
@@ -209,8 +209,8 @@ export default function Home() {
 
                   <div className="sm:col-span-7 space-y-2 text-left">
                     <div>
-                      <h3 className="font-extrabold text-xl sm:text-2xl text-[#23351a] font-serif">The Face in the Mountain</h3>
-                      <p className="text-[#344030] text-xs sm:text-sm leading-relaxed mt-1 font-light">
+                      <h3 className="font-extrabold text-xl sm:text-2xl text-[#1a2b13] font-serif">The Face in the Mountain</h3>
+                      <p className="text-[#25351e] text-xs sm:text-sm leading-relaxed mt-1 font-medium">
                         When Borne's father must leave Vamper Creek, Borne worries that he won't remember everything he has been taught. As challenges arise, he must learn to trust what he knows, think creatively and discover what he is capable of.
                       </p>
                     </div>
@@ -221,20 +221,20 @@ export default function Home() {
                       ))}
                     </div>
 
-                    <p className="text-[11px] sm:text-xs text-[#3a4834] italic leading-relaxed border-l-2 border-[#658a4c] pl-3 py-0.5">
+                    <p className="text-[11px] sm:text-xs text-[#2a3c22] italic font-semibold leading-relaxed border-l-2 border-[#52703c] pl-3 py-0.5">
                       "A beautifully written story that touches the heart and awakens a sense of wonder in every child." <br />
-                      <span className="font-semibold not-italic text-[#23351a]">— Amazon Reviewer</span>
+                      <span className="font-bold not-italic text-[#1a2b13]">— Amazon Reviewer</span>
                     </p>
 
                     <div className="pt-1 space-y-0.5">
                       <Link 
                         to="/books" 
-                        className="inline-flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wider text-[#345322] hover:text-[#23351a] transition"
+                        className="inline-flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wider text-[#28421c] hover:text-[#1a2b13] transition"
                       >
                         DISCOVER THE BOOK <ArrowRight size={13} />
                       </Link>
                       <div>
-                        <a href="#buy" className="text-[11px] text-[#4a6934] hover:underline font-medium">
+                        <a href="#buy" className="text-[11px] text-[#3c552a] font-bold hover:underline">
                           Buy on Amazon →
                         </a>
                       </div>
@@ -255,9 +255,9 @@ export default function Home() {
 
                   <div className="sm:col-span-7 space-y-2 text-left">
                     <div>
-                      <span className="text-[9px] font-bold uppercase tracking-widest text-[#23351a] bg-amber-300/90 px-2 py-0.5 rounded shadow-sm">COMING SOON</span>
-                      <h3 className="font-extrabold text-xl sm:text-2xl text-[#23351a] mt-1 font-serif">The Festival Shoes</h3>
-                      <p className="text-[#344030] text-xs sm:text-sm leading-relaxed mt-1 font-light">
+                      <span className="text-[9px] font-extrabold uppercase tracking-widest text-[#1a2b13] bg-amber-400 px-2 py-0.5 rounded shadow-sm">COMING SOON</span>
+                      <h3 className="font-extrabold text-xl sm:text-2xl text-[#1a2b13] mt-1 font-serif">The Festival Shoes</h3>
+                      <p className="text-[#25351e] text-xs sm:text-sm leading-relaxed mt-1 font-medium">
                         Drunia's journey takes him through Weaverton, where late facies and nature beings are busy at work. When an unexpected challenge arises, he must draw on his courage, determination and self-trust to find a way forward.
                       </p>
                     </div>
@@ -268,20 +268,20 @@ export default function Home() {
                       ))}
                     </div>
 
-                    <p className="text-[11px] sm:text-xs text-[#3a4834] italic leading-relaxed border-l-2 border-[#658a4c] pl-3 py-0.5">
+                    <p className="text-[11px] sm:text-xs text-[#2a3c22] italic font-semibold leading-relaxed border-l-2 border-[#52703c] pl-3 py-0.5">
                       "An enchanting adventure filled with heart, magic and important lessons for every young reader." <br />
-                      <span className="font-semibold not-italic text-[#23351a]">— ABC Reviewer</span>
+                      <span className="font-bold not-italic text-[#1a2b13]">— ABC Reviewer</span>
                     </p>
 
                     <div className="pt-1 space-y-0.5">
                       <Link 
                         to="/books" 
-                        className="inline-flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wider text-[#345322] hover:text-[#23351a] transition"
+                        className="inline-flex items-center gap-1 text-[11px] font-extrabold uppercase tracking-wider text-[#28421c] hover:text-[#1a2b13] transition"
                       >
                         DISCOVER THE BOOK <ArrowRight size={13} />
                       </Link>
                       <div>
-                        <a href="#buy" className="text-[11px] text-[#4a6934] hover:underline font-medium">
+                        <a href="#buy" className="text-[11px] text-[#3c552a] font-bold hover:underline">
                           Buy on Amazon →
                         </a>
                       </div>
@@ -331,7 +331,7 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="mt-2.5 flex items-center justify-center gap-2 text-[#3a4834] italic text-xs font-serif">
+                <div className="mt-2.5 flex items-center justify-center gap-2 text-[#2a3c22] italic text-xs font-serif font-bold">
                   <span className="text-amber-600">🍃</span>
                   <span>A fun way for children to continue the adventure!</span>
                   <span className="text-amber-600">🍃</span>
@@ -341,34 +341,34 @@ export default function Home() {
               <div className="md:col-span-7 space-y-3.5">
                 
                 <div className="space-y-1 text-left">
-                  <span className="text-amber-700 text-[11px] font-bold uppercase tracking-widest">Special Reader Gift</span>
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#23351a] leading-tight font-serif">
+                  <span className="text-amber-800 text-[11px] font-extrabold uppercase tracking-widest">Special Reader Gift</span>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1a2b13] leading-tight font-serif">
                     Continue the Adventure — It’s Free!
                   </h2>
-                  <div className="h-1 w-16 bg-[#658a4c] rounded-full opacity-80 mt-1"></div>
+                  <div className="h-1 w-16 bg-[#52703c] rounded-full opacity-90 mt-1"></div>
                 </div>
 
                 <div className="space-y-1 text-left">
-                  <h3 className="font-bold text-[#355322] text-xs sm:text-sm">
+                  <h3 className="font-bold text-[#28421c] text-xs sm:text-sm">
                     Explore the World of The Weaverton Series
                   </h3>
-                  <p className="text-[#344030] text-xs sm:text-sm leading-relaxed font-light">
+                  <p className="text-[#25351e] text-xs sm:text-sm leading-relaxed font-medium">
                     Step into the world of The Weaverton Series with a free activity book designed to encourage children to colour, create, explore and discover more about the characters, nature beings and ideas they encounter along the way.
                   </p>
                 </div>
 
                 <form onSubmit={handleDownloadSubmit} className="space-y-2.5 text-left pt-1">
                   {submitted ? (
-                    <div className="text-center py-5 space-y-2 bg-white/90 border border-emerald-900/15 p-4 rounded-2xl backdrop-blur-md shadow-lg">
+                    <div className="text-center py-5 space-y-2 bg-white/95 border border-emerald-900/15 p-4 rounded-2xl backdrop-blur-md shadow-lg">
                       <CheckCircle2 className="mx-auto text-emerald-600" size={36} />
-                      <h4 className="font-bold text-base text-[#23351a]">You're All Set!</h4>
-                      <p className="text-xs sm:text-sm text-[#3a4834]">Check your inbox for your download link.</p>
+                      <h4 className="font-extrabold text-base text-[#1a2b13]">You're All Set!</h4>
+                      <p className="text-xs sm:text-sm text-[#2a3c22] font-semibold">Check your inbox for your download link.</p>
                     </div>
                   ) : (
                     <>
                       <div className="grid sm:grid-cols-2 gap-2.5">
                         <div className="space-y-1">
-                          <label className="block text-[10px] font-bold text-[#355322] uppercase tracking-wider">
+                          <label className="block text-[10px] font-bold text-[#28421c] uppercase tracking-wider">
                             First Name
                           </label>
                           <input 
@@ -377,12 +377,12 @@ export default function Home() {
                             onChange={(e) => setName(e.target.value)}
                             placeholder="Enter your first name" 
                             required
-                            className="w-full px-3 py-2 bg-white border border-emerald-900/15 rounded-xl text-xs sm:text-sm text-[#23351a] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#658a4c] focus:border-transparent transition shadow-inner"
+                            className="w-full px-3 py-2 bg-white border border-emerald-900/20 rounded-xl text-xs sm:text-sm text-[#1a2b13] font-medium placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#52703c] focus:border-transparent transition shadow-inner"
                           />
                         </div>
 
                         <div className="space-y-1">
-                          <label className="block text-[10px] font-bold text-[#355322] uppercase tracking-wider">
+                          <label className="block text-[10px] font-bold text-[#28421c] uppercase tracking-wider">
                             Email Address
                           </label>
                           <input 
@@ -391,7 +391,7 @@ export default function Home() {
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Enter your email address" 
                             required
-                            className="w-full px-3 py-2 bg-white border border-emerald-900/15 rounded-xl text-xs sm:text-sm text-[#23351a] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#658a4c] focus:border-transparent transition shadow-inner"
+                            className="w-full px-3 py-2 bg-white border border-emerald-900/20 rounded-xl text-xs sm:text-sm text-[#1a2b13] font-medium placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#52703c] focus:border-transparent transition shadow-inner"
                           />
                         </div>
                       </div>
@@ -407,7 +407,7 @@ export default function Home() {
                     </>
                   )}
 
-                  <p className="text-[10px] text-[#4a5944] leading-relaxed pt-0.5">
+                  <p className="text-[10px] text-[#2c3e24] font-medium leading-relaxed pt-0.5">
                     You’ll also receive occasional news from Magnifying Children’s Horizons about our books, activities and programmes.
                   </p>
                 </form>
@@ -420,10 +420,10 @@ export default function Home() {
         </div>
       </ScrollFade>
 
-      {/* CHARACTER WITH NATURE™ SECTION (Optimized vertical padding and fully contained/fitting card images) */}
+      {/* CHARACTER WITH NATURE™ SECTION (Matched reference layout, fully stretched image filling container, darkened text for eye comfort, and age tags placed directly under the image) */}
       <ScrollFade delay={80}>
-        <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="relative overflow-hidden rounded-3xl shadow-xl border border-emerald-950/20 py-4 px-5 sm:px-8 lg:px-10 space-y-5">
+        <section id="discover" className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="relative overflow-hidden rounded-3xl shadow-xl border border-emerald-950/20 py-5 px-5 sm:px-8 lg:px-10 space-y-4">
             
             <div className="absolute inset-0 z-0 overflow-hidden">
               <img 
@@ -435,40 +435,49 @@ export default function Home() {
 
             <div className="relative z-10 space-y-4">
               
-              <div className="grid lg:grid-cols-12 gap-5 lg:gap-8 items-center">
+              {/* TOP ROW: EXACT REPLICA OF THE IMAGE TOP SECTION */}
+              <div className="grid lg:grid-cols-12 gap-5 lg:gap-8 items-stretch">
                 
-                <div className="lg:col-span-5 flex justify-center">
-                  <div className="rounded-2xl overflow-hidden shadow-xl border border-[#23351a]/10 w-[240px] sm:w-[260px] lg:w-full aspect-[4/3] lg:aspect-[4/3]">
+                {/* Left Photo Container with Image stretched completely to fill container */}
+                <div className="lg:col-span-5 flex flex-col justify-between">
+                  <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#23351a]/15 w-full flex-1 min-h-[280px] sm:min-h-[320px] lg:min-h-full">
                     <img 
                       src="/cwn-image-1.png" 
                       alt="Child exploring stream and leaves" 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover absolute inset-0"
                     />
+                    <div className="absolute bottom-3 left-3 font-serif italic text-white text-sm sm:text-base tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] select-none pointer-events-none z-10 font-bold">
+                      Curiosity <span className="block text-xs not-serif font-bold tracking-normal text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">grows character.</span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="lg:col-span-7 space-y-2.5 text-left">
+                {/* Right Column: Title, Subtitle, Paragraphs & Flow with Darkened Readable Text */}
+                <div className="lg:col-span-7 space-y-2.5 text-left flex flex-col justify-center">
                   <div className="space-y-0.5">
-                    <h2 className="text-2xl sm:text-3xl font-serif text-[#23351a] font-bold tracking-tight">
+                    <h2 className="text-2xl sm:text-3xl font-serif text-[#1a2b13] font-bold tracking-tight">
                       Character with Nature™
                     </h2>
-                    <p className="font-serif italic text-[#4a6934] text-xs sm:text-sm font-medium">
+                    <p className="font-serif italic text-[#3c552a] text-xs sm:text-sm font-bold">
                       Tapping into Nature's Wisdom to Help Children Grow From Within
                     </p>
                   </div>
 
-                  <div className="space-y-1.5 text-[#23351a] text-xs leading-relaxed font-light">
+                  <div className="space-y-1.5 text-[#1e2e16] text-xs sm:text-sm leading-relaxed font-medium">
                     <p>
-                      <strong className="font-medium">Character with Nature™</strong> is a nature-based character development programme that helps children discover meaningful connections between the natural world, their choices and their inner lives.
+                      Character with Nature is a nature-based character development programme that helps children discover meaningful connections between the natural world, their choices and their inner lives.
                     </p>
                     <p>
                       Through stories, nature explorations, observation and reflection, children are encouraged to discover positive character traits, deepen their spiritual awareness and experience for themselves some of the principles at work in nature and in life.
                     </p>
+                    <p className="text-[11px] sm:text-xs text-[#1e2e16] font-semibold">
+                      Rather than simply telling children what to think, Character with Nature™ invites them to notice, question, explore and discover for themselves.
+                    </p>
                   </div>
 
-                  <div className="pt-1.5 border-t border-[#23351a]/10 space-y-1.5">
-                    <h4 className="text-[9px] uppercase tracking-widest font-bold text-[#355322] text-center">
-                      HOW CHILDREN EXPLORE WITH CWN
+                  <div className="pt-2 border-t border-[#23351a]/20 space-y-1.5">
+                    <h4 className="text-[9px] uppercase tracking-widest font-extrabold text-[#28421c] text-center">
+                      — HOW CHILDREN EXPLORE WITH CWN —
                     </h4>
                     
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-0.5">
@@ -480,12 +489,12 @@ export default function Home() {
                           </svg>
                         </div>
                         <div>
-                          <h5 className="font-bold text-[#23351a] text-[9px] uppercase tracking-wider">DISCOVER</h5>
-                          <p className="text-[8px] text-gray-600 leading-tight">Notice and explore nature</p>
+                          <h5 className="font-extrabold text-[#1a2b13] text-[9px] uppercase tracking-wider">DISCOVER</h5>
+                          <p className="text-[8px] text-[#2c3e24] font-semibold leading-tight">Notice and explore nature</p>
                         </div>
                       </div>
 
-                      <div className="hidden sm:flex text-[#355322] font-bold text-sm pb-3">
+                      <div className="hidden sm:flex text-[#28421c] font-extrabold text-sm pb-3">
                         →
                       </div>
 
@@ -496,12 +505,12 @@ export default function Home() {
                           </svg>
                         </div>
                         <div>
-                          <h5 className="font-bold text-[#23351a] text-[9px] uppercase tracking-wider">CONNECT</h5>
-                          <p className="text-[8px] text-gray-600 leading-tight">Make connections & find meaning</p>
+                          <h5 className="font-extrabold text-[#1a2b13] text-[9px] uppercase tracking-wider">CONNECT</h5>
+                          <p className="text-[8px] text-[#2c3e24] font-semibold leading-tight">Make connections & find meaning</p>
                         </div>
                       </div>
 
-                      <div className="hidden sm:flex text-[#355322] font-bold text-sm pb-3">
+                      <div className="hidden sm:flex text-[#28421c] font-extrabold text-sm pb-3">
                         →
                       </div>
 
@@ -512,230 +521,110 @@ export default function Home() {
                           </svg>
                         </div>
                         <div>
-                          <h5 className="font-bold text-[#23351a] text-[9px] uppercase tracking-wider">CREATE</h5>
-                          <p className="text-[8px] text-gray-600 leading-tight">Bring discoveries to daily life</p>
+                          <h5 className="font-extrabold text-[#1a2b13] text-[9px] uppercase tracking-wider">CREATE</h5>
+                          <p className="text-[8px] text-[#2c3e24] font-semibold leading-tight">Bring discoveries to daily life</p>
                         </div>
                       </div>
 
                     </div>
                   </div>
 
-                  <div className="pt-1 text-center lg:text-left">
-                    <Link 
-                      to="/cwn/pathways" 
-                      className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[9px] uppercase tracking-widest px-3.5 py-1.5 rounded-lg shadow transition"
-                    >
-                      Discover Character With Nature™
-                    </Link>
-                  </div>
-
                 </div>
               </div>
 
-              <div className="py-2.5 border-t border-b border-[#23351a]/15 text-center">
-                <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs font-bold tracking-widest text-[#355322] uppercase">
-                  <span>Nature</span>
-                  <span className="text-[#658a4c] text-sm">•</span>
-                  <span>Character</span>
-                  <span className="text-[#658a4c] text-sm">•</span>
-                  <span>Inner Awareness</span>
-                  <span className="text-[#658a4c] text-sm">•</span>
-                  <span>Spiritual Growth</span>
-                </div>
-              </div>
-
-              <div className="space-y-4 pt-0.5">
-                <div className="text-center max-w-2xl mx-auto space-y-1">
-                  <h3 className="text-xl sm:text-2xl font-serif font-extrabold text-[#23351a]">
-                    Discovering Nature’s Laws
-                  </h3>
-                  <p className="text-gray-700 text-xs font-light leading-relaxed">
-                    At the heart of Character with Nature™ are universal laws and principles that children can discover through patterns and processes in the natural world.
-                  </p>
+              {/* LOWER ROW: AGE PROGRESSION IMAGE WITH AGE GAPS IMPLEMENTED EXACTLY UNDERNEATH */}
+              <div id="explore-cwn" className="pt-3 border-t border-[#23351a]/25 text-center space-y-3">
+                
+                <div className="space-y-1">
+                  <div className="flex items-center justify-center space-x-1.5 text-[#28421c] text-xs">
+                    <span className="text-xs">🌿</span>
+                    <h4 className="font-serif italic text-xs sm:text-sm font-bold text-[#1a2b13] uppercase tracking-wider">
+                      DESIGNED TO GROW WITH YOUR CHILD
+                    </h4>
+                  </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3.5 pt-0.5">
-                  
-                  {/* Card 1: Cause & Effect */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 flex flex-col">
-                    <div className="w-full h-36 bg-emerald-950/5 relative overflow-hidden flex items-center justify-center p-2">
-                      <img 
-                        src="/cwn-image-2.png" 
-                        alt="Cause and Effect" 
-                        className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500"
-                      />
-                    </div>
-                    <div className="p-3 space-y-1 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-xs sm:text-sm text-[#23351a]">Cause & Effect</h4>
-                      <p className="text-gray-600 text-[10px] font-light">
-                        What we do influences what happens next.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Card 2: Like Attracts Like */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 flex flex-col">
-                    <div className="w-full h-36 bg-emerald-950/5 relative overflow-hidden flex items-center justify-center p-2">
-                      <img 
-                        src="/cwn-image-3.png" 
-                        alt="Like Attracts Like" 
-                        className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500"
-                      />
-                    </div>
-                    <div className="p-3 space-y-1 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-xs sm:text-sm text-[#23351a]">Like Attracts Like</h4>
-                      <p className="text-gray-600 text-[10px] font-light">
-                        What we nurture influences what grows around us.
-                      </p>
+                <div className="w-full px-2">
+                  <div className="w-full overflow-hidden max-w-3xl mx-auto space-y-2">
+                    <img 
+                      src="/2-cwn-image.png" 
+                      alt="Designed to grow with your child age progression silhouettes" 
+                      className="w-full h-auto object-cover object-center mx-auto mix-blend-multiply opacity-100 max-h-[160px]"
+                    />
+                    
+                    {/* Implemented exact age gaps directly under the image as requested */}
+                    <div className="grid grid-cols-4 text-center pt-1 px-4 sm:px-12">
+                      <div className="text-[10px] sm:text-xs font-extrabold tracking-widest text-[#1a2b13] uppercase">
+                        AGES 3 - 5
+                      </div>
+                      <div className="text-[10px] sm:text-xs font-extrabold tracking-widest text-[#1a2b13] uppercase">
+                        AGES 6 - 9
+                      </div>
+                      <div className="text-[10px] sm:text-xs font-extrabold tracking-widest text-[#1a2b13] uppercase">
+                        AGES 9 - 12
+                      </div>
+                      <div className="text-[10px] sm:text-xs font-extrabold tracking-widest text-[#1a2b13] uppercase">
+                        AGES 12 - 15
+                      </div>
                     </div>
                   </div>
-
-                  {/* Card 3: Gravity */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 flex flex-col">
-                    <div className="w-full h-36 bg-emerald-950/5 relative overflow-hidden flex items-center justify-center p-2">
-                      <img 
-                        src="/cwn-image-4.png" 
-                        alt="Gravity" 
-                        className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500"
-                      />
-                    </div>
-                    <div className="p-3 space-y-1 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-xs sm:text-sm text-[#23351a]">Gravity</h4>
-                      <p className="text-gray-600 text-[10px] font-light">
-                        What we carry within influences our direction.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Card 4: Balance */}
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200/80 flex flex-col">
-                    <div className="w-full h-36 bg-emerald-950/5 relative overflow-hidden flex items-center justify-center p-2">
-                      <img 
-                        src="/cwn-image-5.png" 
-                        alt="Balance" 
-                        className="w-full h-full object-contain object-center transform hover:scale-105 transition duration-500"
-                      />
-                    </div>
-                    <div className="p-3 space-y-1 text-center flex-1 flex flex-col justify-between">
-                      <h4 className="font-serif font-bold text-xs sm:text-sm text-[#23351a]">Balance</h4>
-                      <p className="text-gray-600 text-[10px] font-light">
-                        Nature shows us patterns of harmony.
-                      </p>
-                    </div>
-                  </div>
-
                 </div>
 
-                <div className="pt-1 text-center">
+                <div className="pt-2">
                   <Link 
-                    to="/cwn/laws" 
-                    className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[9px] uppercase tracking-widest px-4 py-1.5 rounded-lg shadow transition"
+                    to="/cwn/pathways" 
+                    className="inline-flex items-center space-x-2 bg-[#23351a] hover:bg-[#1a2813] text-white font-sans text-[10px] tracking-widest font-bold uppercase px-5 py-2.5 rounded-xl shadow-lg transition-all duration-200 border border-[#486337]"
                   >
-                    Explore The Laws & Our Approach
+                    <span>EXPLORE CHARACTER WITH NATURE™</span>
+                    <ArrowRight size={13} className="text-emerald-300" />
                   </Link>
                 </div>
 
-              </div>
-
-            </div>
-
-          </div>
-        </section>
-      </ScrollFade>
-
-      {/* 4. CHARACTER WITH NATURE GROWS WITH YOUR CHILD SECTION (Made compact) */}
-      <ScrollFade delay={90}>
-        <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="relative overflow-hidden rounded-3xl shadow-xl border border-emerald-950/20 py-5 sm:py-6 text-center space-y-3.5">
-            
-            <div className="absolute inset-0 z-0 overflow-hidden">
-              <img 
-                src="/cream.jpeg" 
-                alt="Cream background" 
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-
-            <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 space-y-2">
-              
-              <div className="space-y-1">
-                <div className="flex justify-center mb-0.5">
-                  <svg className="w-4 h-4 text-[#355322]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-serif text-[#23351a] font-bold tracking-tight">
-                  Character with Nature™
-                </h2>
-                <p className="font-serif italic text-[#4a6934] text-base sm:text-lg font-medium">
-                  grows with your child
-                </p>
-                <div className="flex items-center justify-center space-x-2 text-[#658a4c] pt-0.5">
-                  <div className="h-[1px] w-6 bg-[#658a4c]/40"></div>
-                  <span className="text-[10px]">🌿</span>
-                  <div className="h-[1px] w-6 bg-[#658a4c]/40"></div>
-                </div>
-              </div>
-
-              <p className="text-xs sm:text-sm text-[#1e3215] leading-relaxed max-w-2xl mx-auto font-medium text-center">
-                Age-appropriate programmes help children discover their connection with nature and explore how nature can guide their character, choices and inner growth in positive ways as they grow.
-              </p>
-
-            </div>
-
-            <div className="relative z-10 w-full px-4 sm:px-6">
-              <div className="w-full overflow-hidden max-w-3xl mx-auto">
-                <img 
-                  src="/2-cwn-image.png" 
-                  alt="Character with Nature grows with your child age progression" 
-                  className="w-full h-auto object-cover object-center mx-auto mix-blend-multiply opacity-95 max-h-[220px]"
-                />
-              </div>
-            </div>
-
-            <div className="relative z-10 max-w-xl mx-auto px-6 space-y-3 pt-0.5">
-              
-              <div>
-                <a 
-                  href="#explore-cwn" 
-                  className="inline-flex items-center space-x-2 bg-[#23351a] hover:bg-[#1a2813] text-white font-sans text-[10px] tracking-widest font-bold uppercase px-4 py-2 rounded-xl shadow transition-all duration-200 border border-[#486337]"
-                >
-                  <span>EXPLORE CWN PROGRAMMES</span>
-                  <ArrowRight size={13} className="text-emerald-300" />
-                </a>
-              </div>
-
-              <div className="pt-2 border-t border-[#23351a]/10 max-w-sm mx-auto space-y-1.5">
-                <p className="text-[10px] text-[#355322] font-medium">
-                  Be the first to know when Character with Nature™ launches.
-                </p>
-
-                {notified ? (
-                  <div className="bg-white/85 backdrop-blur-md border border-emerald-900/15 py-1.5 px-3 rounded-xl text-[10px] font-bold text-[#23351a] shadow">
-                    ✓ You're on the early notification list!
+                <div className="py-1.5 border-t border-b border-[#23351a]/15 max-w-lg mx-auto">
+                  <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[10px] font-extrabold tracking-widest text-[#28421c] uppercase">
+                    <span>Nature</span>
+                    <span className="text-[#52703c]">•</span>
+                    <span>Character</span>
+                    <span className="text-[#52703c]">•</span>
+                    <span>Inner Awareness</span>
+                    <span className="text-[#52703c]">•</span>
+                    <span>Spiritual Growth</span>
                   </div>
-                ) : (
-                  <form onSubmit={handleNotifySubmit} className="flex items-center bg-white rounded-xl shadow-inner border border-emerald-900/15 overflow-hidden p-0.5">
-                    <div className="pl-2.5 text-gray-400">
-                      <Mail size={13} />
+                </div>
+
+                <div className="max-w-sm mx-auto space-y-1 pt-0.5">
+                  <p className="text-[10px] text-[#28421c] font-bold">
+                    Be the first to know when Character with Nature™ launches.
+                  </p>
+
+                  {notified ? (
+                    <div className="bg-white/95 backdrop-blur-md border border-emerald-900/20 py-1.5 px-3 rounded-xl text-[10px] font-bold text-[#1a2b13] shadow">
+                      ✓ You're on the early notification list!
                     </div>
-                    <input 
-                      type="email" 
-                      value={notifyEmail}
-                      onChange={(e) => setNotifyEmail(e.target.value)}
-                      placeholder="Enter your email address" 
-                      required
-                      className="w-full px-2.5 py-1 text-[11px] text-[#23351a] bg-transparent focus:outline-none placeholder-gray-400"
-                    />
-                    <button 
-                      type="submit"
-                      className="bg-[#23351a] hover:bg-[#1a2813] text-white text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-lg transition shrink-0 flex items-center gap-1 shadow"
-                    >
-                      <Bell size={10} className="text-amber-300" />
-                      <span>GET NOTIFIED</span>
-                    </button>
-                  </form>
-                )}
+                  ) : (
+                    <form onSubmit={handleNotifySubmit} className="flex items-center bg-white rounded-xl shadow-inner border border-emerald-900/25 overflow-hidden p-0.5">
+                      <div className="pl-2.5 text-gray-500">
+                        <Mail size={13} />
+                      </div>
+                      <input 
+                        type="email" 
+                        value={notifyEmail}
+                        onChange={(e) => setNotifyEmail(e.target.value)}
+                        placeholder="Enter your email address" 
+                        required
+                        className="w-full px-2.5 py-1 text-[11px] text-[#1a2b13] font-medium bg-transparent focus:outline-none placeholder-gray-400"
+                      />
+                      <button 
+                        type="submit"
+                        className="bg-[#23351a] hover:bg-[#1a2813] text-white text-[9px] font-extrabold uppercase tracking-wider px-3 py-1.5 rounded-lg transition shrink-0 flex items-center gap-1 shadow"
+                      >
+                        <Bell size={10} className="text-amber-300" />
+                        <span>GET NOTIFIED</span>
+                      </button>
+                    </form>
+                  )}
+                </div>
+
               </div>
 
             </div>
@@ -775,22 +664,22 @@ export default function Home() {
                   
                   <div className="space-y-1">
                     <div className="flex items-center space-x-2">
-                      <span className="text-[10px] font-extrabold tracking-widest text-[#355322] uppercase">OUR COLLABORATION</span>
+                      <span className="text-[10px] font-extrabold tracking-widest text-[#28421c] uppercase">OUR COLLABORATION</span>
                       <span className="text-emerald-700 text-xs">🌿</span>
                     </div>
                     
-                    <h2 className="text-3xl sm:text-4xl font-serif text-[#23351a] font-bold tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl font-serif text-[#1a2b13] font-bold tracking-tight">
                       Blossom in Nature
                     </h2>
                     
-                    <p className="font-serif italic text-[#4a6934] text-xs sm:text-sm font-semibold tracking-wider">
+                    <p className="font-serif italic text-[#3c552a] text-xs sm:text-sm font-bold tracking-wider">
                       STORIES TOLD FROM TWO PERSPECTIVES
                     </p>
                   </div>
 
-                  <div className="space-y-2 text-[#23351a] text-xs sm:text-sm leading-relaxed font-light">
+                  <div className="space-y-2 text-[#1e2e16] text-xs sm:text-sm leading-relaxed font-medium">
                     <p>
-                      Magnifying Children's Horizons is proud to collaborate with <strong className="font-semibold text-[#23351a]">Blossom in Nature</strong>, a children's book initiative created by Tolu Okudolo and Angela Ehrlich.
+                      Magnifying Children's Horizons is proud to collaborate with <strong className="font-bold text-[#1a2b13]">Blossom in Nature</strong>, a children's book initiative created by Tolu Okudolo and Angela Ehrlich.
                     </p>
                     <p>
                       Through paired stories told through the eyes of a child and a nature being, children explore positive character traits and the unseen connections within nature.
@@ -820,28 +709,28 @@ export default function Home() {
               <div className="space-y-1 text-center lg:text-left">
                 <Link to="/" className="inline-flex items-center space-x-3">
                   <img 
-                    src="/leave.jpeg" 
+                    src="/children-image.jpeg" 
                     alt="" 
                     aria-hidden="true"
                     className="w-7 h-7 object-contain shrink-0 mix-blend-multiply opacity-95" 
                   />
                   <div className="flex flex-col text-left">
-                    <span className="font-serif font-bold text-base text-[#23351a] leading-none">Magnifying</span>
-                    <span className="font-serif font-light text-base text-[#355322] leading-none mt-1">Children's Horizons</span>
+                    <span className="font-serif font-bold text-base text-[#1a2b13] leading-none">Magnifying</span>
+                    <span className="font-serif font-semibold text-base text-[#28421c] leading-none mt-1">Children's Horizons</span>
                   </div>
                 </Link>
-                <p className="text-[10px] text-[#4a5944] uppercase tracking-widest font-semibold pl-10">
+                <p className="text-[10px] text-[#2c3e24] font-bold uppercase tracking-widest pl-10">
                   NATURE • CHARACTER • A BRIGHTER TOMORROW
                 </p>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-bold text-[#355322]">
-                <Link to="/" className="hover:text-[#23351a] transition">Home</Link>
-                <Link to="/books" className="hover:text-[#23351a] transition">Books</Link>
-                <Link to="/cwn/pathways" className="hover:text-[#23351a] transition">Character with Nature™</Link>
-                <Link to="/about" className="hover:text-[#23351a] transition">About Us</Link>
-                <Link to="/collaborations" className="hover:text-[#23351a] transition">Collaborations</Link>
-                <Link to="/contact" className="hover:text-[#23351a] transition">Contact</Link>
+              <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
+                <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
+                <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
+                <Link to="/cwn/pathways" className="hover:text-[#1a2b13] transition">Character with Nature™</Link>
+                <Link to="/about" className="hover:text-[#1a2b13] transition">About Us</Link>
+                <Link to="/collaborations" className="hover:text-[#1a2b13] transition">Collaborations</Link>
+                <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
               </div>
 
               <div className="flex items-center space-x-2.5">
@@ -866,7 +755,7 @@ export default function Home() {
 
             </div>
 
-            <div className="pt-3 border-t border-[#23351a]/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#55664d] gap-2">
+            <div className="pt-3 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2">
               <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
               <div className="flex items-center space-x-4">
                 <a href="#privacy" className="hover:underline">Privacy Policy</a>

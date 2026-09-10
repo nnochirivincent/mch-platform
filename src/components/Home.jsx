@@ -17,8 +17,8 @@ export default function Home() {
 
   return (
     <div className="bg-[#fcfbf9] min-h-screen space-y-8 pb-10 overflow-hidden">
-    <section className="relative px-4 sm:px-6 lg:px-12 pt-1 pb-6">
-      <div className="relative max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-2xl min-h-[75vh] lg:min-h-[82vh] flex items-center px-6 sm:px-12 lg:px-20 py-8">
+    <section className="relative px-4 sm:px-6 lg:px-12 pt-1 pb-4">
+      <div className="relative max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-2xl min-h-[60vh] lg:min-h-[68vh] flex items-center px-6 sm:px-12 lg:px-20 py-6">
         
         {/* Background Image Container */}
         <div className="absolute inset-0 z-0 overflow-hidden bg-[#162211]">
@@ -32,8 +32,8 @@ export default function Home() {
         </div>
 
         {/* Content Box */}
-        <div className="relative z-10 w-full max-w-5xl flex flex-col items-start justify-center text-left pl-20 sm:pl-36 lg:pl-56 -mt-16 sm:-mt-20 lg:-mt-24">
-          <div className="space-y-2.5 max-w-5xl text-left">
+        <div className="relative z-10 w-full max-w-5xl flex flex-col items-start justify-center text-left pl-20 sm:pl-36 lg:pl-56 -mt-8 sm:-mt-10 lg:-mt-12">
+          <div className="space-y-2 max-w-5xl text-left">
             
             {/* Main Title Group */}
             <div className="inline-block space-y-0.5">
@@ -45,7 +45,7 @@ export default function Home() {
               </h1>
               
               {/* Divider with Leaf Icon */}
-              <div className="flex items-center space-x-3 my-2 w-full max-w-2xl opacity-95">
+              <div className="flex items-center space-x-3 my-1.5 w-full max-w-2xl opacity-95">
                 <div className="h-[1px] flex-1 bg-[#658a4c]/80"></div>
                 <span className="text-[#658a4c] text-base filter drop-shadow">🌿</span>
                 <div className="h-[1px] flex-1 bg-[#658a4c]/80"></div>
@@ -57,8 +57,8 @@ export default function Home() {
               to Nurture Character and Values in Children
             </p>
 
-            {/* Action Buttons - Scaled down to prevent covering the lower shrub while maintaining original styling */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center gap-3 pt-1.5">
               <Link 
                 to="/books" 
                 className="inline-flex items-center space-x-2 bg-[#23351a] hover:bg-[#1a2813] text-[#ffffff] font-sans text-[11px] sm:text-xs tracking-widest font-semibold uppercase px-4 py-2.5 rounded-xl shadow-xl transition-all duration-200 border border-[#486337]"
@@ -70,8 +70,9 @@ export default function Home() {
                 <span className="ml-1 text-[11px]">→</span>
               </Link>
 
+              {/* Updated route to link directly to your main Character with Nature page */}
               <Link 
-                to="/cwn/pathways" 
+                to="/character-with-nature" 
                 className="inline-flex items-center space-x-2 bg-black/40 hover:bg-black/50 backdrop-blur-md border border-[#e5cea3]/70 text-[#f7e6c4] font-sans text-[11px] sm:text-xs tracking-widest uppercase px-3.5 py-2 rounded-xl transition-all duration-200 shadow-lg"
               >
                 <svg className="w-3.5 h-3.5 text-[#e5cea3] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,6 +91,7 @@ export default function Home() {
 
       </div>
     </section>
+
       {/* 2. COMBINED MASTER SECTION WRAPPED IN CREAM BACKGROUND */}
       <ScrollFade>
         <section className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 rounded-3xl overflow-hidden shadow-2xl py-8 border border-emerald-950/20">
@@ -162,7 +164,7 @@ export default function Home() {
                               <BookOpen size={14} className="text-[#b8df8a]" /> OUR BOOKS
                             </Link>
                             <Link 
-                              to="/cwn/pathways" 
+                              to="/character-with-nature" 
                               className="bg-[#23351a] hover:bg-[#1a2813] text-white border border-[#355322] font-semibold px-3.5 py-2 rounded-xl transition shadow-lg flex items-center gap-1.5 text-xs"
                             >
                               <Compass size={14} className="text-[#b8df8a]" /> CHARACTER WITH NATURE®
@@ -246,8 +248,8 @@ export default function Home() {
                   <div className="sm:col-span-5">
                     <Link to="/books" className="block group">
                       <img 
-                       src="/TFS.jpeg" 
-                       alt="The Festival Shoes Book Cover" 
+                         src="/TFS.jpeg" 
+                         alt="The Festival Shoes Book Cover" 
                         className="w-full h-auto object-cover rounded-2xl shadow-2xl transition duration-300 group-hover:scale-[1.02] border-0 mix-blend-multiply"
                       />
                     </Link>
@@ -554,7 +556,7 @@ export default function Home() {
                     
                   </div>
                 </div>
-z
+
                 <div className="pt-2">
                   <Link 
                     to="/cwn/pathways" 

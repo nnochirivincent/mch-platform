@@ -24,7 +24,7 @@ export default function Home() {
           
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img 
-              src="/hero-image-2.png" 
+              src="/sec-hero.jpeg" 
               alt="Children exploring nature" 
               className="w-full h-full object-cover object-center scale-105 transform animate-fade-in"
             />
@@ -544,7 +544,7 @@ export default function Home() {
                     
                   </div>
                 </div>
-
+z
                 <div className="pt-2">
                   <Link 
                     to="/cwn/pathways" 

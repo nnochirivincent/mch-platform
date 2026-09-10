@@ -17,69 +17,79 @@ export default function Home() {
 
   return (
     <div className="bg-[#fcfbf9] min-h-screen space-y-8 pb-10 overflow-hidden">
-      
-      {/* 1. IMMERSIVE FULL-BACKGROUND HERO SECTION */}
-      <section className="relative px-4 sm:px-6 lg:px-12 pt-1 pb-4">
-        <div className="relative max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-2xl min-h-[64vh] flex items-center justify-end px-8 sm:px-12 lg:px-20 py-6">
-          
-          <div className="absolute inset-0 z-0 overflow-hidden">
-            <img 
-              src="/sec-hero.jpeg" 
-              alt="Children exploring nature" 
-              className="w-full h-full object-cover object-center scale-105 transform animate-fade-in"
-            />
-          </div>
+    <section className="relative px-4 sm:px-6 lg:px-12 pt-1 pb-6">
+      <div className="relative max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-2xl min-h-[75vh] lg:min-h-[82vh] flex items-center px-6 sm:px-12 lg:px-20 py-8">
+        
+        {/* Background Image Container */}
+        <div className="absolute inset-0 z-0 overflow-hidden bg-[#162211]">
+          <img 
+            src="/regen-hero-image.jpeg" 
+            alt="Tapping into Nature's Wisdom" 
+            className="w-full h-full object-cover object-center transform scale-100"
+          />
+          {/* Subtle overlay gradient to ensure text readability */}
+          <div className="absolute inset-0 bg-black/15"></div>
+        </div>
 
-          <div className="relative z-10 w-full max-w-4xl flex flex-col items-start justify-center text-left pl-8 sm:pl-20 lg:pl-32 pr-4 -mt-4 sm:-mt-6">
-            <div className="space-y-3 max-w-5xl text-left">
-              <div className="inline-block">
-                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif text-[#fcf9f2] font-light tracking-wide leading-[1.05] drop-shadow-md">
-                  <span className="block text-2xl sm:text-3xl lg:text-4xl font-serif font-extralight tracking-widest text-[#e8e4dc] mb-1 uppercase drop-shadow">Tapping into</span>
-                  Nature's Wisdom
-                </h1>
-                
-                <div className="flex items-center space-x-4 my-2 w-[88%] sm:w-[91%] lg:w-[93%] opacity-95">
-                  <div className="h-[1.5px] flex-1 bg-[#658a4c]"></div>
-                  <span className="text-[#658a4c] text-lg filter drop-shadow">🌿</span>
-                  <div className="h-[1.5px] flex-1 bg-[#658a4c]"></div>
-                </div>
-              </div>
-
-              <p className="text-lg sm:text-xl lg:text-2xl text-[#f4efe6] font-serif font-normal tracking-wide max-w-3xl drop-shadow pt-1">
-                to Nurture Character and Values in Children
-              </p>
-
-              <div className="flex flex-wrap items-center gap-4 pt-1">
-                <a 
-                  href="#explore" 
-                  className="inline-flex items-center space-x-3 bg-[#23351a] hover:bg-[#1a2813] text-[#ffffff] font-sans text-xs sm:text-sm tracking-widest font-semibold uppercase px-5 py-3 rounded-xl shadow-xl transition-all duration-200 border border-[#486337]"
-                >
-                  <svg className="w-4 h-4 text-[#e2d5bc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                  <span>Explore Our Books</span>
-                  <span className="ml-1 text-xs">→</span>
-                </a>
-
-                <a 
-                  href="#discover" 
-                  className="inline-flex items-center space-x-2.5 bg-black/40 hover:bg-black/50 backdrop-blur-md border border-[#e5cea3] text-[#f7e6c4] font-sans text-xs sm:text-sm tracking-widest uppercase px-4 py-2.5 rounded-xl transition-all duration-200 shadow-lg max-w-[280px] sm:max-w-[320px] text-left leading-tight"
-                >
-                  <svg className="w-4 h-4 text-[#e5cea3] shrink-0 self-center" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15.5 8.5l-4 4-2-2" />
-                  </svg>
-                  <span className="block py-0.5">
-                    Discover Character <br />
-                    With Nature® <span className="ml-0.5 text-xs inline-block">→</span>
-                  </span>
-                </a>
+        {/* Content Box */}
+        <div className="relative z-10 w-full max-w-5xl flex flex-col items-start justify-center text-left pl-20 sm:pl-36 lg:pl-56 -mt-16 sm:-mt-20 lg:-mt-24">
+          <div className="space-y-2.5 max-w-5xl text-left">
+            
+            {/* Main Title Group */}
+            <div className="inline-block space-y-0.5">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif text-[#fcf9f2] font-normal tracking-wide leading-[1.05] drop-shadow-md">
+                <span className="block text-2xl sm:text-3xl lg:text-4xl font-serif font-light tracking-[0.2em] text-[#e8e4dc] mb-1 uppercase drop-shadow">
+                  Tapping into
+                </span>
+                Nature's Wisdom
+              </h1>
+              
+              {/* Divider with Leaf Icon */}
+              <div className="flex items-center space-x-3 my-2 w-full max-w-2xl opacity-95">
+                <div className="h-[1px] flex-1 bg-[#658a4c]/80"></div>
+                <span className="text-[#658a4c] text-base filter drop-shadow">🌿</span>
+                <div className="h-[1px] flex-1 bg-[#658a4c]/80"></div>
               </div>
             </div>
+
+            {/* Subtitle */}
+            <p className="text-lg sm:text-xl lg:text-3xl text-[#f4efe6] font-serif font-normal tracking-wide max-w-2xl drop-shadow pt-0.5">
+              to Nurture Character and Values in Children
+            </p>
+
+            {/* Action Buttons - Scaled down to prevent covering the lower shrub while maintaining original styling */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <Link 
+                to="/books" 
+                className="inline-flex items-center space-x-2 bg-[#23351a] hover:bg-[#1a2813] text-[#ffffff] font-sans text-[11px] sm:text-xs tracking-widest font-semibold uppercase px-4 py-2.5 rounded-xl shadow-xl transition-all duration-200 border border-[#486337]"
+              >
+                <svg className="w-3.5 h-3.5 text-[#e2d5bc]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <span>Explore Our Books</span>
+                <span className="ml-1 text-[11px]">→</span>
+              </Link>
+
+              <Link 
+                to="/cwn/pathways" 
+                className="inline-flex items-center space-x-2 bg-black/40 hover:bg-black/50 backdrop-blur-md border border-[#e5cea3]/70 text-[#f7e6c4] font-sans text-[11px] sm:text-xs tracking-widest uppercase px-3.5 py-2 rounded-xl transition-all duration-200 shadow-lg"
+              >
+                <svg className="w-3.5 h-3.5 text-[#e5cea3] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 21a9 9 0 100-18 9 9 0 000 18z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15.5 8.5l-4 4-2-2" />
+                </svg>
+                <span className="leading-tight text-left">
+                  Discover Character <br className="hidden sm:inline" />
+                  With Nature™ <span className="ml-0.5 text-[11px] inline-block">→</span>
+                </span>
+              </Link>
+            </div>
+
           </div>
         </div>
-      </section>
-     
+
+      </div>
+    </section>
       {/* 2. COMBINED MASTER SECTION WRAPPED IN CREAM BACKGROUND */}
       <ScrollFade>
         <section className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 rounded-3xl overflow-hidden shadow-2xl py-8 border border-emerald-950/20">

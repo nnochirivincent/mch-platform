@@ -5,6 +5,7 @@ import Home from './components/Home';
 import AdminDashboard from './components/AdminDashboard';
 import About from './components/About';
 import CharacterwithNature from './components/CharacterwithNature';
+import Books from './components/Books'; 
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/about" element={<About />} />
             <Route path="/character-with-nature" element={<CharacterwithNature />} />
+            <Route path="/books" element={<Books />} /> 
           </Routes>
         </main>
 

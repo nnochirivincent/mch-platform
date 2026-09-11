@@ -218,7 +218,7 @@ export default function CharacterwithNature() {
                   <div className="space-y-1 text-center lg:text-left">
                     <Link to="/" className="inline-flex items-center space-x-3">
                       <img 
-                        src="/leave.jpeg" 
+                        src="/navbar-image.png" 
                         alt="" 
                         aria-hidden="true"
                         className="w-7 h-7 object-contain shrink-0 mix-blend-multiply opacity-95" 

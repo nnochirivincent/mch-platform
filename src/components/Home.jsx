@@ -279,70 +279,56 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. FREE ACTIVITY BOOK LEAD-CAPTURE SECTION */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-5">
-        <div className="bg-[#e5eee0] border border-[#b8cca9] rounded-2xl p-5 sm:p-7 shadow-lg relative overflow-hidden">
-          <div className="grid lg:grid-cols-12 gap-6 items-center">
-            
-            <div className="lg:col-span-4 relative max-w-[200px] sm:max-w-[240px] lg:max-w-none mx-auto w-full shadow-xl rounded-xl">
-              <div className="absolute -top-2.5 -left-2.5 bg-amber-500 text-white font-black text-[9px] tracking-widest px-2.5 py-0.5 rounded-full uppercase shadow-md z-10 rotate-[-6deg]">
-                100% FREE
-              </div>
-              <img 
-                src="/activity-book-image.jpeg" 
-                alt="Continue the Adventure Free Activity Book" 
-                className="w-full h-auto object-contain rounded-xl border-2 border-white bg-white shadow-md block"
-              />
-            </div>
+       {/* 3. FREE ACTIVITY BOOK SECTION */}
+            <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-5">
+              <div className="bg-[#e5eee0] border border-[#b8cca9] rounded-2xl p-5 sm:p-7 shadow-lg relative overflow-hidden">
+                <div className="grid lg:grid-cols-12 gap-6 items-center">
+                  
+                  <div className="lg:col-span-4 relative max-w-[200px] sm:max-w-[240px] lg:max-w-none mx-auto w-full shadow-xl rounded-xl">
+                    <div className="absolute -top-2.5 -left-2.5 bg-amber-500 text-white font-black text-[9px] tracking-widest px-2.5 py-0.5 rounded-full uppercase shadow-md z-10 rotate-[-6deg]">
+                      100% FREE
+                    </div>
+                    <img 
+                      src="/activity-book-image.jpeg" 
+                      alt="Continue the Adventure Free Activity Book" 
+                      className="w-full h-auto object-contain rounded-xl border-2 border-white bg-white shadow-md block"
+                    />
+                  </div>
 
-            <div className="lg:col-span-8 space-y-3 text-left">
-              <div>
-                <span className="text-[9px] font-extrabold uppercase tracking-widest text-[#3d5e27]">SPECIAL READER GIFT</span>
-                <h3 className="text-xl sm:text-2xl font-serif text-[#12200d] font-bold mt-0.5">
-                  Continue the Adventure — It's Free!
-                </h3>
-                <p className="font-serif italic text-[#2c441c] text-xs sm:text-sm font-bold mt-0.5">
-                  Explore the World of The Weaverton Series
-                </p>
-                <p className="text-xs sm:text-sm text-[#1b2b13] leading-relaxed mt-1.5 font-semibold">
-                  Step into the world of The Weaverton Series with a free activity book designed to encourage children to colour, create, explore and discover more about the characters and ideas they encounter.
-                </p>
-              </div>
+                  <div className="lg:col-span-8 space-y-3 text-left">
+                    <div>
+                      <span className="text-[9px] font-extrabold uppercase tracking-widest text-[#3d5e27]">SPECIAL READER GIFT</span>
+                      <h3 className="text-xl sm:text-2xl font-serif text-[#12200d] font-bold mt-0.5">
+                        Continue the Adventure — It's Free!
+                      </h3>
+                      <p className="font-serif italic text-[#2c441c] text-xs sm:text-sm font-bold mt-0.5">
+                        Explore the World of The Weaverton Series
+                      </p>
+                      <p className="text-xs sm:text-sm text-[#1b2b13] leading-relaxed mt-1.5 font-semibold">
+                        Step into the world of The Weaverton Series with a free activity book designed to encourage children to colour, create, explore and discover more about the characters and ideas they encounter.
+                      </p>
+                    </div>
 
-              <form onSubmit={(e) => e.preventDefault()} className="space-y-2.5 pt-0.5">
-                <div className="grid sm:grid-cols-2 gap-2.5">
-                  <input 
-                    type="text" 
-                    placeholder="First name" 
-                    required
-                    className="w-full bg-white border border-[#96b87d] rounded-xl px-3.5 py-2 text-xs text-[#12200d] placeholder:text-stone-500 font-semibold focus:outline-none focus:ring-2 focus:ring-[#2b421a] shadow-sm"
-                  />
-                  <input 
-                    type="email" 
-                    placeholder="Email address" 
-                    required
-                    className="w-full bg-white border border-[#96b87d] rounded-xl px-3.5 py-2 text-xs text-[#12200d] placeholder:text-stone-500 font-semibold focus:outline-none focus:ring-2 focus:ring-[#2b421a] shadow-sm"
-                  />
+                    <div className="pt-1">
+                      <Link 
+                        to="#" 
+                        className="w-full bg-[#12200d] hover:bg-[#091006] text-white font-sans text-[11px] tracking-widest font-bold uppercase py-3 rounded-xl shadow-md transition duration-200 flex items-center justify-center space-x-2"
+                      >
+                        <svg className="w-3.5 h-3.5 text-[#b8df8a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                        <span>GET THE FREE ACTIVITY BOOK</span>
+                      </Link>
+                    </div>
+
+                    <p className="text-[10px] sm:text-xs text-[#324d20] font-bold text-center sm:text-left">
+                      You’ll also receive occasional news from Magnifying Children’s Horizons about our books and programmes.
+                    </p>
+                  </div>
+
                 </div>
-                <button 
-                  type="submit" 
-                  className="w-full bg-[#12200d] hover:bg-[#091006] text-white font-sans text-[11px] tracking-widest font-bold uppercase py-2.5 rounded-xl shadow-md transition duration-200 flex items-center justify-center space-x-2"
-                >
-                  <svg className="w-3.5 h-3.5 text-[#b8df8a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                  <span>GET THE FREE ACTIVITY BOOK</span>
-                </button>
-              </form>
-
-              <p className="text-[10px] sm:text-xs text-[#324d20] font-bold text-center sm:text-left">
-                You’ll also receive occasional news from Magnifying Children’s Horizons about our books and programmes.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
+              </div>
+            </section>
 
       {/* 4. CHARACTER WITH NATURE® SECTION */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
@@ -511,7 +497,7 @@ export default function HomePage() {
             <div className="space-y-1.5 text-center lg:text-left">
               <Link to="/" className="inline-flex items-center space-x-3 justify-center lg:justify-start">
                 <img 
-                  src="/leave.jpeg" 
+                  src="/navbar-image.png" 
                   alt="" 
                   aria-hidden="true"
                   className="w-7 h-7 object-contain shrink-0 mix-blend-multiply opacity-95" 

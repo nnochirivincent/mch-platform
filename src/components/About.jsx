@@ -242,7 +242,7 @@ export default function About() {
             <div className="space-y-1.5 text-center lg:text-left">
               <Link to="/" className="inline-flex items-center space-x-3 justify-center lg:justify-start">
                 <img 
-                  src="/leave.jpeg" 
+                  src="/navbar-image.png" 
                   alt="" 
                   aria-hidden="true"
                   className="w-7 h-7 object-contain shrink-0 mix-blend-multiply opacity-95" 

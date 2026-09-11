@@ -20,8 +20,7 @@ export default function Navbar() {
               />
             </div>
             <div>
-              <span className="font-extrabold text-base tracking-wide block leading-tight text-[#23461f]">MCH PLATFORM</span>
-              <span className="text-[10px] text-gray-500 font-semibold tracking-wider uppercase block">Magnifying Children's Horizons</span>
+              <span className="font-extrabold text-base tracking-wide block leading-tight text-[#23461f]">Magnifying Children's Horizons</span>
             </div>
           </Link>
 

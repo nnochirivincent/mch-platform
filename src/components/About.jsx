@@ -30,10 +30,6 @@ export default function About() {
               <span>🌿</span>
               <span>About Magnifying Children's Horizons</span>
             </div>
-
-            <h1 className="text-xl sm:text-3xl md:text-4xl font-serif text-[#1e3215] font-semibold tracking-wide leading-snug">
-              Expanding Children's Horizons Through <span className="italic text-[#3a4d31]">Nature</span>, <span className="italic text-[#3a4d31]">Stories</span> and <span className="italic text-[#3a4d31]">Discovery</span>
-            </h1>
           </div>
 
           <div className="space-y-2.5 text-[#1c2c15] font-semibold text-xs sm:text-base leading-relaxed">
@@ -88,10 +84,10 @@ export default function About() {
 
                 <div className="space-y-2.5 text-[#192813] text-xs sm:text-base leading-relaxed font-semibold">
                   <p>
-                    Just as children learn the language of their parents to live in harmony at home, we believe they can also learn the language of nature — observing its patterns, relationships and rhythms and discovering what these can teach them about themselves and the world around them.
+                    Just as children learn the language of their parents to live in harmony at home, <br /> we believe they can also learn the language of nature <br />observing its patterns, relationships and rhythms <br /> and discovering what these can teach them about themselves <br /> and the world around them.
                   </p>
                   <p className="text-[#192813]">
-                    Nature offers children more than knowledge about plants, animals and ecosystems. Through observation and experience, nature can help children develop positive character traits and a growing understanding of the consequences of their choices.
+                    Nature offers children more than knowledge about plants, animals and ecosystems. <br /> Through observation and experience, nature can help children develop positive character <br /> traits and a growing understanding of the consequences of their choices.
                   </p>
                   <p className="font-bold text-[#111e0c]">
                     We encourage children to notice, question, explore and discover for themselves.
@@ -100,7 +96,7 @@ export default function About() {
 
                 <div className="pt-1 flex items-center gap-3">
                   <div className="text-2xl sm:text-3xl select-none flex-shrink-0">
-                    🍀
+                  
                   </div>
                   <blockquote className="bg-white/95 backdrop-blur-md border-l-4 border-[#52703c] px-3 sm:px-4 py-2.5 rounded-r-xl italic font-serif text-xs sm:text-base text-[#192813] font-bold shadow-sm">
                     “Every leaf, ripple and sunrise holds a quiet lesson.”
@@ -149,10 +145,12 @@ export default function About() {
                       A child at heart with a deep, abiding love for her Creator, <strong className="font-bold text-[#111e0c]">Tolulope (Tolu) Okudolo</strong> is an author and educator with a Bachelor of Education and an MBA. Her experiences living in Africa, Europe and North America have given her a rich multicultural perspective.
                     </p>
                     <p>
-                      Her passion lies in helping children discover the connections, wisdom and laws within nature and explore how these can guide everyday choices, nurture positive character and deepen their connection with the world around them.
+                     Her passion lies in helping children discover the connections, wisdom and laws within nature, and how these can guide everyday choices, nurture positive character and deepen their connection with the world around them.
+
                     </p>
                     <p>
-                      Tolu is the founder of Magnifying Children’s Horizons and creator of <strong className="font-bold text-[#111e0c]">Character with Nature™</strong>, a nature-inspired framework that helps children discover life’s timeless principles through the natural world.
+                      Tolu is the founder of Magnifying Children’s Horizons and creator of <strong className="font-bold text-[#111e0c]">Character with Nature™</strong>, a nature-inspired framework that brings this vision to life through discovery and exploration.
+
                     </p>
                     <p>
                       She is the author of <em className="italic font-bold">The Face in the Mountain</em> and <em className="italic font-bold">The Festival Shoes</em> from The Weaverton Series, and co-creator of <em className="italic font-bold">Blossom in Nature</em>, a paired-perspective children's book initiative.
@@ -166,9 +164,10 @@ export default function About() {
         </ScrollFade>
 
         {/* ------------------------------------------------------------- */}
+        {/* FULL-WIDTH "IN TOLU'S OWN VOICE" SECTION */}
         <ScrollFade delay={150}>
-          <section className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
-            <div className="bg-[#dce2dd] rounded-3xl p-5 sm:p-8 lg:p-10 border border-[#c8d1c9] shadow-sm space-y-6">
+          <section className="w-full bg-[#dce2dd] py-10 sm:py-16">
+            <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 space-y-6">
               
               <div className="text-center">
                 <h2 className="text-xl sm:text-3xl md:text-4xl font-serif text-[#293822] font-bold tracking-tight">
@@ -176,7 +175,7 @@ export default function About() {
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 pt-1">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 pt-1">
                 <div className="border-l-2 border-[#6f8564] pl-4 space-y-1.5">
                   <h3 className="font-serif text-sm sm:text-lg text-[#753c2f] font-bold leading-snug">
                     What inspired you to begin writing your books?

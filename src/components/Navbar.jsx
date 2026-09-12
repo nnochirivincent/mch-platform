@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, BookOpen, Phone, Home, Info, FolderDown, Leaf } from 'lucide-react';
+import { Menu, X, BookOpen, Phone, Home, Info, FolderDown, Leaf, Users } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-7 font-medium text-sm text-gray-700">
+          <div className="hidden md:flex items-center space-x-6 font-medium text-sm text-gray-700">
             <Link to="/" className="hover:text-emerald-700 transition flex items-center gap-1.5 py-2">
               <Home size={15} className="text-emerald-700" /> Home
             </Link>
@@ -36,6 +36,11 @@ export default function Navbar() {
 
             <Link to="/character-with-nature" className="hover:text-emerald-700 transition flex items-center gap-1.5 py-2">
               <Leaf size={15} className="text-emerald-700" /> Character with Nature™
+            </Link>
+
+            {/* --- COLLABORATIONS LINK PLACED BESIDE CHARACTER WITH NATURE --- */}
+            <Link to="/collaboration" className="hover:text-emerald-700 transition flex items-center gap-1.5 py-2">
+              <Users size={15} className="text-emerald-700" /> Collaborations
             </Link>
 
             <Link to="/resources" className="hover:text-emerald-700 transition flex items-center gap-1.5 py-2">
@@ -73,6 +78,8 @@ export default function Navbar() {
           <Link to="/" onClick={() => setIsOpen(false)} className="block py-2.5 font-semibold border-b border-gray-100 hover:text-emerald-700">Home</Link>
           <Link to="/books" onClick={() => setIsOpen(false)} className="block py-2.5 font-semibold border-b border-gray-100 hover:text-emerald-700">Our Books</Link>
           <Link to="/character-with-nature" onClick={() => setIsOpen(false)} className="block py-2.5 font-semibold border-b border-gray-100 hover:text-emerald-700">Character with Nature™</Link>
+          {/* --- MOBILE COLLABORATIONS LINK --- */}
+          <Link to="/collaboration" onClick={() => setIsOpen(false)} className="block py-2.5 font-semibold border-b border-gray-100 hover:text-emerald-700">Collaborations</Link>
           <Link to="/resources" onClick={() => setIsOpen(false)} className="block py-2.5 font-semibold border-b border-gray-100 hover:text-emerald-700">Resources</Link>
           <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2.5 font-semibold border-b border-gray-100 hover:text-emerald-700">About Founder</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)} className="block py-3 mt-2 text-center bg-[#23461f] text-white rounded-xl font-semibold shadow">Contact</Link>

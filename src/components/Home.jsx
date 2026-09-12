@@ -172,20 +172,23 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-start px-2 sm:px-4">
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch px-2 sm:px-4">
               
-              <div className="grid sm:grid-cols-12 gap-4 items-center">
-                <div className="sm:col-span-5 w-full aspect-[3/4] max-w-[180px] sm:max-w-none mx-auto overflow-hidden rounded-2xl shadow-xl bg-stone-100">
-                  <Link to="/books" className="block group w-full h-full">
-                    <img 
-                      src="/TFITM.jpeg" 
-                      alt="The Face in the Mountain Book Cover" 
-                      className="w-full h-full object-cover object-center transition duration-300 group-hover:scale-[1.02] border-0"
-                    />
+              {/* BOOK 1 */}
+              <div className="grid sm:grid-cols-12 gap-6 items-stretch p-2">
+                <div className="sm:col-span-5 w-full flex items-center justify-center">
+                  <Link to="/books" className="block group w-full h-full flex items-center justify-center">
+                    <div className="w-[190px] sm:w-full h-full min-h-[380px] sm:min-h-[420px] mx-auto flex items-center justify-center">
+                      <img 
+                        src="/tfim-book-cover.png" 
+                        alt="The Face in the Mountain Book Cover" 
+                        className="w-full h-full object-cover rounded-lg transition duration-300 group-hover:scale-[1.02] drop-shadow-2xl"
+                      />
+                    </div>
                   </Link>
                 </div>
 
-                <div className="sm:col-span-7 space-y-1.5 text-left">
+                <div className="sm:col-span-7 space-y-1.5 text-left flex flex-col justify-center">
                   <div>
                     <h3 className="font-extrabold text-lg sm:text-xl text-[#12200d] font-serif">The Face in the Mountain</h3>
                     <p className="text-[#1b2b13] text-xs sm:text-sm leading-relaxed mt-0.5 font-semibold">
@@ -225,18 +228,21 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-12 gap-4 items-center">
-                <div className="sm:col-span-5 w-full aspect-[3/4] max-w-[180px] sm:max-w-none mx-auto overflow-hidden rounded-2xl shadow-xl bg-stone-100">
-                  <Link to="/books" className="block group w-full h-full">
-                    <img 
-                      src="/TFS.jpeg" 
-                      alt="The Festival Shoes Book Cover" 
-                      className="w-full h-full object-cover object-center transition duration-300 group-hover:scale-[1.02] border-0"
-                    />
+              {/* BOOK 2 */}
+              <div className="grid sm:grid-cols-12 gap-6 items-stretch p-2">
+                <div className="sm:col-span-5 w-full flex items-center justify-center">
+                  <Link to="/books" className="block group w-full h-full flex items-center justify-center">
+                    <div className="w-[190px] sm:w-full h-full min-h-[380px] sm:min-h-[420px] mx-auto flex items-center justify-center">
+                      <img 
+                        src="/TFS-Book-cover.png" 
+                        alt="The Festival Shoes Book Cover" 
+                        className="w-full h-full object-cover rounded-lg transition duration-300 group-hover:scale-[1.02] drop-shadow-2xl"
+                      />
+                    </div>
                   </Link>
                 </div>
 
-                <div className="sm:col-span-7 space-y-1.5 text-left">
+                <div className="sm:col-span-7 space-y-1.5 text-left flex flex-col justify-center">
                   <div>
                     <span className="text-[8px] font-black uppercase tracking-widest text-[#12200d] bg-amber-400 px-1.5 py-0.5 rounded shadow-sm">COMING SOON</span>
                     <h3 className="font-extrabold text-lg sm:text-xl text-[#12200d] mt-0.5 font-serif">The Festival Shoes</h3>
@@ -424,15 +430,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* <div className="space-y-2 bg-[#ebf2e6]/50 p-3 rounded-2xl border border-[#b2cca0]/60"> */}
               <img 
                 src="/image.png" 
                 alt="Continue the Adventure Free Activity Book" 
                 className="w-full h-auto object-contain rounded-xl border-2 border-none bg-white shadow-md block"
               />
-            {/* </div> */}
-
-            
 
           </div>
 
@@ -515,10 +517,10 @@ export default function HomePage() {
           {/* Nav Links */}
           <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
             <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
-            <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
+            <Link to="/books" className="hover:text-[#1a2813] transition">Books</Link>
             <Link to="/cwn/pathways" className="hover:text-[#1a2b13] transition">Character with Nature™</Link>
             <Link to="/about" className="hover:text-[#1a2b13] transition">About Us</Link>
-            <Link to="/collaborations" className="hover:text-[#1a2b13] transition">Collaborations</Link>
+            <Link to="/collaborations" className="hover:text-[#1a2813] transition">Collaborations</Link>
             <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
           </div>
  

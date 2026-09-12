@@ -12,7 +12,7 @@ export default function Books() {
           
           <div className="absolute inset-0 z-0 overflow-hidden bg-[#162211]">
             <img 
-              src="/cwn-image.jpeg" 
+              src="/books-hero.png" 
               alt="Our Books Header" 
               className="w-full h-full object-cover object-center transform scale-100"
             />
@@ -28,7 +28,7 @@ export default function Books() {
       </section>
 
       {/* Introductory Heading */}
-      <section className="pt-8 pb-4 sm:pt-10 sm:pb-6 px-4 sm:px-6 lg:px-8">
+      <section className="pt-6 pb-3 sm:pt-8 sm:pb-4 px-4 sm:px-6 lg:px-12">
         <ScrollFade delay={80}>
           <div className="text-center max-w-3xl mx-auto space-y-2 px-2">
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1e3319] tracking-tight">
@@ -43,24 +43,22 @@ export default function Books() {
       </section>
 
       {/* BOOK 1: The Face in the Mountain */}
-      <section className="pt-4 pb-6 sm:pt-6 sm:pb-8 px-4 sm:px-6 lg:px-8 border-b border-[#23351a]/15">
+      <section className="pt-1 pb-5 sm:pt-2 sm:pb-6 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
         <ScrollFade delay={80}>
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-12 gap-6 items-center">
+          <div className="max-w-[90rem] mx-auto">
+            <div className="grid lg:grid-cols-12 gap-4 lg:gap-6 items-center">
               
-              {/* Book Cover */}
-              <div className="lg:col-span-4 flex justify-center">
-                <div className="w-44 sm:w-52 shadow-xl rounded-xl overflow-hidden transform transition hover:scale-[1.02]">
-                  <img 
-                    src="/TFITM.jpeg" 
-                    alt="The Face in the Mountain Book Cover" 
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
+              {/* Book Cover - Nudged upward */}
+              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-[220px]">
+                <img 
+                  src="/tfim-book-cover.png" 
+                  alt="The Face in the Mountain Book Cover" 
+                  className="w-auto h-[280px] sm:h-[330px] lg:h-[380px] max-w-none object-contain transform transition hover:scale-[1.02] lg:absolute lg:-top-20 drop-shadow-xl z-20"
+                />
               </div>
 
               {/* Book Info & Trailer */}
-              <div className="lg:col-span-8 grid md:grid-cols-2 gap-6 items-center">
+              <div className="lg:col-span-9 grid md:grid-cols-2 gap-4 lg:gap-6 items-center">
                 
                 <div className="space-y-2.5 text-left">
                   <div>
@@ -81,20 +79,22 @@ export default function Books() {
                   </p>
 
                   <div className="pt-1">
-                    <Link 
-                      to="#"
-                      className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-xl shadow transition"
+                    <a 
+                      href="https://www.amazon.com/Face-Mountain-Tolulope-Okudolo/dp/0994876947/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-lg shadow transition"
                     >
                       DISCOVER / BUY THE BOOK →
-                    </Link>
+                    </a>
                   </div>
                 </div>
 
                 {/* Trailer Thumbnail Box */}
                 <div className="space-y-2 text-center">
-                  <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer">
+                  <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5">
                     <img 
-                      src="/cwn-image-3.png" 
+                      src="/TFITM-tumnail.png" 
                       alt="The Face in the Mountain Trailer Preview" 
                       className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-300"
                     />
@@ -109,7 +109,7 @@ export default function Books() {
                   <div>
                     <Link 
                       to="#"
-                      className="inline-flex items-center space-x-1.5 text-[10px] font-extrabold tracking-widest text-[#355322] uppercase border border-[#355322]/30 px-3 py-1.5 rounded-xl hover:bg-[#1e3319]/5 transition shadow-sm"
+                      className="inline-flex items-center space-x-1.5 text-[10px] font-extrabold tracking-widest text-[#355322] uppercase border border-[#355322]/20 px-3 py-1.5 rounded-lg hover:bg-[#1e3319]/5 transition shadow-sm"
                     >
                       <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                       <span>WATCH THE TRAILER</span>
@@ -124,17 +124,17 @@ export default function Books() {
         </ScrollFade>
       </section>
 
-      {/* BOOK 2: The Festival Shoes (Tighter top/bottom padding) */}
-      <section className="pt-6 pb-8 sm:pt-8 sm:pb-10 px-4 sm:px-6 lg:px-8 border-b border-[#23351a]/15">
+      {/* BOOK 2: The Festival Shoes */}
+      <section className="pt-1 pb-6 sm:pt-2 sm:pb-8 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
         <ScrollFade delay={80}>
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-12 gap-6 items-center">
+          <div className="max-w-[90rem] mx-auto">
+            <div className="grid lg:grid-cols-12 gap-4 lg:gap-6 items-center">
               
               {/* Trailer/Video on Left */}
               <div className="lg:col-span-5 space-y-2 text-center">
-                <div className="relative rounded-2xl overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer">
+                <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5">
                   <img 
-                    src="/cwn-image-4.png" 
+                    src="/TFS-tumbnail.png" 
                     alt="The Festival Shoes Trailer Preview" 
                     className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-300"
                   />
@@ -149,7 +149,7 @@ export default function Books() {
                 <div>
                   <Link 
                     to="#"
-                    className="inline-flex items-center space-x-1.5 text-[10px] font-extrabold tracking-widest text-[#355322] uppercase border border-[#355322]/30 px-3 py-1.5 rounded-xl hover:bg-[#1e3319]/5 transition shadow-sm"
+                    className="inline-flex items-center space-x-1.5 text-[10px] font-extrabold tracking-widest text-[#355322] uppercase border border-[#355322]/20 px-3 py-1.5 rounded-lg hover:bg-[#1e3319]/5 transition shadow-sm"
                   >
                     <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                     <span>WATCH THE TRAILER</span>
@@ -177,24 +177,24 @@ export default function Books() {
                 </p>
 
                 <div className="pt-1">
-                  <Link 
-                    to="#"
-                    className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-xl shadow transition"
+                  <a 
+                    href="https://www.amazon.com/dp/YOUR_BOOK_ID"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-lg shadow transition"
                   >
                     DISCOVER / BUY THE BOOK →
-                  </Link>
+                  </a>
                 </div>
               </div>
 
-              {/* Book Cover on Right */}
-              <div className="lg:col-span-3 flex justify-center">
-                <div className="w-40 sm:w-48 shadow-xl rounded-xl overflow-hidden transform transition hover:scale-[1.02]">
-                  <img 
-                    src="/TFS.jpeg" 
-                    alt="The Festival Shoes Book Cover" 
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
+              {/* Book Cover on Right - Nudged upward */}
+              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-[220px]">
+                <img 
+                  src="/TFS-Book-cover.png" 
+                  alt="The Festival Shoes Book Cover" 
+                  className="w-auto h-[280px] sm:h-[330px] lg:h-[380px] max-w-none object-contain transform transition hover:scale-[1.02] lg:absolute lg:-top-20 drop-shadow-xl z-20"
+                />
               </div>
 
             </div>
@@ -202,46 +202,46 @@ export default function Books() {
         </ScrollFade>
       </section>
 
-      {/* BOTTOM SECTION: Two Side-by-Side Groups */}
-      <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 border-b border-[#23351a]/15">
+      {/* BOTTOM SECTION: Two Side-by-Side Groups (60/40 Split) */}
+      <section className="py-6 sm:py-10 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
         <ScrollFade delay={80}>
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-12 gap-8">
+          <div className="max-w-[90rem] mx-auto">
+            <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
               
-              {/* Left Group: Continue the Adventure */}
-              <div className="lg:col-span-6 space-y-4 flex flex-col justify-between">
-                <div className="space-y-1.5 text-left">
-                  <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
+              {/* Left Group: Continue the Adventure (60% width -> col-span-7, kept squared container) */}
+              <div className="lg:col-span-7 bg-[#edf2eb] p-6 sm:p-8 rounded-none shadow-sm flex flex-col justify-between space-y-6">
+                <div className="space-y-2 text-left">
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
                     Continue the Adventure
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#1b2718] font-medium leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#1b2718] font-medium leading-relaxed max-w-xl">
                     Explore free colouring pages, games and activities inspired by the Weaverton Series.
                   </p>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-3">
-                  <div className="p-1 flex items-center justify-center">
-                    <img src="/activity-book-image.jpeg" alt="Coloring Book" className="w-full h-28 object-contain rounded-lg" />
+                <div className="grid sm:grid-cols-2 gap-4 items-center">
+                  <div className="transform -rotate-2 hover:rotate-0 transition duration-300">
+                    <img src="/1-aboutpage-bookcover.png" alt="Coloring Book" className="w-full h-auto object-contain rounded-lg shadow-md bg-white p-1" />
                   </div>
-                  <div className="p-1 flex items-center justify-center">
-                    <img src="/cwn-image-3.png" alt="Board Game Activity" className="w-full h-28 object-cover rounded-lg" />
+                  <div className="transform rotate-1 hover:rotate-0 transition duration-300">
+                    <img src="/TFS-adventure-game.png" alt="Board Game Activity" className="w-full h-auto object-contain rounded-lg shadow-md bg-white p-1" />
                   </div>
                 </div>
 
-                <div className="pt-1 text-left">
+                <div className="pt-2 text-left">
                   <Link 
                     to="#"
-                    className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-xl shadow transition"
+                    className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-6 py-3 rounded-lg shadow-md transition"
                   >
                     EXPLORE FREE RESOURCES →
                   </Link>
                 </div>
               </div>
 
-              {/* Right Group: More Stories to Discover */}
-              <div className="lg:col-span-6 space-y-4 flex flex-col justify-between">
-                <div className="space-y-1.5 text-left">
-                  <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
+              {/* Right Group: More Stories to Discover (40% width -> col-span-5, kept squared container) */}
+              <div className="lg:col-span-5 bg-[#fcf0ed] p-6 sm:p-8 rounded-none shadow-sm flex flex-col justify-between space-y-6">
+                <div className="space-y-2 text-left">
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
                     More Stories to Discover
                   </h3>
                   <p className="text-xs sm:text-sm text-[#1b2718] font-medium leading-relaxed">
@@ -249,25 +249,19 @@ export default function Books() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="flex flex-col items-center text-center space-y-1.5">
-                    <div className="h-28 w-full flex items-center justify-center">
-                      <img src="/cwn-image-4.png" alt="Luna's Threads of Light" className="h-full object-contain rounded" />
-                    </div>
-                    <span className="font-serif font-bold text-xs text-[#1e3319]">Luna's Threads of Light</span>
+                <div className="flex items-center justify-center space-x-3 sm:space-x-5 py-2">
+                  <div className="flex justify-center transform -rotate-1 hover:rotate-0 transition duration-300">
+                    <img src="/2-bookcover-aboutpage.png" alt="Luna's Threads of Light" className="h-56 sm:h-68 lg:h-72 w-auto object-contain drop-shadow-2xl rounded-none" />
                   </div>
-                  <div className="flex flex-col items-center text-center space-y-1.5">
-                    <div className="h-28 w-full flex items-center justify-center">
-                      <img src="/cwn-image-5.png" alt="Femi's Promise" className="h-full object-contain rounded" />
-                    </div>
-                    <span className="font-serif font-bold text-xs text-[#1e3319]">Femi's Promise</span>
+                  <div className="flex justify-center transform rotate-1 hover:rotate-0 transition duration-300">
+                    <img src="/bookcover-aboutpage.png" alt="Femi's Promise" className="h-56 sm:h-68 lg:h-72 w-auto object-contain drop-shadow-2xl rounded-none" />
                   </div>
                 </div>
 
-                <div className="pt-1 text-left">
+                <div className="pt-2 text-left">
                   <Link 
                     to="#"
-                    className="inline-block bg-[#8a4b6c] hover:bg-[#723c58] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-xl shadow transition"
+                    className="inline-block bg-[#9c5175] hover:bg-[#823e60] text-white font-bold text-[10px] uppercase tracking-widest px-6 py-3 rounded-lg shadow-md transition"
                   >
                     EXPLORE COLLABORATIONS →
                   </Link>
@@ -280,9 +274,9 @@ export default function Books() {
       </section>
 
       {/* Footer Section */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 bg-[#fcfbf9]">
+      <footer className="py-8 px-4 sm:px-6 lg:px-10 bg-[#fcfbf9]">
         <ScrollFade delay={80}>
-          <div className="max-w-7xl mx-auto space-y-6">
+          <div className="max-w-[90rem] mx-auto space-y-6">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4 pb-4">
               
               <div className="space-y-1 text-center lg:text-left">
@@ -302,7 +296,7 @@ export default function Books() {
                   NATURE • CHARACTER • A BRIGHTER TOMORROW
                 </p>
               </div>
-  
+
               <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
                 <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
                 <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
@@ -311,7 +305,7 @@ export default function Books() {
                 <Link to="/collaborations" className="hover:text-[#1a2b13] transition">Collaborations</Link>
                 <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
               </div>
-  
+
               <div className="flex items-center space-x-2">
                 <a href="#instagram" aria-label="Instagram" className="w-7 h-7 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -331,10 +325,10 @@ export default function Books() {
                   </svg>
                 </a>
               </div>
-  
+
             </div>
-  
-            <div className="pt-3 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2">
+
+            <div className="pt-3 border-t border-[#23351a]/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2">
               <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
               <div className="flex items-center space-x-4">
                 <a href="#privacy" className="hover:underline">Privacy Policy</a>

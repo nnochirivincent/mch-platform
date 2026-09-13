@@ -7,6 +7,7 @@ import About from './components/About';
 import CharacterwithNature from './components/CharacterwithNature';
 import Books from './components/Books'; 
 import Collaboration from './components/Collaboration';
+import Resources from './components/Resources'; // 1. Import your new component
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="/character-with-nature" element={<CharacterwithNature />} />
             <Route path="/books" element={<Books />} /> 
             <Route path="/collaboration" element={<Collaboration />} />
+            <Route path="/resources" element={<Resources />} />
           </Routes>
         </main>
 

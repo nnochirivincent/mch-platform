@@ -15,8 +15,13 @@ export default function Resources() {
     setMessage(null);
     setIsError(false);
 
+    // Automatically detect if running locally or in production on Vercel
+    const BACKEND_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+      ? 'http://localhost:5000'
+      : 'https://mch-platform.onrender.com';
+
     try {
-      const response = await fetch('http://localhost:5000/api/subscribe', {
+      const response = await fetch(`${BACKEND_URL}/api/subscribe`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,8 +37,7 @@ export default function Resources() {
         
         // Trigger the automatic download with full URL resolution for mobile devices
         if (data.downloadUrl) {
-          // Extract the backend base origin dynamically (handles localhost or your production domain)
-          const backendOrigin = new URL('http://localhost:5000').origin;
+          const backendOrigin = new URL(BACKEND_URL).origin;
           const fullDownloadUrl = data.downloadUrl.startsWith('http') 
             ? data.downloadUrl 
             : `${backendOrigin}${data.downloadUrl}`;

@@ -30,14 +30,28 @@ export default function Resources() {
         setMessage(data.message || 'Subscribed successfully!');
         setEmail('');
         
-        // Trigger the automatic download using the downloadUrl from the backend
+        // Trigger the automatic download with full URL resolution for mobile devices
         if (data.downloadUrl) {
+          // Extract the backend base origin dynamically (handles localhost or your production domain)
+          const backendOrigin = new URL('http://localhost:5000').origin;
+          const fullDownloadUrl = data.downloadUrl.startsWith('http') 
+            ? data.downloadUrl 
+            : `${backendOrigin}${data.downloadUrl}`;
+
+          // Mobile-friendly download trigger
           const link = document.createElement('a');
-          link.href = data.downloadUrl;
+          link.href = fullDownloadUrl;
           link.setAttribute('download', 'Welcome-To-Weaverton-Activity-Book.pdf');
+          link.setAttribute('target', '_blank');
+          link.setAttribute('rel', 'noopener noreferrer');
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
+
+          // Fallback safety for strict mobile browsers that block hidden anchor clicks
+          setTimeout(() => {
+            window.open(fullDownloadUrl, '_blank');
+          }, 500);
         }
       } else {
         setIsError(true);

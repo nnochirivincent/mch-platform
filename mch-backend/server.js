@@ -87,7 +87,7 @@ app.post('/api/subscribe', async (req, res) => {
       return res.status(200).json({
         success: true,
         message: 'You are already subscribed! Here is your download.',
-        downloadUrl: '/welcome-to-weaverton.pdf' 
+        downloadUrl: '/tifm-coloring-book-2.pdf' 
       });
     }
 

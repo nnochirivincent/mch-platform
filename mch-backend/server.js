@@ -62,7 +62,7 @@ app.post('/api/subscribe', async (req, res) => {
       return res.status(200).json({
         success: true,
         message: 'You are already subscribed! Here is your download.',
-        downloadUrl: '/tfim-colouring-book-2.pdf' 
+        downloadUrl: '/tfim-colouring-book-2.pdf' // Uniform spelling
       });
     }
 
@@ -75,7 +75,7 @@ app.post('/api/subscribe', async (req, res) => {
     return res.status(201).json({
       success: true,
       message: 'Subscribed successfully! Your download is starting.',
-      downloadUrl: '/tfim-colouring-book-2.pdf' 
+      downloadUrl: '/tfim-colouring-book-2.pdf' // Uniform spelling
     });
 
   } catch (error) {

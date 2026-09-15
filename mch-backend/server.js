@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
@@ -8,6 +9,9 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors());
+
+// Serve static files (Make sure your PDFs are in a folder named 'public' in your backend directory)
+app.use(express.static(path.join(__dirname, 'public')));
 
 // MongoDB connection
 const MONGO_URI = process.env.MONGO_URI;
@@ -38,6 +42,31 @@ const subscriberSchema = new mongoose.Schema({
 });
 
 const Subscriber = mongoose.model('Subscriber', subscriberSchema);
+
+// File Download Routes
+app.get('/welcome-to-weaverton.pdf', (req, res) => {
+  const filePath = path.join(__dirname, 'public', 'welcome-to-weaverton.pdf');
+  res.download(filePath, (err) => {
+    if (err) {
+      console.error('Error sending file:', err);
+      if (!res.headersSent) {
+        res.status(404).json({ error: 'File not found.' });
+      }
+    }
+  });
+});
+
+app.get('/tfim-colouring -book(2).pdf', (req, res) => {
+  const filePath = path.join(__dirname, 'public', 'tfim-colouring -book(2).pdf');
+  res.download(filePath, (err) => {
+    if (err) {
+      console.error('Error sending file:', err);
+      if (!res.headersSent) {
+        res.status(404).json({ error: 'File not found.' });
+      }
+    }
+  });
+});
 
 // Subscribe Route
 app.post('/api/subscribe', async (req, res) => {
@@ -92,7 +121,7 @@ app.get('/api/admin/subscribers', async (req, res) => {
 
     return res.status(200).json(subscribers);
 
-  } catch (error) {
+  }	catch (error) {
     console.error('Fetch subscribers error:', error);
 
     return res.status(500).json({

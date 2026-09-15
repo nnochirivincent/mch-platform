@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Serve static files (Make sure your PDFs are in a folder named 'public' in your backend directory)
+// Serve static files (All files inside the 'public' folder are automatically accessible via URL)
 app.use(express.static(path.join(__dirname, 'public')));
 
 // MongoDB connection
@@ -43,31 +43,6 @@ const subscriberSchema = new mongoose.Schema({
 
 const Subscriber = mongoose.model('Subscriber', subscriberSchema);
 
-// File Download Routes
-app.get('/welcome-to-weaverton.pdf', (req, res) => {
-  const filePath = path.join(__dirname, 'public', 'welcome-to-weaverton.pdf');
-  res.download(filePath, (err) => {
-    if (err) {
-      console.error('Error sending file:', err);
-      if (!res.headersSent) {
-        res.status(404).json({ error: 'File not found.' });
-      }
-    }
-  });
-});
-
-app.get('/tfim-colouring -book(2).pdf', (req, res) => {
-  const filePath = path.join(__dirname, 'public', 'tfim-colouring -book(2).pdf');
-  res.download(filePath, (err) => {
-    if (err) {
-      console.error('Error sending file:', err);
-      if (!res.headersSent) {
-        res.status(404).json({ error: 'File not found.' });
-      }
-    }
-  });
-});
-
 // Subscribe Route
 app.post('/api/subscribe', async (req, res) => {
   try {
@@ -87,7 +62,7 @@ app.post('/api/subscribe', async (req, res) => {
       return res.status(200).json({
         success: true,
         message: 'You are already subscribed! Here is your download.',
-        downloadUrl: '/tifm-coloring-book-2.pdf' 
+        downloadUrl: '/tfim-colouring-book-2.pdf' 
       });
     }
 
@@ -100,7 +75,7 @@ app.post('/api/subscribe', async (req, res) => {
     return res.status(201).json({
       success: true,
       message: 'Subscribed successfully! Your download is starting.',
-      downloadUrl: '/tfim-colouring -book(2).pdf' 
+      downloadUrl: '/tfim-colouring-book-2.pdf' 
     });
 
   } catch (error) {
@@ -121,7 +96,7 @@ app.get('/api/admin/subscribers', async (req, res) => {
 
     return res.status(200).json(subscribers);
 
-  }	catch (error) {
+  } catch (error) {
     console.error('Fetch subscribers error:', error);
 
     return res.status(500).json({

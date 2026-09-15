@@ -5,11 +5,51 @@ import ScrollFade from './ScrollFade';
 export default function Resources() {
   const [email, setEmail] = useState('');
   const [isHowToPlayOpen, setIsHowToPlayOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(null);
+  const [isError, setIsError] = useState(false);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    alert(`Thank you! Free activity book link sent to: ${email}`);
-    setEmail('');
+    setLoading(true);
+    setMessage(null);
+    setIsError(false);
+
+    try {
+      const response = await fetch('http://localhost:5000/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage(data.message || 'Subscribed successfully!');
+        setEmail('');
+        
+        // Trigger the automatic download using the downloadUrl from the backend
+        if (data.downloadUrl) {
+          const link = document.createElement('a');
+          link.href = data.downloadUrl;
+          link.setAttribute('download', 'Welcome-To-Weaverton-Activity-Book.pdf');
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        }
+      } else {
+        setIsError(true);
+        setMessage(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Subscription error:', error);
+      setIsError(true);
+      setMessage('Network error. Check if your backend server is running.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -24,7 +64,7 @@ export default function Resources() {
         <div className="relative w-full rounded-none overflow-hidden h-[26vh] sm:h-[30vh] lg:h-[34vh] flex items-center justify-center bg-[#162211]">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img 
-              src="/resources-hero.png" 
+              src="/hero-resources-page.png" 
               alt="Free Resources Header" 
               className="w-full h-full object-cover object-center transform scale-100 filter brightness-95"
             />
@@ -87,7 +127,7 @@ export default function Resources() {
 
                   {/* Main Activity Book Cover (Overlapping everything on the left) */}
                   <img 
-                    src="/weaverton-activity-cover.png" 
+                    src="/activity-bookcover.png" 
                     alt="Welcome to Weaverton Activity Book Cover" 
                     className="absolute left-0 top-2 sm:top-4 z-40 w-[230px] sm:w-[290px] transform -rotate-1 hover:rotate-0 transition-transform duration-500 drop-shadow-2xl rounded-lg"
                   />
@@ -126,11 +166,20 @@ export default function Resources() {
                     />
                     <button 
                       type="submit"
-                      className="bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 shrink-0"
+                      disabled={loading}
+                      className="bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 shrink-0 disabled:opacity-50"
                     >
-                      GET THE FREE ACTIVITY BOOK →
+                      {loading ? 'SENDING...' : 'GET THE FREE ACTIVITY BOOK →'}
                     </button>
                   </div>
+
+                  {/* Dynamic Status Feedback Message */}
+                  {message && (
+                    <p className={`text-sm font-semibold mt-2 ${isError ? 'text-red-600' : 'text-[#3c5e2a]'}`}>
+                      {message}
+                    </p>
+                  )}
+
                   <div className="flex items-center space-x-1.5 text-xs text-[#384a30] pt-1">
                     <svg className="w-4 h-4 shrink-0 text-[#3c5e2a]" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
@@ -146,48 +195,44 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* 3. MORE FREE ACTIVITIES SECTION (Directly on Browser Background - No Containers) */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-12 bg-[#fbfbf9]">
-        <div className="max-w-6xl mx-auto space-y-12">
+      {/* 3. MORE FREE ACTIVITIES SECTION */}
+      <section className="py-14 sm:py-20 px-4 sm:px-6 lg:px-12 bg-[#fbfbf9]">
+        <div className="max-w-6xl mx-auto space-y-14">
           
-          {/* Section Heading */}
           <div className="text-center space-y-2">
             <div className="flex items-center justify-center space-x-4">
               <div className="h-[1px] w-16 bg-[#3c5e2a]/30"></div>
-              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1e3319]">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-[#1e3319]">
                 More Free Activities
               </h2>
               <div className="h-[1px] w-16 bg-[#3c5e2a]/30"></div>
             </div>
-            <p className="text-sm sm:text-base text-[#2c3e24] font-medium">
+            <p className="text-base sm:text-lg text-[#2c3e24] font-medium">
               Continue the stories with activities to download, print and enjoy.
             </p>
           </div>
 
-          {/* Activities Grid (Uncontained / Sitting Directly on Page) */}
-          <div className="grid md:grid-cols-2 gap-10 lg:gap-16 max-w-5xl mx-auto items-start">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 max-w-5xl mx-auto items-start">
             
-            {/* Item 1: The Face in the Mountain Coloring Book */}
+            {/* Item 1 */}
             <ScrollFade delay={100}>
-              <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left">
-                {/* Direct Image */}
+              <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center sm:items-start text-center sm:text-left">
                 <img 
-                  src="/face-mountain-coloring.png" 
+                  src="/1-aboutpage-bookcover.png" 
                   alt="The Face in the Mountain Coloring Book" 
-                  className="w-[150px] sm:w-[170px] shrink-0 drop-shadow-xl rounded-lg transform -rotate-2"
+                  className="w-[190px] sm:w-[220px] shrink-0 drop-shadow-2xl rounded-lg transform -rotate-2 hover:rotate-0 transition-transform duration-300"
                 />
-                {/* Text details */}
-                <div className="space-y-3">
-                  <h3 className="font-serif font-bold text-lg sm:text-xl text-[#1e3319]">
+                <div className="space-y-3.5">
+                  <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#1e3319]">
                     The Face in the Mountain Coloring Book
                   </h3>
-                  <p className="text-sm sm:text-base text-[#2c3e24] font-medium leading-relaxed">
+                  <p className="text-base sm:text-lg text-[#2c3e24] font-medium leading-relaxed">
                     Bring scenes and characters from <span className="italic">The Face in the Mountain</span> to life with this free coloring book.
                   </p>
                   <div className="pt-2">
                     <a 
                       href="#download-coloring" 
-                      className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl shadow transition duration-300"
+                      className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl shadow-md transition duration-300"
                     >
                       DOWNLOAD FREE →
                     </a>
@@ -196,37 +241,34 @@ export default function Resources() {
               </div>
             </ScrollFade>
 
-            {/* Item 2: The Festival Shoes Adventure Game */}
+            {/* Item 2 */}
             <ScrollFade delay={140}>
-              <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left">
-                {/* Direct Image */}
+              <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center sm:items-start text-center sm:text-left">
                 <img 
-                  src="/festival-shoes-game.png" 
+                  src="/TFS-adventure-game.png" 
                   alt="The Festival Shoes Adventure Game" 
-                  className="w-[160px] sm:w-[190px] shrink-0 drop-shadow-xl rounded-lg transform rotate-1"
+                  className="w-[200px] sm:w-[235px] shrink-0 drop-shadow-2xl rounded-lg transform rotate-1 hover:rotate-0 transition-transform duration-300"
                 />
-                {/* Text details */}
-                <div className="space-y-3 w-full">
-                  <h3 className="font-serif font-bold text-lg sm:text-xl text-[#1e3319]">
+                <div className="space-y-3.5 w-full">
+                  <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#1e3319]">
                     The Festival Shoes Adventure Game
                   </h3>
-                  <p className="text-sm sm:text-base text-[#2c3e24] font-medium leading-relaxed">
+                  <p className="text-base sm:text-lg text-[#2c3e24] font-medium leading-relaxed">
                     Follow Dunah’s journey from Weaverton to Earth in this downloadable game inspired by <span className="italic">The Festival Shoes</span>.
                   </p>
                   <div>
                     <a 
                       href="#download-game" 
-                      className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl shadow transition duration-300"
+                      className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl shadow-md transition duration-300"
                     >
                       DOWNLOAD FREE →
                     </a>
                   </div>
 
-                  {/* Dropdown Accordion: How to Play */}
                   <div className="pt-3">
                     <button 
                       onClick={() => setIsHowToPlayOpen(!isHowToPlayOpen)}
-                      className="w-full flex items-center justify-between text-xs sm:text-sm font-bold text-[#1e3319] py-2 px-3 rounded-lg bg-[#edf2eb]/70 hover:bg-[#edf2eb] transition border border-[#3c5e2a]/15"
+                      className="w-full flex items-center justify-between text-sm sm:text-base font-bold text-[#1e3319] py-2.5 px-3.5 rounded-lg bg-[#edf2eb]/70 hover:bg-[#edf2eb] transition border border-[#3c5e2a]/15 shadow-sm"
                     >
                       <span>How to Play</span>
                       <svg 
@@ -240,7 +282,7 @@ export default function Resources() {
                       </svg>
                     </button>
                     {isHowToPlayOpen && (
-                      <div className="pt-2 px-3 text-xs sm:text-sm text-[#2c3e24] space-y-1.5 bg-[#edf2eb]/40 rounded-b-lg pb-2 text-left border-x border-b border-[#3c5e2a]/15">
+                      <div className="pt-2.5 px-3.5 text-xs sm:text-sm text-[#2c3e24] space-y-2 bg-[#edf2eb]/40 rounded-b-lg pb-3 text-left border-x border-b border-[#3c5e2a]/15">
                         <p>1. Print out the game board and instructions sheet.</p>
                         <p>2. Gather your tokens and dice to begin the journey across Weaverton.</p>
                         <p>3. Follow the board paths, answer discovery prompts, and reach the festival celebration!</p>
@@ -286,7 +328,6 @@ export default function Resources() {
       <div className="pt-6 border-t border-[#23351a]/15 px-4 sm:px-6 lg:px-12 bg-[#eaf0e8]">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6">
           
-          {/* Logo & Tagline */}
           <div className="flex items-center space-x-3 text-center lg:text-left">
             <Link to="/" className="flex items-center space-x-3 group shrink-0">
               <div className="flex items-center justify-center shrink-0">
@@ -305,7 +346,6 @@ export default function Resources() {
             </div>
           </div>
  
-          {/* Nav Links */}
           <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
             <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
             <Link to="/about" className="hover:text-[#1a2b13] transition">About</Link>
@@ -315,7 +355,6 @@ export default function Resources() {
             <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
           </div>
  
-          {/* Social Icons */}
           <div className="flex items-center space-x-2.5 shrink-0">
             <a href="#instagram" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -338,7 +377,6 @@ export default function Resources() {
  
         </div>
  
-        {/* Copyright and Legal Links */}
         <div className="pt-4 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2 pb-6">
           <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
           <div className="flex items-center space-x-4">

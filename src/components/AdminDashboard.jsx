@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BookOpen, FolderDown, PlusCircle, Settings, Trash2, Edit, Save } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { BookOpen, FolderDown, PlusCircle, Users, Trash2, Edit } from 'lucide-react';
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('books');
@@ -14,6 +14,32 @@ export default function AdminDashboard() {
 
   const [newBookTitle, setNewBookTitle] = useState('');
   const [newBookPrice, setNewBookPrice] = useState('');
+
+  // Subscribers state from MongoDB
+  const [subscribers, setSubscribers] = useState([]);
+  const [loadingSubs, setLoadingSubs] = useState(false);
+
+  // Fetch subscribers when the subscribers tab becomes active
+  useEffect(() => {
+    if (activeTab === 'subscribers') {
+      fetchSubscribers();
+    }
+  }, [activeTab]);
+
+  const fetchSubscribers = async () => {
+    setLoadingSubs(true);
+    try {
+      const response = await fetch('http://localhost:5000/api/admin/subscribers');
+      const data = await response.json();
+      if (response.ok) {
+        setSubscribers(data);
+      }
+    } catch (error) {
+      console.error('Failed to fetch subscribers:', error);
+    } finally {
+      setLoadingSubs(false);
+    }
+  };
 
   const handleAddBook = (e) => {
     e.preventDefault();
@@ -36,9 +62,9 @@ export default function AdminDashboard() {
         <div>
           <span className="bg-emerald-800 text-emerald-200 text-xs px-3 py-1 rounded-full uppercase tracking-wider">Owner Control Center</span>
           <h1 className="text-3xl font-bold mt-2">MCH Platform Management</h1>
-          <p className="text-emerald-100 text-sm mt-1">Upload new books, adjust pricing, and manage digital resources seamlessly.</p>
+          <p className="text-emerald-100 text-sm mt-1">Upload books, manage digital resources, and view live activity book subscribers.</p>
         </div>
-        <div className="flex gap-2 bg-[#1c3919] p-1.5 rounded-xl border border-emerald-800">
+        <div className="flex flex-wrap gap-2 bg-[#1c3919] p-1.5 rounded-xl border border-emerald-800">
           <button 
             onClick={() => setActiveTab('books')} 
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition ${activeTab === 'books' ? 'bg-emerald-600 text-white' : 'text-emerald-200 hover:text-white'}`}
@@ -50,6 +76,12 @@ export default function AdminDashboard() {
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition ${activeTab === 'resources' ? 'bg-emerald-600 text-white' : 'text-emerald-200 hover:text-white'}`}
           >
             Upload Resources
+          </button>
+          <button 
+            onClick={() => setActiveTab('subscribers')} 
+            className={`px-4 py-2 rounded-lg text-sm font-semibold transition ${activeTab === 'subscribers' ? 'bg-emerald-600 text-white' : 'text-emerald-200 hover:text-white'}`}
+          >
+            Subscribers ({subscribers.length})
           </button>
         </div>
       </div>
@@ -149,6 +181,59 @@ export default function AdminDashboard() {
               Upload and Make Live
             </button>
           </form>
+        </div>
+      )}
+
+      {/* Tab Content 3: Subscribers List */}
+      {activeTab === 'subscribers' && (
+        <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-emerald-100 space-y-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <h3 className="font-bold text-xl text-[#23461f] flex items-center gap-2">
+                <Users size={22} className="text-emerald-600" /> Activity Book Subscribers
+              </h3>
+              <p className="text-sm text-gray-600">Live list of emails retrieved directly from your database.</p>
+            </div>
+            <button 
+              onClick={fetchSubscribers} 
+              className="bg-emerald-50 hover:bg-emerald-100 text-[#23461f] font-semibold text-xs px-4 py-2 rounded-lg transition border border-emerald-200"
+            >
+              Refresh List
+            </button>
+          </div>
+
+          {loadingSubs ? (
+            <p className="text-center py-8 text-gray-500 text-sm">Loading subscribers from database...</p>
+          ) : subscribers.length === 0 ? (
+            <div className="text-center py-12 border-2 border-dashed border-gray-200 rounded-xl space-y-2">
+              <Users size={32} className="mx-auto text-gray-300" />
+              <p className="text-gray-600 font-medium">No subscribers found in database.</p>
+              <p className="text-xs text-gray-400">Submit an email on your Resources page to test it out!</p>
+            </div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-gray-200 text-xs uppercase text-gray-500 bg-emerald-50/50">
+                    <th className="py-3 px-4 font-bold">#</th>
+                    <th className="py-3 px-4 font-bold">Email Address</th>
+                    <th className="py-3 px-4 font-bold">Date Subscribed</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100 text-sm">
+                  {subscribers.map((sub, index) => (
+                    <tr key={sub._id || index} className="hover:bg-gray-50/50">
+                      <td className="py-3.5 px-4 text-gray-500">{index + 1}</td>
+                      <td className="py-3.5 px-4 font-medium text-[#23461f]">{sub.email}</td>
+                      <td className="py-3.5 px-4 text-gray-600">
+                        {sub.dateSubscribed ? new Date(sub.dateSubscribed).toLocaleDateString() : 'N/A'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
       )}
 

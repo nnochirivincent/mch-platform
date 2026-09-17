@@ -49,7 +49,7 @@ export default function Navbar() {
             </Link>
 
             <Link to="/about" className="hover:text-emerald-700 transition flex items-center gap-1.5 py-2">
-              <Info size={14} className="text-emerald-700 shrink-0" /> About Founder
+              <Info size={14} className="text-emerald-700 shrink-0" /> About Us
             </Link>
 
             <Link 

@@ -57,7 +57,6 @@ export default function Collaboration() {
               alt="Collaborations Header" 
               className="w-full h-full object-cover object-center transform scale-100 filter brightness-95"
             />
-            {/* Subtle gradient overlay for professional contrast */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#162211]/80 via-transparent to-transparent"></div>
           </div>
 
@@ -65,6 +64,13 @@ export default function Collaboration() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight drop-shadow-md">
               Collaborations
             </h1>
+            <div className="flex items-center justify-center space-x-2 pt-1">
+              <div className="w-8 h-px bg-white/40"></div>
+              <span className="text-[10px] sm:text-xs font-extrabold tracking-[0.25em] uppercase text-lime-200/90 drop-shadow">
+                STORIES THAT CONNECT WORLDS
+              </span>
+              <div className="w-8 h-px bg-white/40"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -72,113 +78,131 @@ export default function Collaboration() {
       {/* TOP-NOTCH ANIMATED FAIRY FLYING ACROSS UPPER CONTENT */}
       <div className="relative w-full h-0 overflow-visible z-40 pointer-events-none">
         <div className="absolute top-2 left-0 animate-elite-fairy flex items-center">
-          {/* Magical Stardust Trail */}
           <div className="flex space-x-1.5 mr-2 opacity-80">
             <div className="w-1.5 h-1.5 bg-lime-300 rounded-full animate-ping" style={{ animationDuration: '1.5s' }}></div>
             <div className="w-2 h-2 bg-emerald-200 rounded-full blur-[1px]"></div>
             <div className="w-1 h-1 bg-white rounded-full"></div>
           </div>
 
-          {/* Detailed SVG Fairy / Magical Firefly with Flapping Wings */}
           <svg className="w-9 h-9 text-lime-200" viewBox="0 0 24 24" fill="currentColor">
-            {/* Left Wing */}
             <path className="animate-wings origin-right fill-lime-300/80 backdrop-blur" d="M12 12C12 12 6 5 3 7C0 9 4 15 12 12Z" />
-            {/* Right Wing */}
             <path className="animate-wings origin-left fill-lime-300/80 backdrop-blur" d="M12 12C12 12 18 5 21 7C24 9 20 15 12 12Z" />
-            {/* Body / Core Glow */}
             <circle cx="12" cy="12" r="3" className="fill-white" />
             <path d="M12 8V16M9 11H15" stroke="#162211" strokeWidth="1" strokeLinecap="round" />
           </svg>
 
-          {/* Trailing Sparkle */}
           <div className="ml-2 w-1.5 h-1.5 bg-lime-400 rounded-full blur-[1px]"></div>
         </div>
       </div>
 
-      {/* 2. INTRO SECTION: Blossom in Nature: Paired Perspectives */}
-      <section className="pt-12 pb-10 px-4 sm:px-6 lg:px-12 text-center bg-[#fbfbf9] relative z-10">
+      {/* 2. MIDDLE SECTION: One Story. Two Perspectives. (Compressed) */}
+      <section className="py-5 sm:py-7 px-6 sm:px-12 lg:px-20 bg-[#edf2eb] border-b border-[#23351a]/10 relative overflow-hidden shadow-inner mt-2">
         <ScrollFade delay={80}>
-          <div className="max-w-3xl mx-auto space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1e3319] tracking-tight">
-              Blossom in Nature: Paired Perspectives
-            </h2>
-            <p className="text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase text-[#355322] bg-[#edf2eb] py-1 px-3 rounded-full inline-block shadow-sm">
-              STORIES SEEN FROM TWO WORLDS
-            </p>
-            <p className="text-xs sm:text-sm text-[#2c3e24] font-medium leading-relaxed pt-2">
-              Blossom in Nature stories are created in interconnected pairs, offering two perspectives on a shared theme — one from the human world and the other from the world of nature and its elemental beings.
-            </p>
-            <p className="text-xs sm:text-sm text-[#2c3e24] font-medium leading-relaxed">
-              The human story follows a child through everyday experiences and choices, while the parallel nature story reveals another side of those experiences — including how nature may respond to human actions.
-            </p>
-            <p className="text-xs sm:text-sm text-[#2c3e24] font-medium leading-relaxed">
-              Together, the paired stories invite children to see the connection between the human and natural worlds, how each can affect the other, and how qualities such as honesty, courage, kindness and perseverance can shape the choices we make.
-            </p>
-          </div>
-        </ScrollFade>
-      </section>
+          <div className="max-w-[95rem] mx-auto space-y-4">
+            
+            {/* Header Title Area */}
+            <div className="text-center space-y-1.5 max-w-2xl mx-auto">
+              <span className="text-[10px] sm:text-xs font-bold tracking-[0.3em] uppercase text-[#355322]">
+                BLOSSOM IN NATURE
+              </span>
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-[#1e3319]">
+                One Story. Two Perspectives.
+              </h3>
+              <p className="text-xs sm:text-sm text-[#2c3e24] font-medium leading-relaxed pt-0.5">
+                Blossom in Nature stories are created in interconnected pairs, offering two perspectives on a shared theme — one from the human world and the other from the world of nature and its elemental beings.
+              </p>
+            </div>
 
-      {/* 3. MIDDLE SECTION: One Story. Two Perspectives. */}
-      <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-12 bg-[#edf2eb] border-y border-[#23351a]/10 relative overflow-hidden shadow-inner">
-        
-        {/* Elite background watermarks */}
-        <div className="absolute -right-16 -bottom-16 opacity-[0.03] pointer-events-none transform rotate-12">
-          <svg className="w-[500px] h-[500px] text-[#1e3319]" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17,8C8,10,5.9,16.17,3.82,21.34L5.71,22l1-2.3C9,20.5,11,21,13,21c7,0,9-8,9-8s-3,0-5-5Z" />
-          </svg>
-        </div>
-
-        <ScrollFade delay={80}>
-          <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
-            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#1e3319]">
-              One Story. Two Perspectives.
-            </h3>
-
-            {/* Book Pair Cards - Ultra-polished high-end glassmorphic presentation */}
-            <div className="grid md:grid-cols-2 gap-10 items-center max-w-2xl mx-auto pt-2">
+            {/* Main Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-4 items-center justify-center pt-2 sm:pt-3">
               
-              {/* Book 1: Femi's Promise */}
-              <div className="space-y-3 text-center group">
-                <div className="overflow-hidden rounded-2xl shadow-xl bg-white/60 backdrop-blur-md p-2 inline-block transform -rotate-1 group-hover:rotate-0 group-hover:-translate-y-2 transition-all duration-500 w-full max-w-[280px] sm:max-w-[310px] ring-1 ring-[#3c5e2a]/20 group-hover:ring-[#3c5e2a]/60 group-hover:shadow-2xl">
+              {/* Left Book: Femi's Promise (2 cols) */}
+              <div className="lg:col-span-2 flex justify-center lg:justify-end -mt-4 sm:-mt-8 lg:-mt-10">
+                <div className="w-[150px] sm:w-[190px] transform -rotate-2 hover:rotate-0 transition-transform duration-500 drop-shadow-2xl">
                   <img 
                     src="/bookcover-aboutpage.png" 
                     alt="Femi's Promise Book Cover" 
-                    className="w-full h-auto object-cover rounded-lg transform group-hover:scale-[1.02] transition duration-500"
+                    className="w-full h-auto object-cover rounded-r-lg rounded-l-sm"
                   />
-                </div>
-                <div>
-                  <h4 className="font-serif font-bold text-lg text-[#1e3319]">Femi's Promise</h4>
-                  <p className="text-xs font-semibold text-[#4a6b35] uppercase tracking-wider pt-0.5">The Human Perspective</p>
                 </div>
               </div>
 
-              {/* Book 2: Luna's Threads of Light */}
-              <div className="space-y-3 text-center group">
-                <div className="overflow-hidden rounded-2xl shadow-xl bg-white/60 backdrop-blur-md p-2 inline-block transform rotate-1 group-hover:rotate-0 group-hover:-translate-y-2 transition-all duration-500 w-full max-w-[280px] sm:max-w-[310px] ring-1 ring-[#3c5e2a]/20 group-hover:ring-[#3c5e2a]/60 group-hover:shadow-2xl">
+              {/* Center Content Columns & Badge (8 cols) */}
+              <div className="lg:col-span-8 space-y-4 px-2 sm:px-4">
+                
+                {/* Two Text Columns */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 text-left">
+                  
+                  {/* Column 1: Femi's Promise Info */}
+                  <div className="space-y-2">
+                    <h4 className="font-serif font-bold text-lg sm:text-xl text-[#1e3319]">Femi’s Promise</h4>
+                    <p className="text-[10px] sm:text-[11px] font-extrabold text-[#355322] uppercase tracking-wider">THE HUMAN PERSPECTIVE</p>
+                    <div className="w-6 h-0.5 bg-[#355322]/40 my-0.5"></div>
+                    <p className="text-xs sm:text-sm text-[#2c3e24] font-medium leading-relaxed">
+                      Through everyday challenges and quiet moments of reflection, Femi learns how staying true to himself can change the way he sees the world — and how others see him.
+                    </p>
+                    <p className="text-[11px] sm:text-xs text-[#355322] font-semibold italic pt-0.5">
+                      A child’s story of honesty, courage, and finding the strength to speak from the heart.
+                    </p>
+                  </div>
+
+                  {/* Column 2: Luna's Threads of Light Info */}
+                  <div className="space-y-2">
+                    <h4 className="font-serif font-bold text-lg sm:text-xl text-[#1e3319]">Luna’s Threads of Light</h4>
+                    <p className="text-[10px] sm:text-[11px] font-extrabold text-[#355322] uppercase tracking-wider">THE ELEMENTAL PERSPECTIVE</p>
+                    <div className="w-6 h-0.5 bg-[#355322]/40 my-0.5"></div>
+                    <p className="text-xs sm:text-sm text-[#2c3e24] font-medium leading-relaxed">
+                      High above the Earth, Luna the moon fairy learns that when you reconnect with who you truly are, your light can guide others through their hardest moments.
+                    </p>
+                    <p className="text-[11px] sm:text-xs text-[#355322] font-semibold italic pt-0.5">
+                      A gentle fairy tale about discovering your true light and the courage it inspires.
+                    </p>
+                  </div>
+
+                </div>
+
+                {/* Central Badge & Divider */}
+                <div className="flex flex-col items-center justify-center space-y-1.5 pt-1">
+                  <div className="inline-flex items-center space-x-2 bg-[#dfebd9] border border-[#3c5e2a]/25 px-3.5 py-1 rounded-full shadow-sm">
+                    <span className="text-[9px] sm:text-[10px] font-extrabold tracking-[0.25em] uppercase text-[#355322]">
+                      THE FIRST PAIRED STORIES
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-2 text-[#3c5e2a]">
+                    <div className="w-10 h-px bg-[#3c5e2a]/30"></div>
+                    <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24">
+                      <path d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M12,20c-4.4,0-8-3.6-8-8 c0-4.4,3.6-8,8-8s8,3.6,8,8C20,16.4,16.4,20,12,20z"/>
+                    </svg>
+                    <div className="w-10 h-px bg-[#3c5e2a]/30"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Right Book: Luna's Threads of Light (2 cols) */}
+              <div className="lg:col-span-2 flex justify-center lg:justify-start -mt-4 sm:-mt-8 lg:-mt-10">
+                <div className="w-[150px] sm:w-[190px] transform rotate-2 hover:rotate-0 transition-transform duration-500 drop-shadow-2xl">
                   <img 
                     src="/2-bookcover-aboutpage.png" 
                     alt="Luna's Threads of Light Book Cover" 
-                    className="w-full h-auto object-cover rounded-lg transform group-hover:scale-[1.02] transition duration-500"
+                    className="w-full h-auto object-cover rounded-l-lg rounded-r-sm"
                   />
-                </div>
-                <div>
-                  <h4 className="font-serif font-bold text-lg text-[#1e3319]">Luna's Threads of Light</h4>
-                  <p className="text-xs font-semibold text-[#4a6b35] uppercase tracking-wider pt-0.5">The Elemental Perspective</p>
                 </div>
               </div>
 
             </div>
 
-            <div className="max-w-xl mx-auto space-y-4 pt-3">
+            {/* Bottom Statement & CTA Button */}
+            <div className="max-w-xl mx-auto text-center space-y-3 pt-2">
               <p className="text-xs sm:text-sm text-[#2c3e24] font-medium leading-relaxed">
-                Femi and Luna experience the same unfolding events from different worlds. Read together, their stories reveal things that neither perspective could show on its own.
+                Femi and Luna are the first interconnected pair in the Paired Perspectives collection. Future stories will continue to explore shared themes through the human and natural worlds.
               </p>
               <div>
                 <a 
                   href="https://blossominnature.com/explore-our-books" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-7 py-3 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
+                  className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-xs uppercase tracking-widest px-7 py-3 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
                 >
                   EXPLORE THE PAIRED STORIES →
                 </a>
@@ -189,35 +213,31 @@ export default function Collaboration() {
         </ScrollFade>
       </section>
 
-      {/* 4. CREATIVE PERSPECTIVES SECTION */}
-      <section className="py-14 sm:py-16 px-4 sm:px-6 lg:px-12 bg-[#fbfbf9] text-center relative">
+      {/* 3. CREATIVE PERSPECTIVES SECTION */}
+      <section className="py-8 sm:py-10 px-6 sm:px-12 lg:px-20 bg-[#fbfbf9] text-center relative">
         <ScrollFade delay={80}>
-          <div className="max-w-3xl mx-auto space-y-4">
-            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#1e3319]">
+          <div className="max-w-3xl mx-auto space-y-2.5">
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
               Two Creative Perspectives, One Shared Vision
             </h3>
-            <p className="text-xs sm:text-sm text-[#2c3e24] font-medium leading-relaxed">
-              Blossom in Nature is a creative collaboration between Tolulope Okudolo of Magnifying Children's Horizons and Angela Ehrich of Nature&Children.
-            </p>
-            <p className="text-xs sm:text-sm text-[#2c3e24] font-medium leading-relaxed">
-              Together, they bring their different creative perspectives to stories that explore the relationship between children, nature and the often unseen activity within the natural world.
+            <p className="text-xs sm:text-sm text-[#2c3e24] font-medium leading-relaxed max-w-2xl mx-auto">
+              Blossom in Nature is a creative collaboration between Tolulope Okudolo of Magnifying Children's Horizons and Angela Ehrich of Nature&Children. Together, they bring different creative perspectives to stories exploring children, nature, and unseen natural elements.
             </p>
           </div>
         </ScrollFade>
       </section>
 
-      {/* 5. FOOTER BANNER SECTION: Discover More From Blossom in Nature */}
-      <section className="relative pt-16 pb-16 px-4 sm:px-6 lg:px-12 overflow-hidden bg-[#eaf0e8] border-t border-[#23351a]/10">
-        {/* Background hill/nature silhouette graphic */}
+      {/* 4. FOOTER BANNER SECTION: Discover More From Blossom in Nature */}
+      <section className="relative pt-10 pb-10 px-6 sm:px-12 lg:px-20 overflow-hidden bg-[#eaf0e8] border-t border-[#23351a]/10">
         <div className="absolute inset-x-0 bottom-0 pointer-events-none opacity-40">
           <img 
             src="/collab.png" 
             alt="Nature Scenery Banner" 
-            className="w-full h-32 sm:h-48 object-cover object-bottom"
+            className="w-full h-20 sm:h-28 object-cover object-bottom"
           />
         </div>
 
-        <div className="relative z-10 max-w-2xl mx-auto text-center space-y-4">
+        <div className="relative z-10 max-w-2xl mx-auto text-center space-y-3">
           <ScrollFade delay={80}>
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
               Discover More From Blossom in Nature
@@ -225,12 +245,12 @@ export default function Collaboration() {
             <p className="text-xs sm:text-sm text-[#2c3e24] font-medium leading-relaxed max-w-lg mx-auto">
               Explore the philosophy behind Paired Perspectives, discover the books and follow the growing collection of stories connecting the human and natural worlds.
             </p>
-            <div className="pt-2">
+            <div className="pt-1.5">
               <a 
                 href="https://blossominnature.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-7 py-3 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
+                className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-xs uppercase tracking-widest px-7 py-3 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
               >
                 VISIT BLOSSOM IN NATURE →
               </a>
@@ -240,10 +260,9 @@ export default function Collaboration() {
       </section>
 
       {/* Footer Section */}
-      <div className="pt-6 border-t border-[#23351a]/15 px-4 sm:px-6 lg:px-12 bg-[#eaf0e8]">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6">
+      <div className="pt-6 border-t border-[#23351a]/15 px-6 sm:px-12 lg:px-20 bg-[#eaf0e8]">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-5 pb-6">
           
-          {/* Logo & Tagline */}
           <div className="flex items-center space-x-3 text-center lg:text-left">
             <Link to="/" className="flex items-center space-x-3 group shrink-0">
               <div className="flex items-center justify-center shrink-0">
@@ -255,15 +274,14 @@ export default function Collaboration() {
               </div>
             </Link>
             <div className="flex flex-col text-left">
-              <span className="font-serif font-bold text-base text-[#1a2b13] leading-none">Magnifying Children's Horizons</span>
-              <span className="text-[10px] text-[#2c3e24] font-bold uppercase tracking-widest mt-1">
+              <span className="font-serif font-bold text-sm sm:text-base text-[#1a2b13] leading-none">Magnifying Children's Horizons</span>
+              <span className="text-[10px] text-[#2c3e24] font-extrabold uppercase tracking-widest mt-1.5">
                 NATURE • CHARACTER • A BRIGHTER TOMORROW
               </span>
             </div>
           </div>
  
-          {/* Nav Links */}
-          <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
+          <div className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm uppercase tracking-wider font-extrabold text-[#28421c]">
             <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
             <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
             <Link to="/cwn/pathways" className="hover:text-[#1a2b13] transition">Character with Nature™</Link>
@@ -272,7 +290,6 @@ export default function Collaboration() {
             <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
           </div>
  
-          {/* Social Icons */}
           <div className="flex items-center space-x-2.5 shrink-0">
             <a href="#instagram" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -294,9 +311,8 @@ export default function Collaboration() {
           </div>
  
         </div>
- 
-        {/* Copyright and Legal Links */}
-        <div className="pt-4 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2 pb-6">
+
+        <div className="pt-4 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-xs text-[#384a30] font-bold gap-2 pb-6">
           <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
           <div className="flex items-center space-x-4">
             <a href="#privacy" className="hover:underline">Privacy Policy</a>

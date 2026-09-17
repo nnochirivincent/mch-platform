@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollFade from './ScrollFade';
 
 export default function Books() {
+  const [tfimReviewsOpen, setTfimReviewsOpen] = useState(false);
+  const [tfsReviewsOpen, setTfsReviewsOpen] = useState(false);
+
   return (
-    <div className="bg-[#fcfbf9] min-h-screen">
+    <div className="bg-[#fcfbf9] min-h-screen text-[#14230f]">
       
       {/* 1. HERO SECTION */}
       <section className="relative w-full pt-0 pb-0">
         <div className="relative w-full rounded-none overflow-hidden h-[25vh] sm:h-[30vh] lg:h-[35vh] flex items-center justify-center">
-          
           <div className="absolute inset-0 z-0 overflow-hidden bg-[#162211]">
             <img 
               src="/books-hero.png" 
@@ -17,13 +19,11 @@ export default function Books() {
               className="w-full h-full object-cover object-center transform scale-100"
             />
           </div>
-
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-2">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#1a2b13] tracking-tight drop-shadow-sm">
               OUR BOOKS
             </h1>
           </div>
-
         </div>
       </section>
 
@@ -34,7 +34,7 @@ export default function Books() {
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1e3319] tracking-tight">
               Discover the Weaverton Series
             </h2>
-            <p className="text-xs sm:text-sm text-[#1b2718] font-medium leading-relaxed">
+            <p className="text-sm sm:text-base text-[#1b2718] font-medium leading-relaxed">
               Step into a world where nature is alive with purpose.<br className="hidden sm:inline" />
               Through the Weaverton Series, children encounter nature beings, unexpected challenges and discoveries that encourage courage, creativity, self-trust and a deeper connection with the natural world.
             </p>
@@ -48,7 +48,7 @@ export default function Books() {
           <div className="max-w-[90rem] mx-auto">
             <div className="grid lg:grid-cols-12 gap-4 lg:gap-6 items-center">
               
-              {/* Book Cover - Nudged upward */}
+              {/* Book Cover */}
               <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-[220px]">
                 <img 
                   src="/tfim-book-cover.png" 
@@ -60,7 +60,7 @@ export default function Books() {
               {/* Book Info & Trailer */}
               <div className="lg:col-span-9 grid md:grid-cols-2 gap-4 lg:gap-6 items-center">
                 
-                <div className="space-y-2.5 text-left">
+                <div className="space-y-3 text-left">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
                       The Face in the Mountain
@@ -70,15 +70,15 @@ export default function Books() {
                     </p>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-[#1b2718] font-medium leading-relaxed">
-                    When Bena’s father must leave Vanger Creek, Bena worries he won’t remember everything he has been taught. As unexpected challenges arise, he must learn to trust what he knows, think creatively and discover what he is capable of.
+                  <p className="text-sm sm:text-base text-[#1b2718] font-medium leading-relaxed">
+                    Boma and his father are nature giants who help the nature beings with their work in Vomper Creek. When Boma’s father must leave, Boma worries he won’t remember everything he has been taught. As unexpected challenges arise, he must learn to trust what he knows, think creatively and discover what he is capable of.
                   </p>
 
-                  <p className="font-serif italic text-xs sm:text-sm font-bold text-[#2c441c]">
-                    A story about self-trust, creativity and finding the courage to meet a challenge in your own way.
+                  <p className="font-serif italic text-sm sm:text-base font-bold text-[#2c441c]">
+                    A story about self-trust, creativity and what nature can teach us about working together.
                   </p>
 
-                  <div className="pt-1">
+                  <div className="flex flex-wrap items-center gap-3 pt-1">
                     <a 
                       href="https://www.amazon.com/Face-Mountain-Tolulope-Okudolo/dp/0994876947/"
                       target="_blank"
@@ -87,20 +87,28 @@ export default function Books() {
                     >
                       DISCOVER / BUY THE BOOK →
                     </a>
+
+                    <button
+                      type="button"
+                      onClick={() => setTfimReviewsOpen(!tfimReviewsOpen)}
+                      className="inline-flex items-center space-x-1.5 bg-[#eaf2e6] hover:bg-[#ddeade] text-[#2c441c] border border-[#355322]/20 font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow-sm transition cursor-pointer"
+                    >
+                      <span>{tfimReviewsOpen ? 'Hide Reviews ▲' : 'Read Reviews (3) ▼'}</span>
+                    </button>
                   </div>
                 </div>
 
                 {/* Trailer Thumbnail Box */}
-                <div className="space-y-2 text-center">
-                  <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5">
+                <div className="space-y-2 text-center max-w-md mx-auto w-full">
+                  <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5 max-h-[190px] mx-auto">
                     <img 
                       src="/TFITM-tumnail.png" 
                       alt="The Face in the Mountain Trailer Preview" 
                       className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-300"
                     />
                     <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                      <div className="w-10 h-10 rounded-full bg-white/90 text-[#1e3319] flex items-center justify-center shadow-lg group-hover:scale-110 transition">
-                        <svg className="w-5 h-5 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+                      <div className="w-9 h-9 rounded-full bg-white/90 text-[#1e3319] flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+                        <svg className="w-4 h-4 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M8 5v14l11-7z"/>
                         </svg>
                       </div>
@@ -119,6 +127,38 @@ export default function Books() {
 
               </div>
 
+              {/* Collapsible Reviews Drawer for Book 1 */}
+              {tfimReviewsOpen && (
+                <div className="lg:col-span-12 bg-[#f4f7f2] border border-[#d2e2cc] p-6 rounded-xl mt-4 space-y-4 shadow-inner">
+                  <h4 className="font-serif font-bold text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
+                    Reader Reviews — The Face in the Mountain
+                  </h4>
+                  <div className="grid md:grid-cols-3 gap-4 text-xs sm:text-sm">
+                    <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
+                      <div className="text-amber-600 font-bold">★★★★★</div>
+                      <p className="italic text-[#1b2718]">
+                        "Liken to Lion King, this is a coming of age story of a father and son. a beautiful tale that inspires us to remember that what we do affects the world we live in. A really fun one to give to a father to read to his son."
+                      </p>
+                      <p className="font-bold text-[#355322]">— Ruby Blotzer</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
+                      <div className="text-amber-600 font-bold">★★★★★</div>
+                      <p className="italic text-[#1b2718]">
+                        "Beautifully illustrated - about the interconnectedness of nature. The identification of several faces in mountains around North America will get people observing the mountains as they travel around. What a great idea."
+                      </p>
+                      <p className="font-bold text-[#355322]">— Carla Johnson-Hicks</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
+                      <div className="text-amber-600 font-bold">★★★★★</div>
+                      <p className="italic text-[#1b2718]">
+                        "A very uniquely different children's book, with its beautiful illustrations shows how fascinating nature can be to children. Through their eyes things look totally different than they do to adults."
+                      </p>
+                      <p className="font-bold text-[#355322]">— Wanda Maynard (Rating: 5 out of 5 stars)</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
             </div>
           </div>
         </ScrollFade>
@@ -131,16 +171,16 @@ export default function Books() {
             <div className="grid lg:grid-cols-12 gap-4 lg:gap-6 items-center">
               
               {/* Trailer/Video on Left */}
-              <div className="lg:col-span-5 space-y-2 text-center">
-                <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5">
+              <div className="lg:col-span-4 space-y-2 text-center max-w-md mx-auto w-full">
+                <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5 max-h-[190px] mx-auto">
                   <img 
                     src="/TFS-tumbnail.png" 
                     alt="The Festival Shoes Trailer Preview" 
                     className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-300"
                   />
                   <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                    <div className="w-10 h-10 rounded-full bg-white/90 text-[#1e3319] flex items-center justify-center shadow-lg group-hover:scale-110 transition">
-                      <svg className="w-5 h-5 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="w-9 h-9 rounded-full bg-white/90 text-[#1e3319] flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+                      <svg className="w-4 h-4 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z"/>
                       </svg>
                     </div>
@@ -157,8 +197,8 @@ export default function Books() {
                 </div>
               </div>
 
-              {/* Details in Center/Middle */}
-              <div className="lg:col-span-4 space-y-2.5 text-left">
+              {/* Details in Center */}
+              <div className="lg:col-span-5 space-y-3 text-left">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
                     The Festival Shoes
@@ -168,15 +208,15 @@ export default function Books() {
                   </p>
                 </div>
 
-                <p className="text-xs sm:text-sm text-[#1b2718] font-medium leading-relaxed">
-                  In Weaverton, fairies and nature beings are busy preparing for an important festival. When an unexpected challenge arises, Jaramie must draw on his courage, determination and self-trust to find a way forward.
+                <p className="text-sm sm:text-base text-[#1b2718] font-medium leading-relaxed">
+                  High above Earth lies Weaverton, where children’s thoughts, words and actions become colourful threads. When sorting pixie Drumlo receives his first important task, it takes him farther than he has ever been before — and along the way, an unexpected challenge puts him to the test.
                 </p>
 
-                <p className="font-serif italic text-xs sm:text-sm font-bold text-[#2c441c]">
-                  A story about perseverance, resourcefulness and discovering what can happen when we don’t give up.
+                <p className="font-serif italic text-sm sm:text-base font-bold text-[#2c441c]">
+                  A luminous adventure exploring the power of our thoughts, words and actions — and how our choices connect us to others, to nature and to the world around us.
                 </p>
 
-                <div className="pt-1">
+                <div className="flex flex-wrap items-center gap-3 pt-1">
                   <a 
                     href="https://www.amazon.com/dp/YOUR_BOOK_ID"
                     target="_blank"
@@ -185,33 +225,73 @@ export default function Books() {
                   >
                     DISCOVER / BUY THE BOOK →
                   </a>
+
+                  <button
+                    type="button"
+                    onClick={() => setTfsReviewsOpen(!tfsReviewsOpen)}
+                    className="inline-flex items-center space-x-1.5 bg-[#eaf2e6] hover:bg-[#ddeade] text-[#2c441c] border border-[#355322]/20 font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow-sm transition cursor-pointer relative z-30"
+                  >
+                    <span>{tfsReviewsOpen ? 'Hide Reviews ▲' : 'Read Reviews (3) ▼'}</span>
+                  </button>
                 </div>
               </div>
 
-              {/* Book Cover on Right - Nudged upward */}
-              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-[220px]">
+              {/* Book Cover on Right (Slightly reduced height) */}
+              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-[250px]">
                 <img 
                   src="/TFS-Book-cover.png" 
                   alt="The Festival Shoes Book Cover" 
-                  className="w-auto h-[280px] sm:h-[330px] lg:h-[380px] max-w-none object-contain transform transition hover:scale-[1.02] lg:absolute lg:-top-20 drop-shadow-xl z-20"
+                  className="w-auto h-[330px] sm:h-[390px] lg:h-[440px] max-w-none object-contain transform transition hover:scale-[1.02] lg:absolute lg:-top-24 drop-shadow-xl z-20"
                 />
               </div>
+
+              {/* Collapsible Reviews Drawer for Book 2 */}
+              {tfsReviewsOpen && (
+                <div className="lg:col-span-12 bg-[#f4f7f2] border border-[#d2e2cc] p-6 rounded-xl mt-4 space-y-4 shadow-inner relative z-30">
+                  <h4 className="font-serif font-bold text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
+                    Reader Reviews — The Festival Shoes
+                  </h4>
+                  <div className="grid md:grid-cols-3 gap-4 text-xs sm:text-sm">
+                    <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
+                      <div className="text-amber-600 font-bold">★★★★★</div>
+                      <p className="italic text-[#1b2718]">
+                        "How the author involves all the senses when using colors and mood to portray earths actions, is brilliant. The wispiness of the illustrations plays into the story without overpowering the message."
+                      </p>
+                      <p className="font-bold text-[#355322]">— Lori Shiver, Goodreads Reviewer</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
+                      <div className="text-amber-600 font-bold">★★★★★</div>
+                      <p className="italic text-[#1b2718]">
+                        "Inspiring, creative, a breath of fresh air. This is a piece of children’s lit whose vintage innocence blazes a trail forward to what children’s literature should be."
+                      </p>
+                      <p className="font-bold text-[#355322]">— Producervan E, Goodreads Reviewer</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
+                      <div className="text-amber-600 font-bold">★★★★★</div>
+                      <p className="italic text-[#1b2718]">
+                        "Manages to educate, - not just entertain, a timeless story that will enthrall and capture the imagination of young readers as fantasy touches are woven in a magically beautiful style. The writing is so vivid you feel like you are actually right there..."
+                      </p>
+                      <p className="font-bold text-[#355322]">— Tara Sheehan, Artistic Bent (Rating: 5/5 stars)</p>
+                    </div>
+                  </div>
+                </div>
+              )}
 
             </div>
           </div>
         </ScrollFade>
       </section>
 
-      {/* BOTTOM SECTION: Two Side-by-Side Groups (60/40 Split) */}
-      <section className="py-6 sm:py-10 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
+      {/* BOTTOM SECTION: Two Side-by-Side Groups */}
+      <section className="py-4 sm:py-6 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
         <ScrollFade delay={80}>
           <div className="max-w-[90rem] mx-auto">
-            <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+            <div className="grid lg:grid-cols-12 gap-5 lg:gap-6 items-stretch">
               
               {/* Left Group: Continue the Adventure */}
-              <div className="lg:col-span-7 bg-[#edf2eb] p-6 sm:p-8 rounded-none shadow-sm flex flex-col justify-between space-y-6">
-                <div className="space-y-2 text-left">
-                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
+              <div className="lg:col-span-7 bg-[#edf2eb] p-6 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
+                <div className="space-y-1.5 text-left">
+                  <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
                     Continue the Adventure
                   </h3>
                   <p className="text-xs sm:text-sm text-[#1b2718] font-medium leading-relaxed max-w-xl">
@@ -219,19 +299,27 @@ export default function Books() {
                   </p>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-4 items-center">
-                  <div className="transform -rotate-2 hover:rotate-0 transition duration-300">
-                    <img src="/1-aboutpage-bookcover.png" alt="Coloring Book" className="w-full h-auto object-contain rounded-lg shadow-md bg-white p-1" />
+                <div className="grid grid-cols-2 gap-4 items-center py-2">
+                  <div className="flex justify-center transform -rotate-1 hover:rotate-0 transition duration-300 group">
+                    <img 
+                      src="/1-aboutpage-bookcover.png" 
+                      alt="Coloring Book" 
+                      className="h-48 sm:h-56 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                    />
                   </div>
-                  <div className="transform rotate-1 hover:rotate-0 transition duration-300">
-                    <img src="/TFS-adventure-game.png" alt="Board Game Activity" className="w-full h-auto object-contain rounded-lg shadow-md bg-white p-1" />
+                  <div className="flex justify-center transform rotate-1 hover:rotate-0 transition duration-300 group">
+                    <img 
+                      src="/TFS-adventure-game.png" 
+                      alt="Board Game Activity" 
+                      className="h-36 sm:h-44 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                    />
                   </div>
                 </div>
 
-                <div className="pt-2 text-left">
+                <div className="text-left pt-1">
                   <Link 
                     to="/resources"
-                    className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-6 py-3 rounded-lg shadow-md transition"
+                    className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-lg shadow transition"
                   >
                     EXPLORE FREE RESOURCES →
                   </Link>
@@ -239,9 +327,9 @@ export default function Books() {
               </div>
 
               {/* Right Group: More Stories to Discover */}
-              <div className="lg:col-span-5 bg-[#fcf0ed] p-6 sm:p-8 rounded-none shadow-sm flex flex-col justify-between space-y-6">
-                <div className="space-y-2 text-left">
-                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
+              <div className="lg:col-span-5 bg-[#fcf0ed] p-6 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
+                <div className="space-y-1.5 text-left">
+                  <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
                     More Stories to Discover
                   </h3>
                   <p className="text-xs sm:text-sm text-[#1b2718] font-medium leading-relaxed">
@@ -249,19 +337,27 @@ export default function Books() {
                   </p>
                 </div>
 
-                <div className="flex items-center justify-center space-x-3 sm:space-x-5 py-2">
-                  <div className="flex justify-center transform -rotate-1 hover:rotate-0 transition duration-300">
-                    <img src="/2-bookcover-aboutpage.png" alt="Luna's Threads of Light" className="h-56 sm:h-68 lg:h-72 w-auto object-contain drop-shadow-2xl rounded-none" />
+                <div className="grid grid-cols-2 gap-4 items-center py-2">
+                  <div className="flex justify-center transform -rotate-1 hover:rotate-0 transition duration-300 group">
+                    <img 
+                      src="/2-bookcover-aboutpage.png" 
+                      alt="Luna's Threads of Light" 
+                      className="h-40 sm:h-48 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                    />
                   </div>
-                  <div className="flex justify-center transform rotate-1 hover:rotate-0 transition duration-300">
-                    <img src="/bookcover-aboutpage.png" alt="Femi's Promise" className="h-56 sm:h-68 lg:h-72 w-auto object-contain drop-shadow-2xl rounded-none" />
+                  <div className="flex justify-center transform rotate-1 hover:rotate-0 transition duration-300 group">
+                    <img 
+                      src="/bookcover-aboutpage.png" 
+                      alt="Femi's Promise" 
+                      className="h-40 sm:h-48 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                    />
                   </div>
                 </div>
 
-                <div className="pt-2 text-left">
+                <div className="text-left pt-1">
                   <Link 
                     to="/collaboration"
-                    className="inline-block bg-[#9c5175] hover:bg-[#823e60] text-white font-bold text-[10px] uppercase tracking-widest px-6 py-3 rounded-lg shadow-md transition"
+                    className="inline-block bg-[#9c5175] hover:bg-[#823e60] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-lg shadow transition"
                   >
                     EXPLORE COLLABORATIONS →
                   </Link>
@@ -273,11 +369,10 @@ export default function Books() {
         </ScrollFade>
       </section>
 
-      {/* Footer Section inside Section 3 wrapper */}
-      <div className="pt-6 border-t border-[#23351a]/15">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 px-4 sm:px-6 lg:px-10">
+      {/* Footer Section */}
+      <div className="pt-6 border-t border-[#23351a]/15 bg-[#f5f1e8]">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 px-4 sm:px-6 lg:px-10 max-w-[90rem] mx-auto">
            
-          {/* Logo & Tagline */}
           <div className="flex items-center space-x-3 text-center lg:text-left">
             <Link to="/" className="flex items-center space-x-3 group shrink-0">
               <div className="flex items-center justify-center shrink-0">
@@ -295,8 +390,7 @@ export default function Books() {
               </span>
             </div>
           </div>
- 
-          {/* Nav Links */}
+
           <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
             <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
             <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
@@ -305,8 +399,7 @@ export default function Books() {
             <Link to="/collaborations" className="hover:text-[#1a2b13] transition">Collaborations</Link>
             <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
           </div>
- 
-          {/* Social Icons */}
+
           <div className="flex items-center space-x-2.5 shrink-0">
             <a href="#instagram" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -326,11 +419,10 @@ export default function Books() {
               </svg>
             </a>
           </div>
- 
+
         </div>
- 
-        {/* Copyright and Legal Links */}
-        <div className="pt-4 pb-6 px-4 sm:px-6 lg:px-10 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2">
+
+        <div className="pt-4 pb-6 px-4 sm:px-6 lg:px-10 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2 max-w-[90rem] mx-auto">
           <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
           <div className="flex items-center space-x-4">
             <a href="#privacy" className="hover:underline">Privacy Policy</a>
@@ -339,6 +431,7 @@ export default function Books() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }

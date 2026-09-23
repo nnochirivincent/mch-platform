@@ -10,13 +10,13 @@ export default function Books() {
     <div className="bg-[#fcfbf9] min-h-screen text-[#14230f] overflow-x-hidden">
       
       {/* 1. HERO SECTION */}
-      <section className="relative w-full">
-        <div className="relative w-full overflow-hidden h-[22vh] sm:h-[28vh] lg:h-[35vh] flex items-center justify-center">
-          <div className="absolute inset-0 z-0 bg-[#162211]">
+      <section className="relative w-full pt-0 pb-0">
+        <div className="relative w-full rounded-none overflow-hidden h-[25vh] sm:h-[30vh] lg:h-[35vh] flex items-center justify-center">
+          <div className="absolute inset-0 z-0 overflow-hidden bg-[#162211]">
             <img 
               src="/books-hero.png" 
               alt="Our Books Header" 
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center transform scale-100"
             />
           </div>
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto space-y-2">
@@ -28,10 +28,10 @@ export default function Books() {
       </section>
 
       {/* Introductory Heading */}
-      <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-12">
+      <section className="pt-6 pb-3 sm:pt-8 sm:pb-4 px-4 sm:px-6 lg:px-12">
         <ScrollFade delay={80}>
-          <div className="text-center max-w-3xl mx-auto space-y-3">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#1e3319] tracking-tight">
+          <div className="text-center max-w-3xl mx-auto space-y-3 px-2">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1e3319] tracking-tight">
               Discover the Weaverton Series
             </h2>
             <p className="text-base sm:text-lg text-[#1b2718] font-semibold leading-relaxed">
@@ -43,24 +43,24 @@ export default function Books() {
       </section>
 
       {/* BOOK 1: The Face in the Mountain */}
-      <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
+      <section className="pt-1 pb-5 sm:pt-2 sm:pb-6 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
         <ScrollFade delay={80}>
           <div className="max-w-[90rem] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div className="grid lg:grid-cols-12 gap-6 lg:gap-6 items-center">
               
               {/* Book Cover */}
-              <div className="lg:col-span-3 flex justify-center items-center py-4 lg:py-0">
+              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-[220px] my-4 lg:my-0">
                 <img 
                   src="/tfim-book-cover.png" 
                   alt="The Face in the Mountain Book Cover" 
-                  className="w-48 sm:w-56 lg:w-auto h-auto max-h-[320px] sm:max-h-[380px] object-contain transform transition hover:scale-[1.02] drop-shadow-xl"
+                  className="w-auto h-[280px] sm:h-[330px] lg:h-[380px] max-w-none object-contain transform transition hover:scale-[1.02] lg:absolute lg:-top-20 drop-shadow-xl z-20"
                 />
               </div>
 
               {/* Book Info & Trailer */}
-              <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+              <div className="lg:col-span-9 grid md:grid-cols-2 gap-6 lg:gap-6 items-center">
                 
-                <div className="space-y-4 text-left">
+                <div className="space-y-3 text-left">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
                       The Face in the Mountain
@@ -99,8 +99,8 @@ export default function Books() {
                 </div>
 
                 {/* Trailer Thumbnail Box */}
-                <div className="space-y-2 text-center max-w-md mx-auto w-full">
-                  <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5 mx-auto">
+                <div className="space-y-2 text-center max-w-md mx-auto w-full pt-4 md:pt-0">
+                  <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5 max-h-[190px] mx-auto w-full">
                     <img 
                       src="/TFITM-tumnail.png" 
                       alt="The Face in the Mountain Trailer Preview" 
@@ -129,11 +129,11 @@ export default function Books() {
 
               {/* Collapsible Reviews Drawer for Book 1 */}
               {tfimReviewsOpen && (
-                <div className="lg:col-span-12 bg-[#f4f7f2] border border-[#d2e2cc] p-4 sm:p-6 rounded-xl mt-4 space-y-4 shadow-inner">
+                <div className="lg:col-span-12 bg-[#f4f7f2] border border-[#d2e2cc] p-4 sm:p-6 rounded-xl mt-4 space-y-4 shadow-inner w-full">
                   <h4 className="font-serif font-bold text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
                     Reader Reviews — The Face in the Mountain
                   </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-base">
+                  <div className="grid md:grid-cols-3 gap-4 text-base">
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
                       <p className="italic text-[#1b2718] font-semibold text-sm sm:text-base">
@@ -153,7 +153,7 @@ export default function Books() {
                       <p className="italic text-[#1b2718] font-semibold text-sm sm:text-base">
                         "A very uniquely different children's book, with its beautiful illustrations shows how fascinating nature can be to children. Through their eyes things look totally different than they do to adults."
                       </p>
-                      <p className="font-bold text-[#355322]">— Wanda Maynard</p>
+                      <p className="font-bold text-[#355322]">— Wanda Maynard (Rating: 5 out of 5 stars)</p>
                     </div>
                   </div>
                 </div>
@@ -165,14 +165,14 @@ export default function Books() {
       </section>
 
       {/* BOOK 2: The Festival Shoes */}
-      <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
+      <section className="pt-1 pb-6 sm:pt-2 sm:pb-8 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
         <ScrollFade delay={80}>
           <div className="max-w-[90rem] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            <div className="grid lg:grid-cols-12 gap-6 lg:gap-6 items-center">
               
-              {/* Trailer/Video on Left (reordered cleanly for mobile) */}
+              {/* Trailer/Video on Left */}
               <div className="lg:col-span-4 space-y-2 text-center max-w-md mx-auto w-full order-2 lg:order-1">
-                <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5 mx-auto">
+                <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5 max-h-[190px] mx-auto w-full">
                   <img 
                     src="/TFS-tumbnail.png" 
                     alt="The Festival Shoes Trailer Preview" 
@@ -198,7 +198,7 @@ export default function Books() {
               </div>
 
               {/* Details in Center */}
-              <div className="lg:col-span-5 space-y-4 text-left order-3 lg:order-2">
+              <div className="lg:col-span-5 space-y-3 text-left order-3 lg:order-2">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
                     The Festival Shoes
@@ -229,7 +229,7 @@ export default function Books() {
                   <button
                     type="button"
                     onClick={() => setTfsReviewsOpen(!tfsReviewsOpen)}
-                    className="inline-flex items-center space-x-1.5 bg-[#eaf2e6] hover:bg-[#ddeade] text-[#2c441c] border border-[#355322]/20 font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow-sm transition cursor-pointer"
+                    className="inline-flex items-center space-x-1.5 bg-[#eaf2e6] hover:bg-[#ddeade] text-[#2c441c] border border-[#355322]/20 font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow-sm transition cursor-pointer relative z-30"
                   >
                     <span>{tfsReviewsOpen ? 'Hide Reviews ▲' : 'Read Reviews (3) ▼'}</span>
                   </button>
@@ -237,41 +237,41 @@ export default function Books() {
               </div>
 
               {/* Book Cover on Right */}
-              <div className="lg:col-span-3 flex justify-center items-center py-4 lg:py-0 order-1 lg:order-3">
+              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-[250px] my-4 lg:my-0 order-1 lg:order-3">
                 <img 
                   src="/TFS-Book-cover.png" 
                   alt="The Festival Shoes Book Cover" 
-                  className="w-48 sm:w-56 lg:w-auto h-auto max-h-[320px] sm:max-h-[400px] object-contain transform transition hover:scale-[1.02] drop-shadow-xl"
+                  className="w-auto h-[330px] sm:h-[390px] lg:h-[440px] max-w-none object-contain transform transition hover:scale-[1.02] lg:absolute lg:-top-24 drop-shadow-xl z-20"
                 />
               </div>
 
               {/* Collapsible Reviews Drawer for Book 2 */}
               {tfsReviewsOpen && (
-                <div className="lg:col-span-12 bg-[#f4f7f2] border border-[#d2e2cc] p-4 sm:p-6 rounded-xl mt-4 space-y-4 shadow-inner order-4">
+                <div className="lg:col-span-12 bg-[#f4f7f2] border border-[#d2e2cc] p-4 sm:p-6 rounded-xl mt-4 space-y-4 shadow-inner relative z-30 w-full order-4">
                   <h4 className="font-serif font-bold text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
                     Reader Reviews — The Festival Shoes
                   </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-base">
+                  <div className="grid md:grid-cols-3 gap-4 text-base">
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
                       <p className="italic text-[#1b2718] font-semibold text-sm sm:text-base">
                         "How the author involves all the senses when using colors and mood to portray earths actions, is brilliant. The wispiness of the illustrations plays into the story without overpowering the message."
                       </p>
-                      <p className="font-bold text-[#355322]">— Lori Shiver</p>
+                      <p className="font-bold text-[#355322]">— Lori Shiver, Goodreads Reviewer</p>
                     </div>
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
                       <p className="italic text-[#1b2718] font-semibold text-sm sm:text-base">
                         "Inspiring, creative, a breath of fresh air. This is a piece of children’s lit whose vintage innocence blazes a trail forward to what children’s literature should be."
                       </p>
-                      <p className="font-bold text-[#355322]">— Producervan E</p>
+                      <p className="font-bold text-[#355322]">— Producervan E, Goodreads Reviewer</p>
                     </div>
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
                       <p className="italic text-[#1b2718] font-semibold text-sm sm:text-base">
-                        "Manages to educate, - not just entertain, a timeless story that will enthrall and capture the imagination of young readers as fantasy touches are woven in a magically beautiful style."
+                        "Manages to educate, - not just entertain, a timeless story that will enthrall and capture the imagination of young readers as fantasy touches are woven in a magically beautiful style. The writing is so vivid you feel like you are actually right there..."
                       </p>
-                      <p className="font-bold text-[#355322]">— Tara Sheehan</p>
+                      <p className="font-bold text-[#355322]">— Tara Sheehan, Artistic Bent (Rating: 5/5 stars)</p>
                     </div>
                   </div>
                 </div>
@@ -286,10 +286,10 @@ export default function Books() {
       <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
         <ScrollFade delay={80}>
           <div className="max-w-[90rem] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            <div className="grid lg:grid-cols-12 gap-6 items-stretch">
               
               {/* Left Group: Continue the Adventure */}
-              <div className="lg:col-span-7 bg-[#edf2eb] p-6 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-6">
+              <div className="lg:col-span-7 bg-[#edf2eb] p-6 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
                 <div className="space-y-2 text-left">
                   <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
                     Continue the Adventure
@@ -299,24 +299,24 @@ export default function Books() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 items-center py-2">
-                  <div className="flex justify-center group">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center py-2 justify-items-center">
+                  <div className="flex justify-center transform -rotate-1 hover:rotate-0 transition duration-300 group">
                     <img 
                       src="/1-aboutpage-bookcover.png" 
                       alt="Coloring Book" 
-                      className="h-36 sm:h-48 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                      className="h-48 sm:h-56 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
                     />
                   </div>
-                  <div className="flex justify-center group">
+                  <div className="flex justify-center transform rotate-1 hover:rotate-0 transition duration-300 group">
                     <img 
                       src="/TFS-adventure-game.png" 
                       alt="Board Game Activity" 
-                      className="h-28 sm:h-38 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                      className="h-36 sm:h-44 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
                     />
                   </div>
                 </div>
 
-                <div className="text-left">
+                <div className="text-left pt-1">
                   <Link 
                     to="/resources"
                     className="inline-block bg-[#3c5e2a] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-lg shadow transition"
@@ -327,7 +327,7 @@ export default function Books() {
               </div>
 
               {/* Right Group: More Stories to Discover */}
-              <div className="lg:col-span-5 bg-[#fcf0ed] p-6 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-6">
+              <div className="lg:col-span-5 bg-[#fcf0ed] p-6 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
                 <div className="space-y-2 text-left">
                   <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
                     More Stories to Discover
@@ -337,24 +337,24 @@ export default function Books() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 items-center py-2">
-                  <div className="flex justify-center group">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center py-2 justify-items-center">
+                  <div className="flex justify-center transform -rotate-1 hover:rotate-0 transition duration-300 group">
                     <img 
                       src="/2-bookcover-aboutpage.png" 
                       alt="Luna's Threads of Light" 
-                      className="h-32 sm:h-44 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                      className="h-40 sm:h-48 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
                     />
                   </div>
-                  <div className="flex justify-center group">
+                  <div className="flex justify-center transform rotate-1 hover:rotate-0 transition duration-300 group">
                     <img 
                       src="/bookcover-aboutpage.png" 
                       alt="Femi's Promise" 
-                      className="h-32 sm:h-44 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                      className="h-40 sm:h-48 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
                     />
                   </div>
                 </div>
 
-                <div className="text-left">
+                <div className="text-left pt-1">
                   <Link 
                     to="/collaboration"
                     className="inline-block bg-[#9c5175] hover:bg-[#823e60] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-lg shadow transition"

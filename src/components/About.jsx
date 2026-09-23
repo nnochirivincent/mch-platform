@@ -4,7 +4,7 @@ import ScrollFade from './ScrollFade';
 
 export default function About() {
   return (
-    <div className="bg-[#fcfbf9] min-h-screen space-y-4 sm:space-y-6 pb-6 overflow-hidden">
+    <div className="bg-[#fcfbf9] min-h-screen space-y-6 sm:space-y-8 pb-8 overflow-hidden">
       
       {/* HERO VIDEO SECTION (FULL WIDTH) */}
       <section className="w-full pt-0 pb-0">
@@ -24,7 +24,7 @@ export default function About() {
 
       {/* ABOUT MCH — OPEN (Uncontained, sitting directly on the browser background) */}
       <section className="max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 pt-2 pb-2 text-left">
-        <div className="space-y-2.5 max-w-4xl">
+        <div className="space-y-3 max-w-4xl">
           <div className="inline-block">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#3a4d31]/10 border border-[#3a4d31]/20 text-[#3a4d31] text-xs font-bold tracking-widest uppercase shadow-sm">
               <span>🌿</span>
@@ -32,8 +32,8 @@ export default function About() {
             </div>
           </div>
 
-          <div className="space-y-2 text-[#1c2c15] font-semibold text-sm sm:text-base lg:text-lg leading-relaxed">
-            <p className="font-bold text-[#2a3c21] text-base sm:text-lg lg:text-xl font-serif">
+          <div className="space-y-3 text-[#1c2c15] font-semibold text-lg leading-relaxed">
+            <p className="font-bold text-[#2a3c21] text-xl font-serif">
               At Magnifying Children’s Horizons, we believe a child’s curiosity is a living seed, ready to grow when it meets the quiet wisdom of nature.
             </p>
             <p>
@@ -47,12 +47,12 @@ export default function About() {
       </section>
 
       {/* Main Content Wrap */}
-      <div className="space-y-6 sm:space-y-8">
+      <div className="space-y-8 sm:space-y-10">
 
-        {/* NATURE: A LIVING TEACHER — image/text feature, softly blended */}
+        {/* NATURE: A LIVING TEACHER — open, borderless layout */}
         <ScrollFade>
           <section className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
-            <div className="relative rounded-3xl overflow-hidden shadow-lg py-5 sm:py-7 px-5 sm:px-8 border border-emerald-950/25">
+            <div className="relative overflow-hidden py-6 sm:py-8 px-6 sm:px-10">
               
               <div className="absolute inset-0 z-0 overflow-hidden">
                 <img 
@@ -60,13 +60,13 @@ export default function About() {
                   alt="Nature teaching background" 
                   className="w-full h-full object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#fbfaf7] via-[#fbfaf7]/95 sm:via-[#fbfaf7] to-[#fbfaf7]/70 sm:to-transparent w-full sm:w-11/12 lg:w-4/5 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#fcfbf9] via-[#fcfbf9]/95 sm:via-[#fcfbf9] to-[#fcfbf9]/70 sm:to-transparent w-full sm:w-11/12 lg:w-4/5 pointer-events-none"></div>
               </div>
 
-              <div className="relative z-10 max-w-xl sm:max-w-2xl lg:max-w-3xl space-y-3 text-left">
+              <div className="relative z-10 max-w-xl sm:max-w-2xl lg:max-w-3xl space-y-4 text-left">
                 
                 <div className="space-y-1">
-                  <span className="text-[11px] sm:text-xs font-bold font-mono tracking-widest text-[#2c3c24] uppercase">
+                  <span className="text-xs font-bold font-mono tracking-widest text-[#2c3c24] uppercase">
                     OUR PHILOSOPHY
                   </span>
                   <div className="h-[2px] w-24 bg-[#587a41]"></div>
@@ -82,20 +82,20 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="space-y-2.5 text-[#192813] text-xs sm:text-base leading-relaxed font-semibold">
+                <div className="space-y-3 text-[#192813] text-lg leading-relaxed font-semibold">
                   <p>
                     Just as children learn the language of their parents to live in harmony at home, we believe they can also learn the language of nature — observing its patterns, relationships and rhythms — and discovering what these can teach them about themselves and the world around them.
                   </p>
                   <p className="text-[#192813]">
                     Nature offers children more than knowledge about plants, animals and ecosystems. Through observation and experience, nature can help children develop positive character traits and a growing understanding of the consequences of their choices.
                   </p>
-                  <p className="font-bold text-[#111e0c] text-sm sm:text-base">
+                  <p className="font-bold text-[#111e0c] text-lg sm:text-xl">
                     We encourage children to notice, question, explore and discover for themselves.
                   </p>
                 </div>
 
                 <div className="pt-1">
-                  <blockquote className="bg-white/95 backdrop-blur-md border-l-4 border-[#52703c] px-3 sm:px-4 py-2.5 rounded-r-xl italic font-serif text-xs sm:text-base text-[#192813] font-bold shadow-sm">
+                  <blockquote className="bg-white/95 backdrop-blur-md border-l-4 border-[#52703c] px-4 py-3 rounded-r-xl italic font-serif text-lg text-[#192813] font-bold shadow-sm">
                     “Every leaf, ripple and sunrise holds a quiet lesson.”
                   </blockquote>
                 </div>
@@ -111,7 +111,7 @@ export default function About() {
             <div className="space-y-4">
               
               <div className="space-y-1">
-                <span className="text-[11px] sm:text-xs font-bold font-mono tracking-widest text-[#2c3c24] uppercase">
+                <span className="text-xs font-bold font-mono tracking-widest text-[#2c3c24] uppercase">
                   MEET THE FOUNDER
                 </span>
                 <div className="h-[2px] w-28 bg-[#587a41]"></div>
@@ -130,12 +130,12 @@ export default function About() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-xs sm:text-sm text-[#453f36] italic text-center leading-relaxed px-2 font-serif font-medium">
+                  <p className="text-sm text-[#453f36] italic text-center leading-relaxed px-2 font-serif font-medium">
                     Tolulope sharing a story with children at the Niagara Nature Centre
                   </p>
                 </div>
 
-                <div className="lg:col-span-8 space-y-2.5 text-[#192813] text-xs sm:text-base leading-relaxed font-semibold">
+                <div className="lg:col-span-8 space-y-3 text-[#192813] text-lg leading-relaxed font-semibold">
                   <p>
                     A child at heart with a deep, abiding love for her Creator, <strong className="font-bold text-[#111e0c]">Tolulope (Tolu) Okudolo</strong> is an author and educator with a Bachelor of Education and an MBA. Her experiences living in Africa, Europe and North America have given her a rich multicultural perspective.
                   </p>
@@ -157,8 +157,8 @@ export default function About() {
 
         {/* IN TOLU'S OWN VOICE — full-width pale green band */}
         <ScrollFade delay={150}>
-          <section className="w-full bg-[#dce2dd] py-8 sm:py-12">
-            <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 space-y-5">
+          <section className="w-full bg-[#dce2dd] py-10 sm:py-14">
+            <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 space-y-6">
               
               <div className="text-center">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-[#293822] font-bold tracking-tight">
@@ -166,30 +166,30 @@ export default function About() {
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 pt-1">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 pt-1">
                 <div className="border-l-3 border-[#6f8564] pl-4 space-y-2">
-                  <h3 className="font-serif text-sm sm:text-base text-[#753c2f] font-bold leading-snug">
+                  <h3 className="font-serif text-base sm:text-lg text-[#753c2f] font-bold leading-snug">
                     What inspired you to begin writing your books?
                   </h3>
-                  <p className="text-[#192813] text-xs sm:text-sm leading-relaxed font-semibold">
+                  <p className="text-[#192813] text-lg leading-relaxed font-semibold">
                     <strong className="font-bold text-[#111e0c]">My love for nature and children inspired me to begin writing.</strong> I believe that an important part of helping children develop character and spirituality lies in helping them connect with nature and discover its laws for themselves. My own experiences have also shaped the stories I tell.
                   </p>
                 </div>
 
                 <div className="border-l-3 border-[#6f8564] pl-4 space-y-2">
-                  <h3 className="font-serif text-sm sm:text-base text-[#753c2f] font-bold leading-snug">
+                  <h3 className="font-serif text-base sm:text-lg text-[#753c2f] font-bold leading-snug">
                     How do your stories begin?
                   </h3>
-                  <p className="text-[#192813] text-xs sm:text-sm leading-relaxed font-semibold">
+                  <p className="text-[#192813] text-lg leading-relaxed font-semibold">
                     <strong className="font-bold text-[#111e0c]">Often with pictures.</strong> I see scenes in my mind's eye and begin putting the dialogue around them. It's also quite fun!
                   </p>
                 </div>
 
                 <div className="border-l-3 border-[#6f8564] pl-4 space-y-2 md:col-span-2 lg:col-span-1">
-                  <h3 className="font-serif text-sm sm:text-base text-[#753c2f] font-bold leading-snug">
+                  <h3 className="font-serif text-base sm:text-lg text-[#753c2f] font-bold leading-snug">
                     What do you hope a child carries away from your stories?
                   </h3>
-                  <p className="text-[#192813] text-xs sm:text-sm leading-relaxed font-semibold">
+                  <p className="text-[#192813] text-lg leading-relaxed font-semibold">
                     <strong className="font-bold text-[#111e0c]">Curiosity</strong> — and a sense that there is more to discover. I hope children leave wanting to explore, ask questions and find their own connection with the natural world.
                   </p>
                 </div>
@@ -203,21 +203,21 @@ export default function About() {
         {/* READY TO EXPLORE MORE — dark CTA (Call to action) */}
         <section className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 pt-1">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-[#23351a] text-white p-6 sm:p-9 rounded-3xl shadow-xl space-y-4">
+            <div className="bg-[#23351a] text-white p-8 sm:p-10 rounded-3xl shadow-xl space-y-4">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold">Ready to Explore More?</h2>
-              <p className="text-emerald-100 text-xs sm:text-base max-w-lg mx-auto font-semibold">
+              <p className="text-emerald-100 text-lg max-w-lg mx-auto font-semibold">
                 Discover our stories and explore Character with Nature™.
               </p>
-              <div className="flex flex-wrap justify-center gap-3 pt-1">
+              <div className="flex flex-wrap justify-center gap-3 pt-2">
                 <Link 
                   to="/books" 
-                  className="bg-white text-[#23351a] hover:bg-emerald-50 font-bold text-[11px] sm:text-xs uppercase tracking-widest px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5"
+                  className="bg-white text-[#23351a] hover:bg-emerald-50 font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5"
                 >
                   Explore Our Books
                 </Link>
                 <Link 
                   to="/cwn/pathways" 
-                  className="bg-[#355322] hover:bg-[#2c441b] text-white border border-emerald-700 font-bold text-[11px] sm:text-xs uppercase tracking-widest px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5"
+                  className="bg-[#355322] hover:bg-[#2c441b] text-white border border-emerald-700 font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5"
                 >
                   Character With Nature™
                 </Link>
@@ -226,68 +226,75 @@ export default function About() {
           </div>
         </section>
 
-       {/* Footer Section */}
-             <div className="pt-6 border-t border-[#23351a]/15 bg-[#f5f1e8]">
-               <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 px-4 sm:px-6 lg:px-10 max-w-[90rem] mx-auto">
-                  
-                 <div className="flex items-center space-x-3 text-center lg:text-left">
-                   <Link to="/" className="flex items-center space-x-3 group shrink-0">
-                     <div className="flex items-center justify-center shrink-0">
-                       <img 
-                         src="/navbar-image.png" 
-                         alt="MCH Logo" 
-                         className="h-10 w-auto object-contain group-hover:scale-105 transition duration-300"
-                       />
-                     </div>
-                   </Link>
-                   <div className="flex flex-col text-left">
-                     <span className="font-serif font-bold text-base text-[#1a2b13] leading-none">Magnifying Children's Horizons</span>
-                     <span className="text-[10px] text-[#2c3e24] font-bold uppercase tracking-widest mt-1">
-                       NATURE • CHARACTER • A BRIGHTER TOMORROW
-                     </span>
-                   </div>
-                 </div>
-       
-                 <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
-                   <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
-                   <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
-                   <Link to="/cwn/pathways" className="hover:text-[#1a2b13] transition">Character with Nature™</Link>
-                   <Link to="/about" className="hover:text-[#1a2b13] transition">About Us</Link>
-                   <Link to="/collaborations" className="hover:text-[#1a2b13] transition">Collaborations</Link>
-                   <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
-                 </div>
-       
-                 <div className="flex items-center space-x-2.5 shrink-0">
-                   <a href="#instagram" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
-                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                       <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                       <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
-                       <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-                     </svg>
-                   </a>
-                   <a href="#facebook" aria-label="Facebook" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
-                     <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                       <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
-                     </svg>
-                   </a>
-                   <a href="#youtube" aria-label="YouTube" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
-                     <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                     </svg>
-                   </a>
-                 </div>
-       
-               </div>
-       
-               <div className="pt-4 pb-6 px-4 sm:px-6 lg:px-10 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2 max-w-[90rem] mx-auto">
-                 <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
-                 <div className="flex items-center space-x-4">
-                   <a href="#privacy" className="hover:underline">Privacy Policy</a>
-                   <a href="#terms" className="hover:underline">Terms of Use</a>
-                   <a href="#credits" className="hover:underline">Site by Pixel Designer Agency</a>
-                 </div>
-               </div>
-             </div>
+        {/* Footer Section */}
+        <div className="pt-6 border-t border-[#23351a]/15 bg-[#f5f1e8]">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 px-4 sm:px-6 lg:px-10 max-w-[90rem] mx-auto">
+             
+            <div className="flex items-center space-x-3 text-center lg:text-left">
+              <Link to="/" className="flex items-center space-x-3 group shrink-0">
+                <div className="flex items-center justify-center shrink-0">
+                  <img 
+                    src="/navbar-image.png" 
+                    alt="MCH Logo" 
+                    className="h-10 w-auto object-contain group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+              </Link>
+              <div className="flex flex-col text-left">
+                <span className="font-serif font-bold text-base text-[#1a2b13] leading-none">Magnifying Children's Horizons</span>
+                <span className="text-[10px] text-[#2c3e24] font-bold uppercase tracking-widest mt-1">
+                  NATURE • CHARACTER • A BRIGHTER TOMORROW
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
+              <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
+              <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
+              <Link to="/cwn/pathways" className="hover:text-[#1a2b13] transition">Character with Nature™</Link>
+              <Link to="/about" className="hover:text-[#1a2b13] transition">About Us</Link>
+              <Link to="/collaborations" className="hover:text-[#1a2b13] transition">Collaborations</Link>
+              <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
+            </div>
+
+            <div className="flex items-center space-x-2.5 shrink-0">
+              <a 
+                href="https://www.instagram.com/magnifyingchildrenshorizons/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram" 
+                className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition"
+              >
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </a>
+              <a 
+                href="https://www.facebook.com/magnifyingchildrenshorizons" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Facebook" 
+                className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition"
+              >
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <div className="pt-4 pb-6 px-4 sm:px-6 lg:px-10 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2 max-w-[90rem] mx-auto">
+            <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
+            <div className="flex items-center space-x-4">
+              <a href="#privacy" className="hover:underline">Privacy Policy</a>
+              <a href="#terms" className="hover:underline">Terms of Use</a>
+              <a href="#credits" className="hover:underline">Site by Pixel Designer Agency</a>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>

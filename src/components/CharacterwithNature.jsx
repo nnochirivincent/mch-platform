@@ -43,7 +43,7 @@ export default function CharacterwithNature() {
                   </h2>
                 </div>
 
-                <div className="space-y-4 text-base sm:text-[1.05rem] text-[#1b2718] font-medium leading-[1.6] text-justify">
+                <div className="space-y-4 text-lg text-[#1b2718] font-semibold leading-relaxed text-left">
                   <p>
                     Children encounter patterns, relationships and processes in nature every day. <strong className="font-bold text-[#1e3319]">Character with Nature™ (CWN)</strong> turns these encounters into opportunities for discovery—helping children explore what the natural world can reveal about character, choices and their inner lives.
                   </p>
@@ -75,10 +75,10 @@ export default function CharacterwithNature() {
                 <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-extrabold text-[#1e3319]">
                   DISCOVERING NATURE’S LAWS
                 </h3>
-                <p className="text-base sm:text-[1.05rem] text-[#1b2718] font-medium leading-[1.6]">
+                <p className="text-lg text-[#1b2718] font-semibold leading-relaxed text-left sm:text-center">
                   At the heart of Character with Nature™ are universal laws and principles that children can discover through patterns and processes in the natural world.
                 </p>
-                <p className="text-base sm:text-[1.05rem] text-[#1b2718] font-medium leading-[1.6]">
+                <p className="text-lg text-[#1b2718] font-semibold leading-relaxed text-left sm:text-center">
                   Through age-appropriate exploration and reflection, children begin to connect what they discover in nature with their own choices, character and inner lives.
                 </p>
               </div>
@@ -97,7 +97,7 @@ export default function CharacterwithNature() {
                   </div>
                   <div className="p-4 space-y-2 text-center flex-1 flex flex-col justify-between bg-emerald-950/[0.02]">
                     <h4 className="font-serif font-bold text-xs uppercase text-[#1e3319]">CAUSE & EFFECT</h4>
-                    <p className="text-sm sm:text-base text-[#1b2718] font-medium leading-[1.6]">
+                    <p className="text-[17px] text-[#1b2718] font-semibold leading-relaxed">
                       What we do influences what happens next.
                     </p>
                   </div>
@@ -114,7 +114,7 @@ export default function CharacterwithNature() {
                   </div>
                   <div className="p-4 space-y-2 text-center flex-1 flex flex-col justify-between bg-emerald-950/[0.02]">
                     <h4 className="font-serif font-bold text-xs uppercase text-[#1e3319]">LIKE ATTRACTS LIKE</h4>
-                    <p className="text-sm sm:text-base text-[#1b2718] font-medium leading-[1.6]">
+                    <p className="text-[17px] text-[#1b2718] font-semibold leading-relaxed">
                       What we nurture and give attention to can influence what grows around us.
                     </p>
                   </div>
@@ -131,7 +131,7 @@ export default function CharacterwithNature() {
                   </div>
                   <div className="p-4 space-y-2 text-center flex-1 flex flex-col justify-between bg-emerald-950/[0.02]">
                     <h4 className="font-serif font-bold text-xs uppercase text-[#1e3319]">GRAVITY</h4>
-                    <p className="text-sm sm:text-base text-[#1b2718] font-medium leading-[1.6]">
+                    <p className="text-[17px] text-[#1b2718] font-semibold leading-relaxed">
                       What we carry within can influence how we move and the direction we take.
                     </p>
                   </div>
@@ -148,7 +148,7 @@ export default function CharacterwithNature() {
                   </div>
                   <div className="p-4 space-y-2 text-center flex-1 flex flex-col justify-between bg-emerald-950/[0.02]">
                     <h4 className="font-serif font-bold text-xs uppercase text-[#1e3319]">BALANCE</h4>
-                    <p className="text-sm sm:text-base text-[#1b2718] font-medium leading-[1.6]">
+                    <p className="text-[17px] text-[#1b2718] font-semibold leading-relaxed">
                       Nature shows us how giving and receiving work together to create balance and harmony.
                     </p>
                   </div>
@@ -182,7 +182,7 @@ export default function CharacterwithNature() {
               <div className="grid lg:grid-cols-12 gap-6 items-center">
                 
                 {/* Left Description & CTA */}
-                <div className="lg:col-span-4 space-y-4 text-base sm:text-[1.05rem] text-[#1b2718] font-medium leading-[1.6]">
+                <div className="lg:col-span-4 space-y-4 text-lg text-[#1b2718] font-semibold leading-relaxed text-left">
                   <p>
                     Discover child-friendly videos and explanations, nature explorations, pattern-noticing activities, related stories and resources designed for each stage of development.
                   </p>
@@ -215,8 +215,8 @@ export default function CharacterwithNature() {
         </ScrollFade>
 
         {/* Footer Section */}
-        <div className="pt-6 border-t border-[#23351a]/15 bg-[#f5f1e8] -mx-4 sm:-mx-6 lg:-mx-10 px-4 sm:px-6 lg:px-10 mt-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 max-w-[90rem] mx-auto">
+        <div className="pt-6 border-t border-[#23351a]/15 bg-[#f5f1e8]">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 px-4 sm:px-6 lg:px-10 max-w-[90rem] mx-auto">
              
             <div className="flex items-center space-x-3 text-center lg:text-left">
               <Link to="/" className="flex items-center space-x-3 group shrink-0">
@@ -235,7 +235,7 @@ export default function CharacterwithNature() {
                 </span>
               </div>
             </div>
-   
+ 
             <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
               <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
               <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
@@ -244,30 +244,37 @@ export default function CharacterwithNature() {
               <Link to="/collaborations" className="hover:text-[#1a2b13] transition">Collaborations</Link>
               <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
             </div>
-   
+ 
             <div className="flex items-center space-x-2.5 shrink-0">
-              <a href="#instagram" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+              <a 
+                href="https://www.instagram.com/magnifyingchildrenshorizons/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram" 
+                className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition"
+              >
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
                   <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
                   <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
                 </svg>
               </a>
-              <a href="#facebook" aria-label="Facebook" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+              <a 
+                href="https://www.facebook.com/magnifyingchildrenshorizons" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Facebook" 
+                className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition"
+              >
                 <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
                 </svg>
               </a>
-              <a href="#youtube" aria-label="YouTube" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
-                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-              </a>
             </div>
-   
+ 
           </div>
-
-          <div className="pt-4 pb-6 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2 max-w-[90rem] mx-auto">
+ 
+          <div className="pt-4 pb-6 px-4 sm:px-6 lg:px-10 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2 max-w-[90rem] mx-auto">
             <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
             <div className="flex items-center space-x-4">
               <a href="#privacy" className="hover:underline">Privacy Policy</a>

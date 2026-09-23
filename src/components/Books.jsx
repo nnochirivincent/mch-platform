@@ -30,11 +30,11 @@ export default function Books() {
       {/* Introductory Heading */}
       <section className="pt-6 pb-3 sm:pt-8 sm:pb-4 px-4 sm:px-6 lg:px-12">
         <ScrollFade delay={80}>
-          <div className="text-center max-w-3xl mx-auto space-y-2 px-2">
+          <div className="text-center max-w-3xl mx-auto space-y-3 px-2">
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1e3319] tracking-tight">
               Discover the Weaverton Series
             </h2>
-            <p className="text-sm sm:text-base text-[#1b2718] font-medium leading-relaxed">
+            <p className="text-lg text-[#1b2718] font-semibold leading-relaxed">
               Step into a world where nature is alive with purpose.<br className="hidden sm:inline" />
               Through the Weaverton Series, children encounter nature beings, unexpected challenges and discoveries that encourage courage, creativity, self-trust and a deeper connection with the natural world.
             </p>
@@ -70,11 +70,11 @@ export default function Books() {
                     </p>
                   </div>
 
-                  <p className="text-sm sm:text-base text-[#1b2718] font-medium leading-relaxed">
+                  <p className="text-lg text-[#1b2718] font-semibold leading-relaxed">
                     Boma and his father are nature giants who help the nature beings with their work in Vomper Creek. When Boma’s father must leave, Boma worries he won’t remember everything he has been taught. As unexpected challenges arise, he must learn to trust what he knows, think creatively and discover what he is capable of.
                   </p>
 
-                  <p className="font-serif italic text-sm sm:text-base font-bold text-[#2c441c]">
+                  <p className="font-serif italic text-lg font-bold text-[#2c441c]">
                     A story about self-trust, creativity and what nature can teach us about working together.
                   </p>
 
@@ -133,24 +133,24 @@ export default function Books() {
                   <h4 className="font-serif font-bold text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
                     Reader Reviews — The Face in the Mountain
                   </h4>
-                  <div className="grid md:grid-cols-3 gap-4 text-xs sm:text-sm">
+                  <div className="grid md:grid-cols-3 gap-4 text-base">
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
-                      <p className="italic text-[#1b2718]">
+                      <p className="italic text-[#1b2718] font-semibold text-base">
                         "Liken to Lion King, this is a coming of age story of a father and son. a beautiful tale that inspires us to remember that what we do affects the world we live in. A really fun one to give to a father to read to his son."
                       </p>
                       <p className="font-bold text-[#355322]">— Ruby Blotzer</p>
                     </div>
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
-                      <p className="italic text-[#1b2718]">
+                      <p className="italic text-[#1b2718] font-semibold text-base">
                         "Beautifully illustrated - about the interconnectedness of nature. The identification of several faces in mountains around North America will get people observing the mountains as they travel around. What a great idea."
                       </p>
                       <p className="font-bold text-[#355322]">— Carla Johnson-Hicks</p>
                     </div>
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
-                      <p className="italic text-[#1b2718]">
+                      <p className="italic text-[#1b2718] font-semibold text-base">
                         "A very uniquely different children's book, with its beautiful illustrations shows how fascinating nature can be to children. Through their eyes things look totally different than they do to adults."
                       </p>
                       <p className="font-bold text-[#355322]">— Wanda Maynard (Rating: 5 out of 5 stars)</p>
@@ -208,11 +208,11 @@ export default function Books() {
                   </p>
                 </div>
 
-                <p className="text-sm sm:text-base text-[#1b2718] font-medium leading-relaxed">
+                <p className="text-lg text-[#1b2718] font-semibold leading-relaxed">
                   High above Earth lies Weaverton, where children’s thoughts, words and actions become colourful threads. When sorting pixie Drumlo receives his first important task, it takes him farther than he has ever been before — and along the way, an unexpected challenge puts him to the test.
                 </p>
 
-                <p className="font-serif italic text-sm sm:text-base font-bold text-[#2c441c]">
+                <p className="font-serif italic text-lg font-bold text-[#2c441c]">
                   A luminous adventure exploring the power of our thoughts, words and actions — and how our choices connect us to others, to nature and to the world around us.
                 </p>
 
@@ -251,24 +251,24 @@ export default function Books() {
                   <h4 className="font-serif font-bold text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
                     Reader Reviews — The Festival Shoes
                   </h4>
-                  <div className="grid md:grid-cols-3 gap-4 text-xs sm:text-sm">
+                  <div className="grid md:grid-cols-3 gap-4 text-base">
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
-                      <p className="italic text-[#1b2718]">
+                      <p className="italic text-[#1b2718] font-semibold text-base">
                         "How the author involves all the senses when using colors and mood to portray earths actions, is brilliant. The wispiness of the illustrations plays into the story without overpowering the message."
                       </p>
                       <p className="font-bold text-[#355322]">— Lori Shiver, Goodreads Reviewer</p>
                     </div>
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
-                      <p className="italic text-[#1b2718]">
+                      <p className="italic text-[#1b2718] font-semibold text-base">
                         "Inspiring, creative, a breath of fresh air. This is a piece of children’s lit whose vintage innocence blazes a trail forward to what children’s literature should be."
                       </p>
                       <p className="font-bold text-[#355322]">— Producervan E, Goodreads Reviewer</p>
                     </div>
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
-                      <p className="italic text-[#1b2718]">
+                      <p className="italic text-[#1b2718] font-semibold text-base">
                         "Manages to educate, - not just entertain, a timeless story that will enthrall and capture the imagination of young readers as fantasy touches are woven in a magically beautiful style. The writing is so vivid you feel like you are actually right there..."
                       </p>
                       <p className="font-bold text-[#355322]">— Tara Sheehan, Artistic Bent (Rating: 5/5 stars)</p>
@@ -290,11 +290,11 @@ export default function Books() {
               
               {/* Left Group: Continue the Adventure */}
               <div className="lg:col-span-7 bg-[#edf2eb] p-6 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
-                <div className="space-y-1.5 text-left">
+                <div className="space-y-2 text-left">
                   <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
                     Continue the Adventure
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#1b2718] font-medium leading-relaxed max-w-xl">
+                  <p className="text-lg text-[#1b2718] font-semibold leading-relaxed max-w-xl">
                     Explore free colouring pages, games and activities inspired by the Weaverton Series.
                   </p>
                 </div>
@@ -328,11 +328,11 @@ export default function Books() {
 
               {/* Right Group: More Stories to Discover */}
               <div className="lg:col-span-5 bg-[#fcf0ed] p-6 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
-                <div className="space-y-1.5 text-left">
+                <div className="space-y-2 text-left">
                   <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
                     More Stories to Discover
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#1b2718] font-medium leading-relaxed">
+                  <p className="text-lg text-[#1b2718] font-semibold leading-relaxed">
                     Explore books and creative collaborations beyond the Weaverton Series — including stories that invite children to experience nature, character and the world from different perspectives.
                   </p>
                 </div>
@@ -372,7 +372,7 @@ export default function Books() {
       {/* Footer Section */}
       <div className="pt-6 border-t border-[#23351a]/15 bg-[#f5f1e8]">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 px-4 sm:px-6 lg:px-10 max-w-[90rem] mx-auto">
-           
+            
           <div className="flex items-center space-x-3 text-center lg:text-left">
             <Link to="/" className="flex items-center space-x-3 group shrink-0">
               <div className="flex items-center justify-center shrink-0">
@@ -401,21 +401,28 @@ export default function Books() {
           </div>
 
           <div className="flex items-center space-x-2.5 shrink-0">
-            <a href="#instagram" aria-label="Instagram" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+            <a 
+              href="https://www.instagram.com/magnifyingchildrenshorizons/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Instagram" 
+              className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition"
+            >
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
               </svg>
             </a>
-            <a href="#facebook" aria-label="Facebook" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
+            <a 
+              href="https://www.facebook.com/magnifyingchildrenshorizons" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Facebook" 
+              className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition"
+            >
               <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
-              </svg>
-            </a>
-            <a href="#youtube" aria-label="YouTube" className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition">
-              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
             </a>
           </div>

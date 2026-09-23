@@ -156,7 +156,7 @@ export default function CharacterwithNature() {
 
               </div>
 
-              {/* Button: Explore the Laws */}
+              {/* Button: Explore the Laws (Updated to /cwn/laws) */}
               <div className="pt-2">
                 <Link 
                   to="/cwn/laws"
@@ -190,6 +190,7 @@ export default function CharacterwithNature() {
                     Parents can also explore the foundations of CWN and guidance for supporting their child's journey.
                   </p>
                   <div>
+                    {/* Button: Explore Programmes (Updated to /cwn/programmes) */}
                     <Link 
                       to="/cwn/programmes"
                       className="block w-full bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest py-3 px-4 rounded-xl shadow transition text-center"
@@ -239,9 +240,9 @@ export default function CharacterwithNature() {
             <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
               <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
               <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
-              <Link to="/cwn/pathways" className="hover:text-[#1a2b13] transition">Character with Nature™</Link>
+              <Link to="/character-with-nature" className="hover:text-[#1a2b13] transition">Character with Nature™</Link>
               <Link to="/about" className="hover:text-[#1a2b13] transition">About Us</Link>
-              <Link to="/collaborations" className="hover:text-[#1a2b13] transition">Collaborations</Link>
+              <Link to="/collaboration" className="hover:text-[#1a2b13] transition">Collaborations</Link>
               <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
             </div>
  

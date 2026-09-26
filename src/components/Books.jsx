@@ -46,10 +46,10 @@ export default function Books() {
       <section className="pt-4 pb-6 sm:pt-6 sm:pb-8 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
         <ScrollFade delay={80}>
           <div className="max-w-[90rem] mx-auto">
-            <div className="grid lg:grid-cols-12 gap-6 lg:gap-6 items-center">
+            <div className="grid lg:grid-cols-12 gap-6 items-center">
               
-              {/* Book Cover */}
-              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-[300px] sm:min-h-[350px] lg:min-h-0 my-2 lg:my-0">
+              {/* Book Cover: Responsive static flow on mobile, absolute top offset on lg desktop */}
+              <div className="lg:col-span-3 flex justify-center items-center relative lg:overflow-visible py-4 lg:py-0">
                 <img 
                   src="/tfim-book-cover.png" 
                   alt="The Face in the Mountain Book Cover" 
@@ -58,7 +58,7 @@ export default function Books() {
               </div>
 
               {/* Book Info & Trailer */}
-              <div className="lg:col-span-9 grid md:grid-cols-2 gap-6 lg:gap-6 items-center">
+              <div className="lg:col-span-9 grid md:grid-cols-2 gap-6 items-center">
                 
                 <div className="space-y-3 text-left">
                   <div>
@@ -168,9 +168,9 @@ export default function Books() {
       <section className="pt-4 pb-6 sm:pt-6 sm:pb-8 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
         <ScrollFade delay={80}>
           <div className="max-w-[90rem] mx-auto">
-            <div className="grid lg:grid-cols-12 gap-6 lg:gap-6 items-center">
+            <div className="grid lg:grid-cols-12 gap-6 items-center">
               
-              {/* Trailer/Video on Left */}
+              {/* Trailer/Video */}
               <div className="lg:col-span-4 space-y-2 text-center max-w-md mx-auto w-full order-2 lg:order-1">
                 <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5 max-h-[190px] mx-auto w-full">
                   <img 
@@ -237,7 +237,7 @@ export default function Books() {
               </div>
 
               {/* Book Cover on Right */}
-              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-[320px] sm:min-h-[380px] lg:min-h-0 my-2 lg:my-0 order-1 lg:order-3">
+              <div className="lg:col-span-3 flex justify-center items-center relative lg:overflow-visible py-4 lg:py-0 order-1 lg:order-3">
                 <img 
                   src="/TFS-Book-cover.png" 
                   alt="The Festival Shoes Book Cover" 

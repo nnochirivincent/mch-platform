@@ -11,9 +11,9 @@ export default function HomePage() {
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-to-br from-[#87a96b]/10 to-[#3c5e2a]/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
       <div className="absolute top-[40%] right-10 w-[400px] h-[400px] bg-gradient-to-br from-[#c2d0b7]/20 to-[#4a6b35]/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
       
-    {/* 1. HERO SECTION (Edge-to-edge with text shifted further to the right) */}
+    {/* 1. HERO SECTION (Edge-to-edge with responsive spacing for mobile) */}
       <section className="relative w-full pt-0 pb-2">
-        <div className="relative w-full rounded-none sm:rounded-3xl overflow-hidden shadow-xl min-h-[52vh] lg:min-h-[60vh] flex items-center px-6 sm:px-12 lg:px-20 py-6">
+        <div className="relative w-full rounded-none sm:rounded-3xl overflow-hidden shadow-xl min-h-[52vh] lg:min-h-[60vh] flex items-center px-4 sm:px-12 lg:px-20 py-8">
           
           <div className="absolute inset-0 z-0 overflow-hidden bg-[#162211]">
             <img 
@@ -24,13 +24,13 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
-          {/* Shifted text container further to the right using larger left padding classes */}
-          <div className="relative z-10 w-full max-w-6xl flex flex-col items-start justify-center text-left pl-12 sm:pl-32 lg:pl-64">
+          {/* Responsive padding container that adapts safely to smaller screens while preserving desktop shift */}
+          <div className="relative z-10 w-full max-w-6xl flex flex-col items-start justify-center text-left pl-2 sm:pl-16 lg:pl-64 pr-2">
             <div className="space-y-4 max-w-4xl text-left">
               
               <div className="inline-block space-y-1">
-                <h1 className="text-[2.25rem] sm:text-[3.25rem] lg:text-[4.25rem] font-serif text-[#ffffff] font-normal tracking-wide leading-[1.05] drop-shadow-lg">
-                  <span className="block text-[1.15rem] sm:text-[1.65rem] lg:text-[2.15rem] font-serif font-semibold tracking-[0.2em] text-[#f4f0eb] mb-2 uppercase drop-shadow-md">
+                <h1 className="text-[2.1rem] sm:text-[3.25rem] lg:text-[4.25rem] font-serif text-[#ffffff] font-normal tracking-wide leading-[1.05] drop-shadow-lg">
+                  <span className="block text-[1.1rem] sm:text-[1.65rem] lg:text-[2.15rem] font-serif font-semibold tracking-[0.2em] text-[#f4f0eb] mb-2 uppercase drop-shadow-md">
                     Tapping into
                   </span>
                   Nature's Wisdom
@@ -44,7 +44,7 @@ export default function HomePage() {
               </div>
 
               {/* Straight line subtitle */}
-              <p className="text-lg sm:text-xl lg:text-2xl text-[#fcf9f5] font-serif font-medium tracking-wide max-w-2xl drop-shadow-md pt-0.5 leading-relaxed">
+              <p className="text-base sm:text-xl lg:text-2xl text-[#fcf9f5] font-serif font-medium tracking-wide max-w-2xl drop-shadow-md pt-0.5 leading-relaxed">
                 to Nurture Character and Values in Children
               </p>
 

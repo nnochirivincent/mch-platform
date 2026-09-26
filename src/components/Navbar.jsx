@@ -115,7 +115,7 @@ export default function Navbar() {
           <Link to="/character-with-nature" onClick={() => setIsOpen(false)} className="block py-2.5 font-semibold border-b border-gray-100 hover:text-emerald-700">Character with Nature™</Link>
           <Link to="/collaboration" onClick={() => setIsOpen(false)} className="block py-2.5 font-semibold border-b border-gray-100 hover:text-emerald-700">Collaborations</Link>
           <Link to="/resources" onClick={() => setIsOpen(false)} className="block py-2.5 font-semibold border-b border-gray-100 hover:text-emerald-700">Resources</Link>
-          <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2.5 font-semibold border-b border-gray-100 hover:text-emerald-700">About Founder</Link>
+          <Link to="/about" onClick={() => setIsOpen(false)} className="block py-2.5 font-semibold border-b border-gray-100 hover:text-emerald-700">About Us</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)} className="block py-3 mt-2 text-center bg-[#23461f] text-white rounded-xl font-semibold shadow">Contact</Link>
         </div>
       )}

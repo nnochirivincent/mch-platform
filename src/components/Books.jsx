@@ -11,7 +11,7 @@ export default function Books() {
       
       {/* 1. HERO SECTION */}
       <section className="relative w-full pt-0 pb-0">
-        <div className="relative w-full rounded-none overflow-hidden h-[22vh] sm:h-[30vh] lg:h-[35vh] flex items-center justify-center">
+        <div className="relative w-full rounded-none overflow-hidden h-[25vh] sm:h-[30vh] lg:h-[35vh] flex items-center justify-center">
           <div className="absolute inset-0 z-0 overflow-hidden bg-[#162211]">
             <img 
               src="/books-hero.png" 
@@ -34,7 +34,7 @@ export default function Books() {
             <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#1e3319] tracking-tight">
               Discover the Weaverton Series
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-[#1b2718] font-semibold leading-relaxed">
+            <p className="text-base sm:text-lg text-[#1b2718] font-semibold leading-relaxed">
               Step into a world where nature is alive with purpose.<br className="hidden sm:inline" />
               Through the Weaverton Series, children encounter nature beings, unexpected challenges and discoveries that encourage courage, creativity, self-trust and a deeper connection with the natural world.
             </p>
@@ -43,17 +43,17 @@ export default function Books() {
       </section>
 
       {/* BOOK 1: The Face in the Mountain */}
-      <section className="pt-2 pb-6 sm:pt-4 sm:pb-8 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
+      <section className="pt-4 pb-6 sm:pt-6 sm:pb-8 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
         <ScrollFade delay={80}>
           <div className="max-w-[90rem] mx-auto">
             <div className="grid lg:grid-cols-12 gap-6 lg:gap-6 items-center">
               
               {/* Book Cover */}
-              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible my-2 lg:my-0">
+              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-[300px] sm:min-h-[350px] lg:min-h-0 my-2 lg:my-0">
                 <img 
                   src="/tfim-book-cover.png" 
                   alt="The Face in the Mountain Book Cover" 
-                  className="w-auto h-[240px] sm:h-[310px] lg:h-[380px] max-w-none object-contain transform transition hover:scale-[1.02] lg:absolute lg:-top-20 drop-shadow-xl z-20"
+                  className="w-auto h-[280px] sm:h-[330px] lg:h-[380px] max-w-none object-contain transform transition hover:scale-[1.02] lg:absolute lg:-top-20 drop-shadow-xl z-20"
                 />
               </div>
 
@@ -70,11 +70,11 @@ export default function Books() {
                     </p>
                   </div>
 
-                  <p className="text-sm sm:text-base md:text-lg text-[#1b2718] font-semibold leading-relaxed">
+                  <p className="text-base sm:text-lg text-[#1b2718] font-semibold leading-relaxed">
                     Boma and his father are nature giants who help the nature beings with their work in Vomper Creek. When Boma’s father must leave, Boma worries he won’t remember everything he has been taught. As unexpected challenges arise, he must learn to trust what he knows, think creatively and discover what he is capable of.
                   </p>
 
-                  <p className="font-serif italic text-sm sm:text-base md:text-lg font-bold text-[#2c441c]">
+                  <p className="font-serif italic text-base sm:text-lg font-bold text-[#2c441c]">
                     A story about self-trust, creativity and what nature can teach us about working together.
                   </p>
 
@@ -83,7 +83,7 @@ export default function Books() {
                       href="https://www.amazon.com/Face-Mountain-Tolulope-Okudolo/dp/0994876947/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 sm:px-5 py-2.5 rounded-lg shadow transition"
+                      className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-lg shadow transition"
                     >
                       DISCOVER / BUY THE BOOK →
                     </a>
@@ -99,7 +99,7 @@ export default function Books() {
                 </div>
 
                 {/* Trailer Thumbnail Box */}
-                <div className="space-y-2 text-center max-w-md mx-auto w-full pt-2 md:pt-0">
+                <div className="space-y-2 text-center max-w-md mx-auto w-full pt-4 md:pt-0">
                   <div className="relative rounded-lg overflow-hidden shadow-lg aspect-video flex items-center justify-center group cursor-pointer bg-black/5 max-h-[190px] mx-auto w-full">
                     <img 
                       src="/TFITM-tumnail.png" 
@@ -130,7 +130,7 @@ export default function Books() {
               {/* Collapsible Reviews Drawer for Book 1 */}
               {tfimReviewsOpen && (
                 <div className="lg:col-span-12 bg-[#f4f7f2] border border-[#d2e2cc] p-4 sm:p-6 rounded-xl mt-4 space-y-4 shadow-inner w-full">
-                  <h4 className="font-serif font-bold text-base sm:text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
+                  <h4 className="font-serif font-bold text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
                     Reader Reviews — The Face in the Mountain
                   </h4>
                   <div className="grid md:grid-cols-3 gap-4 text-base">
@@ -165,7 +165,7 @@ export default function Books() {
       </section>
 
       {/* BOOK 2: The Festival Shoes */}
-      <section className="pt-2 pb-6 sm:pt-4 sm:pb-8 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
+      <section className="pt-4 pb-6 sm:pt-6 sm:pb-8 px-4 sm:px-6 lg:px-10 border-b border-[#23351a]/10">
         <ScrollFade delay={80}>
           <div className="max-w-[90rem] mx-auto">
             <div className="grid lg:grid-cols-12 gap-6 lg:gap-6 items-center">
@@ -208,11 +208,11 @@ export default function Books() {
                   </p>
                 </div>
 
-                <p className="text-sm sm:text-base md:text-lg text-[#1b2718] font-semibold leading-relaxed">
+                <p className="text-base sm:text-lg text-[#1b2718] font-semibold leading-relaxed">
                   High above Earth lies Weaverton, where children’s thoughts, words and actions become colourful threads. When sorting pixie Drumlo receives his first important task, it takes him farther than he has ever been before — and along the way, an unexpected challenge puts him to the test.
                 </p>
 
-                <p className="font-serif italic text-sm sm:text-base md:text-lg font-bold text-[#2c441c]">
+                <p className="font-serif italic text-base sm:text-lg font-bold text-[#2c441c]">
                   A luminous adventure exploring the power of our thoughts, words and actions — and how our choices connect us to others, to nature and to the world around us.
                 </p>
 
@@ -221,7 +221,7 @@ export default function Books() {
                     href="https://www.amazon.com/dp/YOUR_BOOK_ID"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 sm:px-5 py-2.5 rounded-lg shadow transition"
+                    className="inline-block bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-5 py-2.5 rounded-lg shadow transition"
                   >
                     DISCOVER / BUY THE BOOK →
                   </a>
@@ -237,18 +237,18 @@ export default function Books() {
               </div>
 
               {/* Book Cover on Right */}
-              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible my-2 lg:my-0 order-1 lg:order-3">
+              <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-[320px] sm:min-h-[380px] lg:min-h-0 my-2 lg:my-0 order-1 lg:order-3">
                 <img 
                   src="/TFS-Book-cover.png" 
                   alt="The Festival Shoes Book Cover" 
-                  className="w-auto h-[260px] sm:h-[340px] lg:h-[440px] max-w-none object-contain transform transition hover:scale-[1.02] lg:absolute lg:-top-24 drop-shadow-xl z-20"
+                  className="w-auto h-[330px] sm:h-[390px] lg:h-[440px] max-w-none object-contain transform transition hover:scale-[1.02] lg:absolute lg:-top-24 drop-shadow-xl z-20"
                 />
               </div>
 
               {/* Collapsible Reviews Drawer for Book 2 */}
               {tfsReviewsOpen && (
                 <div className="lg:col-span-12 bg-[#f4f7f2] border border-[#d2e2cc] p-4 sm:p-6 rounded-xl mt-4 space-y-4 shadow-inner relative z-30 w-full order-4">
-                  <h4 className="font-serif font-bold text-base sm:text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
+                  <h4 className="font-serif font-bold text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
                     Reader Reviews — The Festival Shoes
                   </h4>
                   <div className="grid md:grid-cols-3 gap-4 text-base">
@@ -289,12 +289,12 @@ export default function Books() {
             <div className="grid lg:grid-cols-12 gap-6 items-stretch">
               
               {/* Left Group: Continue the Adventure */}
-              <div className="lg:col-span-7 bg-[#edf2eb] p-5 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
+              <div className="lg:col-span-7 bg-[#edf2eb] p-6 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
                 <div className="space-y-2 text-left">
                   <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
                     Continue the Adventure
                   </h3>
-                  <p className="text-sm sm:text-base md:text-lg text-[#1b2718] font-semibold leading-relaxed max-w-xl">
+                  <p className="text-base sm:text-lg text-[#1b2718] font-semibold leading-relaxed max-w-xl">
                     Explore free colouring pages, games and activities inspired by the Weaverton Series.
                   </p>
                 </div>
@@ -304,14 +304,14 @@ export default function Books() {
                     <img 
                       src="/1-aboutpage-bookcover.png" 
                       alt="Coloring Book" 
-                      className="h-40 sm:h-56 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                      className="h-48 sm:h-56 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
                     />
                   </div>
                   <div className="flex justify-center transform rotate-1 hover:rotate-0 transition duration-300 group">
                     <img 
                       src="/TFS-adventure-game.png" 
                       alt="Board Game Activity" 
-                      className="h-32 sm:h-44 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                      className="h-36 sm:h-44 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
                     />
                   </div>
                 </div>
@@ -327,12 +327,12 @@ export default function Books() {
               </div>
 
               {/* Right Group: More Stories to Discover */}
-              <div className="lg:col-span-5 bg-[#fcf0ed] p-5 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
+              <div className="lg:col-span-5 bg-[#fcf0ed] p-6 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
                 <div className="space-y-2 text-left">
                   <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
                     More Stories to Discover
                   </h3>
-                  <p className="text-sm sm:text-base md:text-lg text-[#1b2718] font-semibold leading-relaxed">
+                  <p className="text-base sm:text-lg text-[#1b2718] font-semibold leading-relaxed">
                     Explore books and creative collaborations beyond the Weaverton Series — including stories that invite children to experience nature, character and the world from different perspectives.
                   </p>
                 </div>
@@ -342,14 +342,14 @@ export default function Books() {
                     <img 
                       src="/2-bookcover-aboutpage.png" 
                       alt="Luna's Threads of Light" 
-                      className="h-36 sm:h-48 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                      className="h-40 sm:h-48 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
                     />
                   </div>
                   <div className="flex justify-center transform rotate-1 hover:rotate-0 transition duration-300 group">
                     <img 
                       src="/bookcover-aboutpage.png" 
                       alt="Femi's Promise" 
-                      className="h-36 sm:h-48 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
+                      className="h-40 sm:h-48 w-auto object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300" 
                     />
                   </div>
                 </div>

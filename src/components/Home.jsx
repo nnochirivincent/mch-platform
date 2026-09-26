@@ -179,115 +179,150 @@ export default function HomePage() {
                 </div>
               </div>
             </ScrollFade>
+                     {/* BOOKS SITTING DIRECTLY ON THE PAGE */}
 
-            {/* BOOKS SITTING ON THEIR OWN ON THE PAGE */}
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch px-2 sm:px-4">
-              
-              {/* BOOK 1 */}
-              <ScrollFade delay={90}>
-                <div className="grid sm:grid-cols-12 gap-6 items-center p-4 bg-white/60 rounded-2xl border border-[#3d5e27]/10 shadow-sm">
-                  <div className="sm:col-span-5 w-full flex items-center justify-center">
-                    <Link to="/books" className="block group w-full flex items-center justify-center">
-                      <img 
-                        src="/tfim-book-cover.png" 
-                        alt="The Face in the Mountain Book Cover" 
-                        className="w-[180px] sm:w-[210px] h-[270px] sm:h-[310px] object-cover rounded-lg transition duration-300 group-hover:scale-[1.02] drop-shadow-xl"
-                      />
-                    </Link>
-                  </div>
+<div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch px-0 sm:px-2">
 
-                  <div className="sm:col-span-7 space-y-3 text-left flex flex-col justify-center">
-                    <div>
-                      <h3 className="font-extrabold text-xl text-[#0e170a] font-serif">The Face in the Mountain</h3>
-                      <p className="text-[#14230f] text-lg leading-relaxed mt-2 font-medium">
-                        When Boma's father must leave Vamper Creek, Borne worries that he won't remember everything he has been taught. As challenges arise, he must learn to trust what he knows, think creatively and discover what he is capable of.
-                      </p>
-                    </div>
+{/* BOOK 1 */} <ScrollFade delay={90}> <div className="grid sm:grid-cols-12 gap-6 items-stretch h-full">
 
-                    <div className="flex text-amber-600 gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={14} fill="currentColor" />
-                      ))}
-                    </div>
+  {/* BOOK COVER */}
+  <div className="sm:col-span-5 w-full flex items-stretch justify-center">
+    <Link
+      to="/books"
+      className="block group w-full flex items-stretch justify-center"
+    >
+      <img
+        src="/tfim-book-cover.png"
+        alt="The Face in the Mountain Book Cover"
+        className="w-[180px] sm:w-[210px] h-full min-h-[335px] sm:min-h-[385px] object-cover rounded-lg transition duration-300 group-hover:scale-[1.02] drop-shadow-xl"
+      />
+    </Link>
+  </div>
 
-                    <p className="text-sm text-[#14230f] italic font-semibold leading-relaxed border-l-2 border-[#3d5e27] pl-3 py-1">
-                      "A beautifully written story that touches the heart and awakens a sense of wonder in every child." <br />
-                      <span className="font-bold not-italic text-[#0e170a]">— Amazon Reviewer</span>
-                    </p>
+  {/* BOOK DETAILS */}
+  <div className="sm:col-span-7 space-y-3 text-left flex flex-col justify-center h-full py-2">
+    <div>
+      <h3 className="font-extrabold text-xl text-[#0e170a] font-serif">
+        The Face in the Mountain
+      </h3>
 
-                    <div className="pt-2 space-y-1">
-                      <Link 
-                        to="/books" 
-                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#14230f] hover:text-[#3c5e2a] transition"
-                      >
-                        DISCOVER THE BOOK <ArrowRight size={13} />
-                      </Link>
-                      <div>
-                        <a 
-                          href="https://www.amazon.com/Face-Mountain-Tolulope-Okudolo/dp/0994876947/" 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-xs text-[#243b17] font-bold hover:underline"
-                        >
-                          Buy on Amazon →
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ScrollFade>
+      <p className="text-[#14230f] text-lg leading-relaxed mt-2 font-medium">
+        Boma’s father leaves Vomper Creek, Boma worries he won’t remember
+        all he has been taught. Faced with unexpected challenges, he must
+        trust what he knows, think creatively and discover what he can do.
+      </p>
+    </div>
 
-              {/* BOOK 2: THE FESTIVAL SHOES */}
-              <ScrollFade delay={120}>
-                <div className="grid sm:grid-cols-12 gap-6 items-center p-4 bg-white/60 rounded-2xl border border-[#3d5e27]/10 shadow-sm">
-                  <div className="sm:col-span-5 w-full flex items-center justify-center">
-                    <Link to="/books" className="block group w-full flex items-center justify-center">
-                      <img 
-                        src="/TFS-Book-cover.png" 
-                        alt="The Festival Shoes Book Cover" 
-                        className="w-[216px] sm:w-[252px] h-[335px] sm:h-[385px] object-cover rounded-lg transition duration-300 group-hover:scale-[1.02] drop-shadow-xl"
-                      />
-                    </Link>
-                  </div>
+    <div className="flex text-amber-600 gap-1">
+      {[...Array(5)].map((_, i) => (
+        <Star key={i} size={14} fill="currentColor" />
+      ))}
+    </div>
 
-                  <div className="sm:col-span-7 space-y-3 text-left flex flex-col justify-center">
-                    <div>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-[#0e170a] bg-amber-400 px-2 py-0.5 rounded shadow-sm">COMING SOON</span>
-                      <h3 className="font-extrabold text-xl text-[#0e170a] mt-1.5 font-serif">The Festival Shoes</h3>
-                      <p className="text-[#14230f] text-lg leading-relaxed mt-2 font-medium">
-                        Drumlo's journey takes him through Weaverton, where late facies and nature beings are busy at work. When an unexpected challenge arises, he must draw on his courage, determination and self-trust to find a way forward.
-                      </p>
-                    </div>
+    <p className="text-sm text-[#14230f] italic font-semibold leading-relaxed border-l-2 border-[#3d5e27] pl-3 py-1">
+      "A beautifully written story that touches the heart and awakens a
+      sense of wonder in every child." <br />
+      <span className="font-bold not-italic text-[#0e170a]">
+        — Amazon Reviewer
+      </span>
+    </p>
 
-                    <div className="flex text-amber-600 gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={14} fill="currentColor" />
-                      ))}
-                    </div>
+    <div className="pt-2 space-y-1">
+      <Link
+        to="/books"
+        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#14230f] hover:text-[#3c5e2a] transition"
+      >
+        DISCOVER THE BOOK <ArrowRight size={13} />
+      </Link>
 
-                    <p className="text-sm text-[#14230f] italic font-semibold leading-relaxed border-l-2 border-[#3d5e27] pl-3 py-1">
-                      "An enchanting adventure filled with heart, magic and important lessons for every young reader." <br />
-                      <span className="font-bold not-italic text-[#0e170a]">— ABC Reviewer</span>
-                    </p>
+      <div>
+        <a
+          href="https://www.amazon.com/Face-Mountain-Tolulope-Okudolo/dp/0994876947/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-[#243b17] font-bold hover:underline"
+        >
+          Buy on Amazon →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
-                    <div className="pt-2 space-y-1">
-                      <Link 
-                        to="/books" 
-                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#14230f] hover:text-[#3c5e2a] transition"
-                      >
-                        DISCOVER THE BOOK <ArrowRight size={13} />
-                      </Link>
-                      <div>
-                        <a href="#buy" className="text-xs text-[#243b17] font-bold hover:underline">
-                          Buy on Amazon →
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ScrollFade>
+  </ScrollFade>
 
-            </div>
+{/* BOOK 2: THE FESTIVAL SHOES */} <ScrollFade delay={120}> <div className="grid sm:grid-cols-12 gap-6 items-stretch h-full">
+
+  {/* BOOK COVER */}
+  <div className="sm:col-span-5 w-full flex items-stretch justify-center">
+    <Link
+      to="/books"
+      className="block group w-full flex items-stretch justify-center"
+    >
+      <img
+        src="/TFS-Book-cover.png"
+        alt="The Festival Shoes Book Cover"
+        className="w-[216px] sm:w-[252px] h-full min-h-[335px] sm:min-h-[385px] object-cover rounded-lg transition duration-300 group-hover:scale-[1.02] drop-shadow-xl"
+      />
+    </Link>
+  </div>
+
+  {/* BOOK DETAILS */}
+  <div className="sm:col-span-7 space-y-3 text-left flex flex-col justify-center h-full py-2">
+    <div>
+      <span className="text-[10px] font-black uppercase tracking-widest text-[#0e170a] bg-amber-400 px-2 py-0.5 rounded shadow-sm">
+        COMING SOON
+      </span>
+
+      <h3 className="font-extrabold text-xl text-[#0e170a] mt-1.5 font-serif">
+        The Festival Shoes
+      </h3>
+
+      <p className="text-[#14230f] text-lg leading-relaxed mt-2 font-medium">
+       Journey through Weaverton with Drumlo on an unexpected
+        adventure that reveals the power of our thoughts, words and actions —
+         and how our choices connect us to others and the world around us.
+      </p>
+    </div>
+
+    <div className="flex text-amber-600 gap-1">
+      {[...Array(5)].map((_, i) => (
+        <Star key={i} size={14} fill="currentColor" />
+      ))}
+    </div>
+
+    <p className="text-sm text-[#14230f] italic font-semibold leading-relaxed border-l-2 border-[#3d5e27] pl-3 py-1">
+      "An enchanting adventure filled with heart, magic and important
+      lessons for every young reader." <br />
+      <span className="font-bold not-italic text-[#0e170a]">
+        — ABC Reviewer
+      </span>
+    </p>
+
+    <div className="pt-2 space-y-1">
+      <Link
+        to="/books"
+        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#14230f] hover:text-[#3c5e2a] transition"
+      >
+        DISCOVER THE BOOK <ArrowRight size={13} />
+      </Link>
+
+      <div>
+        <a
+          href="#buy"
+          className="text-xs text-[#243b17] font-bold hover:underline"
+        >
+          Buy on Amazon →
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  </ScrollFade>
+
+</div>
 
           </div>
 
@@ -470,17 +505,17 @@ export default function HomePage() {
 
             <div className="md:col-span-8 space-y-4 text-left">
               <div className="flex items-center space-x-2">
-                <span className="text-xs font-black uppercase tracking-widest text-[#2b421a]">OUR COLLABORATION</span>
+                <span className="text-2xl sm:text-3xl font-serif text-[#0e170a] font-bold">OUR COLLABORATION</span>
               </div>
 
-              <div>
-                <h3 className="text-2xl sm:text-3xl font-serif text-[#0e170a] font-bold">
-                  Blossom in Nature
-                </h3>
-                <p className="font-serif italic text-[#243b17] text-sm sm:text-base font-semibold mt-1">
-                  STORIES TOLD FROM TWO PERSPECTIVES
-                </p>
-              </div>
+             <div>
+  <h3 className="text-2xl sm:text-3xl font-serif text-[#0e170a] font-bold">
+    Blossom in Nature
+  </h3>
+  <p className="font-serif italic text-[#243b17] text-sm sm:text-base font-semibold mt-1">
+    STORIES TOLD FROM TWO PERSPECTIVES
+  </p>
+</div>
 
               <p className="text-lg text-[#14230f] leading-relaxed font-medium">
                 Blossom in Nature is a creative collaboration between Tolulope Okudolo of Magnifying Children’s Horizons and Angela Ehrlich of Nature4Children.

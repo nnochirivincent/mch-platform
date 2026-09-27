@@ -85,77 +85,104 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto space-y-8">
           
           <div className="w-full">
-            <div className="relative min-h-[320px] sm:min-h-[380px] flex items-center rounded-2xl overflow-hidden shadow-sm">
-              
-              <div className="absolute inset-0 z-0 overflow-hidden shadow-none bg-transparent">
-                <img 
-                  src="/regen-2-hero-section.png" 
-                  alt="Helping children grow through nature" 
-                  className="w-full h-full object-cover object-center transform scale-95 opacity-90"
-                />
-                <div className="absolute inset-0 bg-gradient-to-l from-[#f7f4ee] via-[#f7f4ee]/90 lg:via-transparent to-transparent opacity-95 sm:opacity-90"></div>
-              </div>
+  <div className="relative min-h-[520px] sm:min-h-[480px] lg:min-h-[380px] flex items-center rounded-2xl overflow-hidden shadow-sm">
 
-              <div className="relative z-10 w-full px-6 sm:px-10 lg:px-14 py-8">
-                <div className="grid lg:grid-cols-12 gap-6 items-center">
-                  <div className="lg:col-span-8 space-y-4 text-left">
-                    
-                    <div className="space-y-2">
-                      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#16260f] tracking-tight leading-snug font-bold drop-shadow-sm">
-                        Helping Children Grow Through Nature
-                      </h2>
-                      <div className="flex items-center space-x-2 text-[#2b421a]">
-                        <div className="h-[1.5px] w-8 bg-[#2b421a]"></div>
-                        <span className="text-xs">🌿</span>
-                        <div className="h-[1.5px] w-8 bg-[#2b421a]"></div>
-                      </div>
-                    </div>
+{/* BACKGROUND IMAGE */}
+<div className="absolute inset-0 z-0 overflow-hidden bg-[#f7f4ee]">
+  <img
+    src="/regen-2-hero-section.png"
+    alt="Helping children grow through nature"
+    className="w-full h-full object-cover object-center sm:object-center lg:object-center transform-none lg:scale-95 opacity-100"
+  />
 
-                    <div className="space-y-4 text-[#14230f] text-lg leading-relaxed font-medium max-w-2xl">
-                      <p>
-                        At Magnifying Children's Horizons we believe the natural world offers children more than a place to explore. It offers opportunities to wonder, discover, reflect and grow.
-                      </p>
-                      <p className="text-lg text-[#14230f] font-medium leading-relaxed">
-                        Through meaningful stories and nature-based experiences we help children develop positive character traits, inner awareness, spiritual growth and a deeper connection with the world around them.
-                      </p>
-                    </div>
+  {/* MOBILE OVERLAY - KEEPS IMAGE VISIBLE WHILE MAKING TEXT READABLE */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#f7f4ee]/85 via-[#f7f4ee]/65 to-[#f7f4ee]/85 sm:bg-gradient-to-r sm:from-[#f7f4ee]/95 sm:via-[#f7f4ee]/75 sm:to-transparent lg:bg-gradient-to-l lg:from-[#f7f4ee] lg:via-[#f7f4ee]/90 lg:to-transparent"></div>
+</div>
 
-                    <div className="pt-2 space-y-4">
-                      <div>
-                        <Link 
-                          to="/about" 
-                          className="inline-flex items-center gap-2 bg-[#23351a] hover:bg-[#1a2813] text-white text-xs sm:text-sm font-bold uppercase tracking-widest px-5 py-3 rounded-xl shadow-md transition border border-[#486337]"
-                        >
-                          <span>ABOUT US</span>
-                          <span className="text-emerald-300">✓</span>
-                        </Link>
-                      </div>
+{/* CONTENT */}
+<div className="relative z-10 w-full px-5 sm:px-10 lg:px-14 py-10 sm:py-8">
+  <div className="grid lg:grid-cols-12 gap-6 items-center">
 
-                      <div className="space-y-2">
-                        <div className="text-xs font-extrabold uppercase tracking-widest text-[#14230f]">Explore:</div>
-                        <div className="flex flex-wrap gap-3">
-                          <Link 
-                            to="/books" 
-                            className="bg-[#23351a] hover:bg-[#1a2813] text-white border border-[#355322] font-bold px-4 py-2.5 rounded-xl transition shadow-sm flex items-center gap-2 text-sm"
-                          >
-                            <BookOpen size={16} className="text-[#b8df8a]" /> OUR BOOKS
-                          </Link>
-                          <Link 
-                            to="/character-with-nature" 
-                            className="bg-[#23351a] hover:bg-[#1a2813] text-white border border-[#355322] font-bold px-4 py-2.5 rounded-xl transition shadow-sm flex items-center gap-2 text-sm"
-                          >
-                            <Compass size={16} className="text-[#b8df8a]" /> CHARACTER WITH NATURE®
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
+    <div className="lg:col-span-8 space-y-4 text-left">
 
-                  </div>
-                </div>
-              </div>
+      {/* HEADING */}
+      <div className="space-y-2">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#16260f] tracking-tight leading-snug font-bold drop-shadow-sm">
+          Helping Children Grow Through Nature
+        </h2>
 
-            </div>
+        <div className="flex items-center space-x-2 text-[#2b421a]">
+          <div className="h-[1.5px] w-8 bg-[#2b421a]"></div>
+          <span className="text-xs">🌿</span>
+          <div className="h-[1.5px] w-8 bg-[#2b421a]"></div>
+        </div>
+      </div>
+
+      {/* TEXT */}
+      <div className="space-y-4 text-[#14230f] text-base sm:text-lg leading-relaxed font-medium max-w-2xl">
+        <p>
+          At Magnifying Children's Horizons we believe the natural world
+          offers children more than a place to explore. It offers
+          opportunities to wonder, discover, reflect and grow.
+        </p>
+
+        <p className="text-base sm:text-lg text-[#14230f] font-medium leading-relaxed">
+          Through meaningful stories and nature-based experiences we help
+          children develop positive character traits, inner awareness,
+          spiritual growth and a deeper connection with the world around
+          them.
+        </p>
+      </div>
+
+      {/* BUTTONS */}
+      <div className="pt-2 space-y-4">
+
+        <div>
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-2 bg-[#23351a] hover:bg-[#1a2813] text-white text-xs sm:text-sm font-bold uppercase tracking-widest px-5 py-3 rounded-xl shadow-md transition border border-[#486337]"
+          >
+            <span>ABOUT US</span>
+            <span className="text-emerald-300">✓</span>
+          </Link>
+        </div>
+
+        {/* EXPLORE */}
+        <div className="space-y-2">
+          <div className="text-xs font-extrabold uppercase tracking-widest text-[#14230f]">
+            Explore:
           </div>
+
+          <div className="flex flex-wrap gap-3">
+
+            <Link
+              to="/books"
+              className="bg-[#23351a] hover:bg-[#1a2813] text-white border border-[#355322] font-bold px-4 py-2.5 rounded-xl transition shadow-sm flex items-center gap-2 text-sm"
+            >
+              <BookOpen size={16} className="text-[#b8df8a]" />
+              OUR BOOKS
+            </Link>
+
+            <Link
+              to="/character-with-nature"
+              className="bg-[#23351a] hover:bg-[#1a2813] text-white border border-[#355322] font-bold px-4 py-2.5 rounded-xl transition shadow-sm flex items-center gap-2 text-sm"
+            >
+              <Compass size={16} className="text-[#b8df8a]" />
+              CHARACTER WITH NATURE®
+            </Link>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
 
           <div className="space-y-6 pt-4">
             

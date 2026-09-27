@@ -239,11 +239,8 @@ return ( <div className="min-h-screen bg-[#fcf9f2] text-[#14230f] selection:bg-[
                   to="/books"
                   className="block group w-full flex items-stretch justify-center"
                 >
-                  <img
-                    src="/tfim-book-cover.png"
-                    alt="The Face in the Mountain Book Cover"
-                    className="w-[180px] sm:w-[210px] h-full min-h-[335px] sm:min-h-[385px] object-cover rounded-lg transition duration-300 group-hover:scale-[1.02] drop-shadow-xl"
-                  />
+  {/* BOOK 1 COVER */}
+<img src="/tfim-book-cover.png" alt="The Face in the Mountain Book Cover" className="w-[216px] sm:w-[252px] h-[335px] sm:h-[385px] object-cover rounded-lg transition duration-300 group-hover:scale-[1.02] drop-shadow-xl" />
                 </Link>
               </div>
 
@@ -309,11 +306,8 @@ return ( <div className="min-h-screen bg-[#fcf9f2] text-[#14230f] selection:bg-[
                   to="/books"
                   className="block group w-full flex items-stretch justify-center"
                 >
-                  <img
-                    src="/TFS-Book-cover.png"
-                    alt="The Festival Shoes Book Cover"
-                    className="w-[216px] sm:w-[252px] h-full min-h-[335px] sm:min-h-[385px] object-cover rounded-lg transition duration-300 group-hover:scale-[1.02] drop-shadow-xl"
-                  />
+                  {/* BOOK 2 COVER */}
+<img src="/TFS-Book-cover.png" alt="The Festival Shoes Book Cover" className="w-[216px] sm:w-[252px] h-[335px] sm:h-[385px] object-cover rounded-lg transition duration-300 group-hover:scale-[1.02] drop-shadow-xl" />
                 </Link>
               </div>
 

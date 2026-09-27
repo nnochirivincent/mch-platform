@@ -1093,7 +1093,7 @@ export default function Books() {
               <div className="flex flex-col text-left">
                 <span className="font-serif font-bold text-base text-[#1a2b13] leading-none">Magnifying Children's Horizons</span>
                 <span className="text-[10px] text-[#2c3e24] font-bold uppercase tracking-widest mt-1">
-                  NATURE • CHARACTER • A BRIGHTER TOMORROW
+                  NATURE • CHARACTER • SPIRITUAL VALUES
                 </span>
               </div>
             </div>

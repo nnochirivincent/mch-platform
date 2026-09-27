@@ -1076,153 +1076,78 @@ export default function Books() {
 
       </section>
 
-
-      {/* =========================================================
-          FOOTER
-      ========================================================= */}
-      <div className="pt-6 border-t border-[#23351a]/15 bg-[#f5f1e8]">
-
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-5 sm:gap-6 pb-6 px-4 sm:px-6 lg:px-10 max-w-[90rem] mx-auto">
-
-          {/* LOGO */}
-          <div className="flex items-center space-x-3 text-center lg:text-left">
-
-            <Link to="/" className="flex items-center space-x-3 group shrink-0">
-
-              <div className="flex items-center justify-center shrink-0">
-
-                <img
-                  src="/navbar-image.png"
-                  alt="MCH Logo"
-                  className="h-10 w-auto object-contain group-hover:scale-105 transition duration-300"
-                />
-
+      {/* Footer Section */}
+        <div className="pt-6 border-t border-[#23351a]/15 bg-[#f5f1e8]">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 px-4 sm:px-6 lg:px-10 max-w-[90rem] mx-auto">
+             
+            <div className="flex items-center space-x-3 text-center lg:text-left">
+              <Link to="/" className="flex items-center space-x-3 group shrink-0">
+                <div className="flex items-center justify-center shrink-0">
+                  <img 
+                    src="/navbar-image.png" 
+                    alt="MCH Logo" 
+                    className="h-10 w-auto object-contain group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+              </Link>
+              <div className="flex flex-col text-left">
+                <span className="font-serif font-bold text-base text-[#1a2b13] leading-none">Magnifying Children's Horizons</span>
+                <span className="text-[10px] text-[#2c3e24] font-bold uppercase tracking-widest mt-1">
+                  NATURE • CHARACTER • A BRIGHTER TOMORROW
+                </span>
               </div>
+            </div>
 
-            </Link>
+            <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
+              <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
+              <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
+              <Link to="/character-with-nature" className="hover:text-[#1a2b13] transition">Character with Nature™</Link>
+              <Link to="/about" className="hover:text-[#1a2b13] transition">About Us</Link>
+              <Link to="/collaboration" className="hover:text-[#1a2b13] transition">Collaborations</Link>
+              <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
+            </div>
 
-            <div className="flex flex-col text-left">
-
-              <span className="font-serif font-bold text-sm sm:text-base text-[#1a2b13] leading-none">
-                Magnifying Children's Horizons
-              </span>
-
-              <span className="text-[9px] sm:text-[10px] text-[#2c3e24] font-bold uppercase tracking-widest mt-1">
-                NATURE • CHARACTER • A BRIGHTER TOMORROW
-              </span>
-
+            <div className="flex items-center space-x-2.5 shrink-0">
+              <a 
+                href="https://www.instagram.com/magnifyingchildrenshorizons/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram" 
+                className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition"
+              >
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+              </a>
+              <a 
+                href="https://www.facebook.com/magnifyingchildrenshorizons" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Facebook" 
+                className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition"
+              >
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                </svg>
+              </a>
             </div>
 
           </div>
 
-
-          {/* NAVIGATION */}
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[10px] sm:text-xs uppercase tracking-wider font-extrabold text-[#28421c] px-2">
-
-            <Link to="/" className="hover:text-[#1a2b13] transition">
-              Home
-            </Link>
-
-            <Link to="/books" className="hover:text-[#1a2b13] transition">
-              Books
-            </Link>
-
-            <Link to="/cwn/pathways" className="hover:text-[#1a2b13] transition">
-              Character with Nature™
-            </Link>
-
-            <Link to="/about" className="hover:text-[#1a2b13] transition">
-              About Us
-            </Link>
-
-            <Link to="/collaborations" className="hover:text-[#1a2b13] transition">
-              Collaborations
-            </Link>
-
-            <Link to="/contact" className="hover:text-[#1a2b13] transition">
-              Contact
-            </Link>
-
+          <div className="pt-4 pb-6 px-4 sm:px-6 lg:px-10 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2 max-w-[90rem] mx-auto">
+            <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
+            <div className="flex items-center space-x-4">
+              <a href="#privacy" className="hover:underline">Privacy Policy</a>
+              <a href="#terms" className="hover:underline">Terms of Use</a>
+              <a href="#credits" className="hover:underline">Site by Pixel Designer Agency</a>
+            </div>
           </div>
-
-
-          {/* SOCIAL ICONS */}
-          <div className="flex items-center space-x-2.5 shrink-0">
-
-            <a
-              href="https://www.instagram.com/magnifyingchildrenshorizons/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition"
-            >
-
-              <svg
-                className="w-3.5 h-3.5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" />
-                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-              </svg>
-
-            </a>
-
-
-            <a
-              href="https://www.facebook.com/magnifyingchildrenshorizons"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="w-8 h-8 rounded-full bg-[#23351a] text-white flex items-center justify-center text-xs shadow hover:bg-[#1a2813] transition"
-            >
-
-              <svg
-                className="w-3.5 h-3.5"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-
-                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
-
-              </svg>
-
-            </a>
-
-          </div>
-
         </div>
 
 
-        {/* COPYRIGHT */}
-        <div className="pt-4 pb-6 px-4 sm:px-6 lg:px-10 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2 max-w-[90rem] mx-auto">
-
-          <p className="text-center sm:text-left">
-            © 2026 Magnifying Children's Horizons. All rights reserved.
-          </p>
-
-          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
-
-            <a href="#privacy" className="hover:underline">
-              Privacy Policy
-            </a>
-
-            <a href="#terms" className="hover:underline">
-              Terms of Use
-            </a>
-
-            <a href="#credits" className="hover:underline">
-              Site by Pixel Designer Agency
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
+       
 
     </div>
   );

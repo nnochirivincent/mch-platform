@@ -193,14 +193,13 @@ export default function About() {
                     <strong className="font-bold text-[#111e0c]">Curiosity</strong> — and a sense that there is more to discover. I hope children leave wanting to explore, ask questions and find their own connection with the natural world.
                   </p>
                 </div>
-
               </div>
 
             </div>
           </section>
         </ScrollFade>
 
-        {/* READY TO EXPLORE MORE — dark CTA (Call to action) */}
+       {/* READY TO EXPLORE MORE — dark CTA */}
         <section className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 pt-1">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-[#23351a] text-white p-8 sm:p-10 rounded-3xl shadow-xl space-y-4">
@@ -215,8 +214,9 @@ export default function About() {
                 >
                   Explore Our Books
                 </Link>
+                {/* Fixed Route */}
                 <Link 
-                  to="/cwn/pathways" 
+                  to="/character-with-nature" 
                   className="bg-[#355322] hover:bg-[#2c441b] text-white border border-emerald-700 font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5"
                 >
                   Character With Nature™
@@ -227,6 +227,7 @@ export default function About() {
         </section>
 
         {/* Footer Section */}
+      {/* Footer Section */}
         <div className="pt-6 border-t border-[#23351a]/15 bg-[#f5f1e8]">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 px-4 sm:px-6 lg:px-10 max-w-[90rem] mx-auto">
              
@@ -251,9 +252,9 @@ export default function About() {
             <div className="flex flex-wrap justify-center gap-4 text-xs uppercase tracking-wider font-extrabold text-[#28421c]">
               <Link to="/" className="hover:text-[#1a2b13] transition">Home</Link>
               <Link to="/books" className="hover:text-[#1a2b13] transition">Books</Link>
-              <Link to="/cwn/pathways" className="hover:text-[#1a2b13] transition">Character with Nature™</Link>
+              <Link to="/character-with-nature" className="hover:text-[#1a2b13] transition">Character with Nature™</Link>
               <Link to="/about" className="hover:text-[#1a2b13] transition">About Us</Link>
-              <Link to="/collaborations" className="hover:text-[#1a2b13] transition">Collaborations</Link>
+              <Link to="/collaboration" className="hover:text-[#1a2b13] transition">Collaborations</Link>
               <Link to="/contact" className="hover:text-[#1a2b13] transition">Contact</Link>
             </div>
 

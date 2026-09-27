@@ -301,7 +301,7 @@ export default function Resources() {
                     The Festival Shoes Adventure Game
                   </h3>
                   <p className="text-base sm:text-lg text-[#2c3e24] font-medium leading-relaxed">
-                    Follow Dunah’s journey from Weaverton to Earth in this downloadable game inspired by <span className="italic">The Festival Shoes</span>.
+                    Follow Drumlo journey from Weaverton to Earth in this downloadable game inspired by <span className="italic">The Festival Shoes</span>.
                   </p>
                   <div>
                     <a 

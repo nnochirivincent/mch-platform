@@ -30,7 +30,7 @@ export default function Contact() {
       window.location.hostname === 'localhost' ||
       window.location.hostname === '127.0.0.1'
         ? 'http://localhost:5000'
-        : 'https://mch-platform.onrender.com';
+        : 'https://mch-platform-1.onrender.com';
 
     try {
       const response = await fetch(`${BACKEND_URL}/api/contact`, {

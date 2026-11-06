@@ -64,7 +64,7 @@ const DOWNLOAD_URL =
 
 const BACKEND_PUBLIC_URL =
   process.env.BACKEND_PUBLIC_URL ||
-  'https://mch-platform.onrender.com';
+  'https://mch-platform-1.onrender.com';
 
 
 // ===============================

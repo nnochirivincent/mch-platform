@@ -198,7 +198,7 @@ export default function Contact() {
           <div className="mt-12 sm:mt-14 text-center space-y-4">
             <div className="inline-flex items-center space-x-2 text-sm sm:text-base text-[#1e2f16] font-bold">
               <Mail size={18} className="text-[#2a431a] shrink-0" />
-              <span>Or email us directly at <a href="hello@magnifyingchildrenshorizons.com" className="underline font-extrabold hover:text-[#2a431a]">info@mch-platform.com</a></span>
+              <span>Or email us directly at <a href="mailto:hello@magnifyingchildrenshorizons.com" className="underline font-extrabold hover:text-[#2a431a]">hello@magnifyingchildrenshorizons.com</a></span>
             </div>
 
             <div className="flex justify-center space-x-4 pt-2">

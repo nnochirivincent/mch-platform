@@ -319,9 +319,6 @@ return ( <div className="min-h-screen bg-[#fcf9f2] text-[#14230f] selection:bg-[
               {/* BOOK 2 DETAILS */}
               <div className="sm:col-span-7 space-y-3 text-left flex flex-col justify-center h-full py-2">
                 <div>
-                  <span className="text-[10px] font-black uppercase tracking-widest text-[#0e170a] bg-amber-400 px-2 py-0.5 rounded shadow-sm">
-                    COMING SOON
-                  </span>
 
                   <h3 className="font-extrabold text-xl text-[#0e170a] mt-1.5 font-serif">
                     The Festival Shoes

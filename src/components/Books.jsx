@@ -6,6 +6,12 @@ export default function Books() {
   const [tfimReviewsOpen, setTfimReviewsOpen] = useState(false);
   const [tfsReviewsOpen, setTfsReviewsOpen] = useState(false);
 
+  const tfimAmazonLink =
+    'https://www.amazon.com/Face-Mountain-Tolulope-Okudolo/dp/0994876947/';
+
+  const tfsAmazonLink =
+    'https://www.amazon.ca/dp/0994876920';
+
   return (
     <div className="bg-[#fcfbf9] min-h-screen text-[#14230f] overflow-x-hidden">
 
@@ -13,8 +19,13 @@ export default function Books() {
       <section className="relative w-full pt-0 pb-0">
         <div className="relative w-full rounded-none overflow-hidden h-[20vh] min-h-[150px] sm:h-[30vh] lg:h-[35vh] flex items-center justify-center">
           <div className="absolute inset-0 z-0 overflow-hidden bg-[#162211]">
-            <img src="/books-hero.png" alt="Our Books Header" className="w-full h-full object-cover object-center" />
+            <img
+              src="/books-hero.png"
+              alt="Our Books Header"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
+
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
             <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-[#1a2b13] tracking-tight drop-shadow-sm">
               OUR BOOKS
@@ -30,6 +41,7 @@ export default function Books() {
             <h2 className="text-xl sm:text-3xl font-serif font-bold text-[#1e3319] tracking-tight">
               Discover the Weaverton Series
             </h2>
+
             <p className="text-sm sm:text-lg text-[#1b2718] font-semibold leading-relaxed max-w-2xl mx-auto">
               Step into a world where nature is alive with purpose.
               <br className="hidden sm:inline" />
@@ -48,6 +60,7 @@ export default function Books() {
 
             {/* DESKTOP BOOK 1 */}
             <div className="hidden lg:grid grid-cols-12 gap-5 lg:gap-6 items-center">
+
               <div className="lg:col-span-3 flex justify-center items-center relative overflow-visible min-h-0 lg:min-h-[220px]">
                 <img
                   src="/tfim-book-cover.png"
@@ -68,11 +81,13 @@ export default function Books() {
               </div>
 
               <div className="lg:col-span-9 grid md:grid-cols-2 gap-6 lg:gap-6 items-center">
+
                 <div className="space-y-3 text-center md:text-left">
                   <div>
                     <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
                       The Face in the Mountain
                     </h3>
+
                     <p className="text-[10px] sm:text-[11px] uppercase tracking-widest font-extrabold text-[#355322] mt-1">
                       Ages 6–9
                     </p>
@@ -92,8 +107,9 @@ export default function Books() {
                   </p>
 
                   <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-2 sm:gap-3 pt-1">
+
                     <a
-                      href="https://www.amazon.com/Face-Mountain-Tolulope-Okudolo/dp/0994876947/"
+                      href={tfimAmazonLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex justify-center items-center bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow transition"
@@ -123,6 +139,7 @@ export default function Books() {
                       alt="The Face in the Mountain Trailer Preview"
                       className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-300"
                     />
+
                     <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                       <div className="w-9 h-9 rounded-full bg-white/90 text-[#1e3319] flex items-center justify-center shadow-lg group-hover:scale-110 transition">
                         <svg className="w-4 h-4 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
@@ -131,6 +148,7 @@ export default function Books() {
                       </div>
                     </div>
                   </div>
+
                   <div>
                     <Link
                       to="#"
@@ -151,7 +169,9 @@ export default function Books() {
                   <h4 className="font-serif font-bold text-base sm:text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
                     Reader Reviews — The Face in the Mountain
                   </h4>
+
                   <div className="grid md:grid-cols-3 gap-4 text-sm sm:text-base">
+
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
                       <p className="italic text-[#1b2718] font-semibold text-sm sm:text-base leading-relaxed">
@@ -175,6 +195,7 @@ export default function Books() {
                       </p>
                       <p className="font-bold text-[#355322]">— Wanda Maynard (Rating: 5 out of 5 stars)</p>
                     </div>
+
                   </div>
                 </div>
               )}
@@ -182,6 +203,7 @@ export default function Books() {
 
             {/* MOBILE BOOK 1 */}
             <div className="lg:hidden flex flex-col items-center">
+
               <div className="flex justify-center items-center w-full">
                 <img
                   src="/tfim-book-cover.png"
@@ -204,6 +226,7 @@ export default function Books() {
                   <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
                     The Face in the Mountain
                   </h3>
+
                   <p className="text-[10px] sm:text-[11px] uppercase tracking-widest font-extrabold text-[#355322] mt-1">
                     Ages 6–9
                   </p>
@@ -231,6 +254,7 @@ export default function Books() {
                     alt="The Face in the Mountain Trailer Preview"
                     className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition duration-300"
                   />
+
                   <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                     <div className="w-10 h-10 rounded-full bg-white/90 text-[#1e3319] flex items-center justify-center shadow-lg group-hover:scale-110 transition">
                       <svg className="w-4 h-4 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
@@ -239,6 +263,7 @@ export default function Books() {
                     </div>
                   </div>
                 </div>
+
                 <div>
                   <Link
                     to="#"
@@ -253,14 +278,16 @@ export default function Books() {
               </div>
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2 sm:gap-3 pt-4 w-full max-w-xl">
+
                 <a
-                  href="https://www.amazon.com/Face-Mountain-Tolulope-Okudolo/dp/0994876947/"
+                  href={tfimAmazonLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex justify-center items-center bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow transition"
                 >
                   DISCOVER / BUY THE BOOK →
                 </a>
+
                 <button
                   type="button"
                   onClick={() => setTfimReviewsOpen(!tfimReviewsOpen)}
@@ -277,7 +304,9 @@ export default function Books() {
                   <h4 className="font-serif font-bold text-base text-[#1e3319] border-b border-[#d2e2cc] pb-2">
                     Reader Reviews — The Face in the Mountain
                   </h4>
+
                   <div className="space-y-4">
+
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
                       <p className="italic text-[#1b2718] font-semibold text-sm leading-relaxed">
@@ -301,6 +330,7 @@ export default function Books() {
                       </p>
                       <p className="font-bold text-[#355322]">— Wanda Maynard (Rating: 5 out of 5 stars)</p>
                     </div>
+
                   </div>
                 </div>
               )}
@@ -338,6 +368,7 @@ export default function Books() {
                   <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
                     The Festival Shoes
                   </h3>
+
                   <p className="text-[10px] sm:text-[11px] uppercase tracking-widest font-extrabold text-[#355322] mt-1">
                     Ages 6–9
                   </p>
@@ -358,8 +389,9 @@ export default function Books() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-2 sm:gap-3 pt-1">
+
                   <a
-                    href="https://www.amazon.ca/dp/0994876920 "
+                    href={tfsAmazonLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex justify-center items-center bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow transition"
@@ -407,7 +439,9 @@ export default function Books() {
                   <h4 className="font-serif font-bold text-base sm:text-lg text-[#1e3319] border-b border-[#d2e2cc] pb-2">
                     Reader Reviews — The Festival Shoes
                   </h4>
+
                   <div className="grid md:grid-cols-3 gap-4 text-sm sm:text-base">
+
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
                       <p className="italic text-[#1b2718] font-semibold text-sm sm:text-base leading-relaxed">
@@ -431,6 +465,7 @@ export default function Books() {
                       </p>
                       <p className="font-bold text-[#355322]">— Tara Sheehan, Artistic Bent (Rating: 5/5 stars)</p>
                     </div>
+
                   </div>
                 </div>
               )}
@@ -438,6 +473,7 @@ export default function Books() {
 
             {/* MOBILE BOOK 2 */}
             <div className="lg:hidden flex flex-col items-center">
+
               <div className="flex justify-center items-center w-full">
                 <img
                   src="/TFS-Book-cover.png"
@@ -463,6 +499,7 @@ export default function Books() {
                   <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#1e3319]">
                     The Festival Shoes
                   </h3>
+
                   <p className="text-[10px] sm:text-[11px] uppercase tracking-widest font-extrabold text-[#355322] mt-1">
                     Ages 6–9
                   </p>
@@ -505,8 +542,9 @@ export default function Books() {
               </div>
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2 sm:gap-3 pt-4 w-full max-w-xl">
+
                 <a
-                  href="https://www.amazon.ca/dp/0994876920"
+                  href={tfsAmazonLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex justify-center items-center bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow transition"
@@ -533,7 +571,9 @@ export default function Books() {
                   <h4 className="font-serif font-bold text-base text-[#1e3319] border-b border-[#d2e2cc] pb-2">
                     Reader Reviews — The Festival Shoes
                   </h4>
+
                   <div className="space-y-4">
+
                     <div className="bg-white p-4 rounded-lg shadow-sm space-y-2 border border-[#e2ebd9]">
                       <div className="text-amber-600 font-bold">★★★★★</div>
                       <p className="italic text-[#1b2718] font-semibold text-sm leading-relaxed">
@@ -557,6 +597,7 @@ export default function Books() {
                       </p>
                       <p className="font-bold text-[#355322]">— Tara Sheehan, Artistic Bent (Rating: 5/5 stars)</p>
                     </div>
+
                   </div>
                 </div>
               )}
@@ -573,10 +614,12 @@ export default function Books() {
 
               {/* CONTINUE THE ADVENTURE */}
               <div className="lg:col-span-7 bg-[#edf2eb] p-5 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
+
                 <div className="space-y-2 text-center sm:text-left">
                   <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
                     Continue the Adventure
                   </h3>
+
                   <p className="text-sm sm:text-lg text-[#1b2718] font-semibold leading-relaxed max-w-xl mx-auto sm:mx-0">
                     Explore free colouring pages, games and activities inspired
                     by the Weaverton Series.
@@ -584,6 +627,7 @@ export default function Books() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 sm:gap-4 items-center py-2">
+
                   <div className="flex justify-center transform -rotate-1 hover:rotate-0 transition duration-300 group">
                     <img
                       src="/1-aboutpage-bookcover.png"
@@ -591,6 +635,7 @@ export default function Books() {
                       className="h-36 sm:h-56 w-auto max-w-full object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300"
                     />
                   </div>
+
                   <div className="flex justify-center transform rotate-1 hover:rotate-0 transition duration-300 group">
                     <img
                       src="/TFS-adventure-game.png"
@@ -612,10 +657,12 @@ export default function Books() {
 
               {/* MORE STORIES */}
               <div className="lg:col-span-5 bg-[#fcf0ed] p-5 sm:p-8 rounded-xl shadow-sm flex flex-col justify-between space-y-5">
+
                 <div className="space-y-2 text-center sm:text-left">
                   <h3 className="text-lg sm:text-xl font-serif font-bold text-[#1e3319]">
                     More Stories to Discover
                   </h3>
+
                   <p className="text-sm sm:text-lg text-[#1b2718] font-semibold leading-relaxed">
                     Explore books and creative collaborations beyond the Weaverton
                     Series — including stories that invite children to experience
@@ -624,6 +671,7 @@ export default function Books() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 sm:gap-4 items-center py-2">
+
                   <div className="flex justify-center transform -rotate-1 hover:rotate-0 transition duration-300 group">
                     <img
                       src="/2-bookcover-aboutpage.png"
@@ -631,6 +679,7 @@ export default function Books() {
                       className="h-32 sm:h-48 w-auto max-w-full object-contain drop-shadow-xl rounded group-hover:scale-105 transition duration-300"
                     />
                   </div>
+
                   <div className="flex justify-center transform rotate-1 hover:rotate-0 transition duration-300 group">
                     <img
                       src="/bookcover-aboutpage.png"
@@ -656,7 +705,9 @@ export default function Books() {
 
       {/* FOOTER */}
       <div className="pt-6 border-t border-[#23351a]/15 bg-[#f5f1e8]">
+
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 px-4 sm:px-6 lg:px-10 max-w-[90rem] mx-auto">
+
           <div className="flex items-center space-x-3 text-center lg:text-left">
             <Link to="/" className="flex items-center space-x-3 group shrink-0">
               <div className="flex items-center justify-center shrink-0">
@@ -667,10 +718,12 @@ export default function Books() {
                 />
               </div>
             </Link>
+
             <div className="flex flex-col text-left">
               <span className="font-serif font-bold text-base text-[#1a2b13] leading-none">
                 Magnifying Children's Horizons
               </span>
+
               <span className="text-[10px] text-[#2c3e24] font-bold uppercase tracking-widest mt-1">
                 NATURE • CHARACTER • SPIRITUAL VALUES
               </span>
@@ -687,6 +740,7 @@ export default function Books() {
           </div>
 
           <div className="flex items-center space-x-2.5 shrink-0">
+
             <a
               href="https://www.instagram.com/magnifyingchildrenshorizons/"
               target="_blank"
@@ -716,7 +770,9 @@ export default function Books() {
         </div>
 
         <div className="pt-4 pb-6 px-4 sm:px-6 lg:px-10 border-t border-[#23351a]/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#384a30] font-semibold gap-2 max-w-[90rem] mx-auto">
+
           <p>© 2026 Magnifying Children's Horizons. All rights reserved.</p>
+
           <div className="flex items-center space-x-4">
             <a href="#privacy" className="hover:underline">Privacy Policy</a>
             <a href="#terms" className="hover:underline">Terms of Use</a>

@@ -341,7 +341,7 @@ return ( <div className="min-h-screen bg-[#fcf9f2] text-[#14230f] selection:bg-[
                   "An enchanting adventure filled with heart, magic and important
                   lessons for every young reader." <br />
                   <span className="font-bold not-italic text-[#0e170a]">
-                    — ABC Reviewer
+                    -Amazon Reviewer
                   </span>
                 </p>
 
@@ -355,7 +355,9 @@ return ( <div className="min-h-screen bg-[#fcf9f2] text-[#14230f] selection:bg-[
 
                   <div>
                     <a
-                      href="#buy"
+                      href="https://www.amazon.ca/dp/0994876920"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-xs text-[#243b17] font-bold hover:underline"
                     >
                       Buy on Amazon →

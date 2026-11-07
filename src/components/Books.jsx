@@ -357,28 +357,28 @@ export default function Books() {
                   and to the world around us.
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2 sm:gap-3 pt-4 w-full max-w-xl">
-                <a
-                  href="https://www.amazon.ca/dp/0994876920"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex justify-center items-center bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow transition"
-                >
-                  DISCOVER / BUY THE BOOK →
-                </a>
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-2 sm:gap-3 pt-1">
+                  <a
+                    href="https://www.amazon.com/Face-Mountain-Tolulope-Okudolo/dp/0994876947/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex justify-center items-center bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow transition"
+                  >
+                    DISCOVER / BUY THE BOOK →
+                  </a>
 
-                <button
-                  type="button"
-                  onClick={() => setTfsReviewsOpen(!tfsReviewsOpen)}
-                  className="inline-flex justify-center items-center bg-[#eaf2e6] hover:bg-[#ddeade] text-[#2c441c] border border-[#355322]/20 font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow-sm transition cursor-pointer relative z-30"
-                >
-                  <span>
-                    {tfsReviewsOpen
-                      ? 'Hide Reviews ▲'
-                      : 'Read Reviews (3) ▼'}
-                  </span>
-                </button>
-              </div>
+                  <button
+                    type="button"
+                    onClick={() => setTfsReviewsOpen(!tfsReviewsOpen)}
+                    className="inline-flex justify-center items-center bg-[#eaf2e6] hover:bg-[#ddeade] text-[#2c441c] border border-[#355322]/20 font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow-sm transition cursor-pointer relative z-30"
+                  >
+                    <span>
+                      {tfsReviewsOpen
+                        ? 'Hide Reviews ▲'
+                        : 'Read Reviews (3) ▼'}
+                    </span>
+                  </button>
+                </div>
               </div>
 
               {/* BOOK COVER */}
@@ -506,7 +506,7 @@ export default function Books() {
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2 sm:gap-3 pt-4 w-full max-w-xl">
                 <a
-                  href="https://www.amazon.com/Face-Mountain-Tolulope-Okudolo/dp/0994876947/"
+                  href="https://www.amazon.ca/dp/0994876920"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex justify-center items-center bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow transition"

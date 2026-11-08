@@ -140,7 +140,8 @@ const adminSchema = new mongoose.Schema({
     type: String,
     required: true,
     lowercase: true,
-    trim: true
+    trim: true,
+    unique: true
   },
 
   passwordHash: {
@@ -150,7 +151,8 @@ const adminSchema = new mongoose.Schema({
 
   accountType: {
     type: String,
-    default: 'primary',
+    enum: ['programmer', 'owner'],
+    required: true,
     unique: true
   },
 
@@ -587,9 +589,22 @@ function authenticateAdmin(req, res, next) {
   const token = authorization.slice(7);
 
   try {
-    const decoded = jwt.verify(token, getAdminTokenSecret());
+    const secret = getAdminTokenSecret();
 
-    if (decoded.role !== 'admin') {
+    if (!secret) {
+      return res.status(500).json({
+        success: false,
+        message: 'Admin security is not configured.'
+      });
+    }
+
+    const decoded = jwt.verify(token, secret);
+
+    if (
+      decoded.role !== 'admin' ||
+      !decoded.adminId ||
+      !['programmer', 'owner'].includes(decoded.accountType)
+    ) {
       return res.status(403).json({
         success: false,
         message: 'Administrator access required.'
@@ -609,17 +624,17 @@ function authenticateAdmin(req, res, next) {
 }
 
 // =====================================
-// CHECK WHETHER FIRST ADMIN EXISTS
+// CHECK FIRST ADMIN SETUP
 // =====================================
 
 app.get('/api/admin/setup-status', async (req, res) => {
   try {
-    const adminExists = await Admin.exists({
-      accountType: 'primary'
+    const programmerExists = await Admin.exists({
+      accountType: 'programmer'
     });
 
     return res.status(200).json({
-      setupRequired: !adminExists
+      setupRequired: !programmerExists
     });
 
   } catch (error) {
@@ -633,6 +648,7 @@ app.get('/api/admin/setup-status', async (req, res) => {
 
 // =====================================
 // FIRST ADMIN REGISTRATION
+// PROGRAMMER ACCOUNT ONLY
 // =====================================
 
 app.post('/api/admin/setup', async (req, res) => {
@@ -688,14 +704,14 @@ app.post('/api/admin/setup', async (req, res) => {
       });
     }
 
-    const existingAdmin = await Admin.findOne({
-      accountType: 'primary'
+    const existingProgrammer = await Admin.exists({
+      accountType: 'programmer'
     });
 
-    if (existingAdmin) {
+    if (existingProgrammer) {
       return res.status(403).json({
         success: false,
-        message: 'Administrator setup has already been completed.'
+        message: 'Programmer registration has already been completed.'
       });
     }
 
@@ -704,21 +720,21 @@ app.post('/api/admin/setup', async (req, res) => {
     await Admin.create({
       email: cleanEmail,
       passwordHash,
-      accountType: 'primary'
+      accountType: 'programmer'
     });
 
-    console.log('First MCH administrator account created.');
+    console.log('MCH programmer administrator account created.');
 
     return res.status(201).json({
       success: true,
-      message: 'Administrator account created. You can now log in.'
+      message: 'Programmer account created. You can now log in.'
     });
 
   } catch (error) {
     if (error.code === 11000) {
-      return res.status(403).json({
+      return res.status(409).json({
         success: false,
-        message: 'Administrator setup has already been completed.'
+        message: 'This administrator account or account type already exists.'
       });
     }
 
@@ -726,10 +742,106 @@ app.post('/api/admin/setup', async (req, res) => {
 
     return res.status(500).json({
       success: false,
-      message: 'Unable to create the administrator account.'
+      message: 'Unable to create the programmer account.'
     });
   }
 });
+
+// =====================================
+// CREATE SECOND ADMIN
+// PROGRAMMER ACCOUNT ONLY
+// =====================================
+
+app.post(
+  '/api/admin/create-owner',
+  authenticateAdmin,
+  async (req, res) => {
+    try {
+      // Confirm that the logged-in account is still
+      // the registered programmer account.
+      const programmer = await Admin.findOne({
+        _id: req.admin.adminId,
+        accountType: 'programmer'
+      });
+
+      if (!programmer) {
+        return res.status(403).json({
+          success: false,
+          message: 'Only the authorised programmer can create the owner account.'
+        });
+      }
+
+      const ownerExists = await Admin.exists({
+        accountType: 'owner'
+      });
+
+      if (ownerExists) {
+        return res.status(403).json({
+          success: false,
+          message: 'The organisation owner account has already been created.'
+        });
+      }
+
+      const { email, password } = req.body;
+
+      if (
+        typeof email !== 'string' ||
+        typeof password !== 'string'
+      ) {
+        return res.status(400).json({
+          success: false,
+          message: 'Please provide the owner email and password.'
+        });
+      }
+
+      const cleanEmail = email.trim().toLowerCase();
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)) {
+        return res.status(400).json({
+          success: false,
+          message: 'Please enter a valid owner email address.'
+        });
+      }
+
+      if (password.length < 12 || password.length > 128) {
+        return res.status(400).json({
+          success: false,
+          message: 'The password must be between 12 and 128 characters.'
+        });
+      }
+
+      const passwordHash = await bcrypt.hash(password, 12);
+
+      await Admin.create({
+        email: cleanEmail,
+        passwordHash,
+        accountType: 'owner'
+      });
+
+      console.log('MCH organisation owner account created.');
+
+      return res.status(201).json({
+        success: true,
+        message: 'Organisation owner account created successfully.'
+      });
+
+    } catch (error) {
+      if (error.code === 11000) {
+        return res.status(409).json({
+          success: false,
+          message: 'An administrator account with this email or account type already exists.'
+        });
+      }
+
+      console.error('Create owner account error:', error);
+
+      return res.status(500).json({
+        success: false,
+        message: 'Unable to create the owner account.'
+      });
+    }
+  }
+);
 
 // =====================================
 // ADMIN LOGIN
@@ -767,10 +879,7 @@ app.post('/api/admin/login', async (req, res) => {
       });
     }
 
-    const admin = await Admin.findOne({
-      accountType: 'primary',
-      email
-    });
+    const admin = await Admin.findOne({ email });
 
     const passwordMatches = admin
       ? await bcrypt.compare(password, admin.passwordHash)
@@ -799,13 +908,23 @@ app.post('/api/admin/login', async (req, res) => {
 
     loginAttempts.delete(ip);
 
+    const secret = getAdminTokenSecret();
+
+    if (!secret) {
+      return res.status(500).json({
+        success: false,
+        message: 'Admin security is not configured.'
+      });
+    }
+
     const token = jwt.sign(
       {
         adminId: admin._id.toString(),
         email: admin.email,
+        accountType: admin.accountType,
         role: 'admin'
       },
-      getAdminTokenSecret(),
+      secret,
       {
         expiresIn: '8h'
       }
@@ -816,7 +935,8 @@ app.post('/api/admin/login', async (req, res) => {
       message: 'Login successful.',
       token,
       admin: {
-        email: admin.email
+        email: admin.email,
+        accountType: admin.accountType
       }
     });
 
@@ -837,13 +957,37 @@ app.post('/api/admin/login', async (req, res) => {
 app.get(
   '/api/admin/verify',
   authenticateAdmin,
-  (req, res) => {
-    return res.status(200).json({
-      success: true,
-      admin: {
-        email: req.admin.email
+  async (req, res) => {
+    try {
+      const admin = await Admin.findById(req.admin.adminId);
+
+      if (
+        !admin ||
+        admin.email !== req.admin.email ||
+        admin.accountType !== req.admin.accountType
+      ) {
+        return res.status(401).json({
+          success: false,
+          message: 'Administrator account is no longer valid.'
+        });
       }
-    });
+
+      return res.status(200).json({
+        success: true,
+        admin: {
+          email: admin.email,
+          accountType: admin.accountType
+        }
+      });
+
+    } catch (error) {
+      console.error('Admin verification error:', error);
+
+      return res.status(500).json({
+        success: false,
+        message: 'Unable to verify administrator session.'
+      });
+    }
   }
 );
 

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollFade from './ScrollFade';
@@ -106,15 +107,19 @@ export default function Books() {
                     us about working together.
                   </p>
 
-                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-2 sm:gap-3 pt-1">
+                  {/* DESKTOP BOOK 1 BUTTONS */}
+                  <div className="relative z-50 isolate flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-2 sm:gap-3 pt-1">
 
                     <a
                       href={tfimAmazonLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex justify-center items-center bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow transition"
+                      aria-label="Discover or buy The Face in the Mountain on Amazon"
+                      className="relative z-[60] pointer-events-auto cursor-pointer inline-flex justify-center items-center bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow transition"
                     >
-                      DISCOVER / BUY THE BOOK →
+                      <span className="pointer-events-none">
+                        DISCOVER / BUY THE BOOK →
+                      </span>
                     </a>
 
                     <button
@@ -277,15 +282,19 @@ export default function Books() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2 sm:gap-3 pt-4 w-full max-w-xl">
+              {/* MOBILE BOOK 1 BUTTONS */}
+              <div className="relative z-50 isolate flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2 sm:gap-3 pt-4 w-full max-w-xl">
 
                 <a
                   href={tfimAmazonLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex justify-center items-center bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow transition"
+                  aria-label="Discover or buy The Face in the Mountain on Amazon"
+                  className="relative z-[60] pointer-events-auto cursor-pointer inline-flex justify-center items-center bg-[#355322] hover:bg-[#2c441b] text-white font-bold text-[10px] uppercase tracking-widest px-4 py-2.5 rounded-lg shadow transition"
                 >
-                  DISCOVER / BUY THE BOOK →
+                  <span className="pointer-events-none">
+                    DISCOVER / BUY THE BOOK →
+                  </span>
                 </a>
 
                 <button

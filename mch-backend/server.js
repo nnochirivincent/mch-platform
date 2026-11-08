@@ -16,14 +16,29 @@ const app = express();
 
 app.use(express.json({ limit: '1mb' }));
 
+// =====================================
+// CORS CONFIGURATION
+// =====================================
+
 const allowedOrigins = [
   'http://localhost:5173',
+  'http://127.0.0.1:5173',
+
+  // Vercel website
   'https://mch-platform.vercel.app',
+
+  // Correct MCH custom domains
+  'https://magnifyingchildrenshorizons.com',
+  'https://www.magnifyingchildrenshorizons.com',
+
+  // Previous domain entries retained
   'https://magnifyingchildrenhorizon.com',
   'https://www.magnifyingchildrenhorizon.com',
+
+  // Additional frontend URLs configured in Render
   ...(process.env.FRONTEND_URL || '')
     .split(',')
-    .map(url => url.trim())
+    .map(url => url.trim().replace(/\/+$/, ''))
     .filter(Boolean)
 ];
 
@@ -32,6 +47,8 @@ app.use(cors({
     if (!origin || allowedOrigins.includes(origin)) {
       return callback(null, true);
     }
+
+    console.error('CORS blocked origin:', origin);
 
     return callback(new Error('Origin not allowed by CORS'));
   }
@@ -757,8 +774,6 @@ app.post(
   authenticateAdmin,
   async (req, res) => {
     try {
-      // Confirm that the logged-in account is still
-      // the registered programmer account.
       const programmer = await Admin.findOne({
         _id: req.admin.adminId,
         accountType: 'programmer'
